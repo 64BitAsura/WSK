@@ -35,12 +35,14 @@ event.on('css2scss', () => {
     renamer(folder);
 });
 event.on('install', () => {
-    const file = path.join(process.cwd(), "wsk-app/package.json");
+    const project = args[1] || '';
+    const file = path.join(process.cwd(), `wsk-app${project ? '-'+project : ''}/package.json`);
     if (fs.statSync(file).isFile()) {
         const content = fs.readFileSync(file, 'utf8');
         const pkg = JSON.parse(content);
-        pkg.dependencies["angular-workspace"] = "*";
-        // pkg.dependencies["angular-library"] = "*";
+        // pkg.dependencies["angular-workspace"] = "*";
+        pkg.dependencies["angular-library"] = "*";
+        pkg.dependencies["stencil-library"] = "*";
         pkg.scripts["serve"] = "ng serve --open";
         fs.writeFileSync(file, JSON.stringify(pkg, null, 2));
         console.log(`Updated package.json`);

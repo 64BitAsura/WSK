@@ -1,5 +1,5 @@
 /*
- * Public API Surface of angular-library
+ * Public API Surface of component-library
  */
 
 export * from './lib/angular-library.module';

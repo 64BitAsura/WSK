@@ -1,3 +1,6 @@
+# Ignore WSK generated folders
+wsk-app*/
+
 # Logs
 logs
 *.log
