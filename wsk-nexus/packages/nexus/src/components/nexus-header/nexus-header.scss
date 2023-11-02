@@ -1,0 +1,69 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+@import '../../styles/grid/mixins';
+
+.nexus-header {
+  display: block;
+  background: var(--header-bg-color);
+  border-bottom: 1px solid $grey-500;
+  color: $white;
+  z-index: 100;
+
+  &.nexus-header-fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &.nexus-header-sticky {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .nexus-btn-icon {
+    color: var(--header-icon-color);
+  }
+
+  .nexus-container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.nexus-header-inner {
+  @include between();
+
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: flex;
+}
+
+.nexus-header-menu-open {
+  .nexus-header-menu-open-button {
+    opacity: 0;
+    visibility: hidden;
+    transition: 100ms all var(--ease-in-out-expo);
+  }
+}
+
+svg.nexus-header-close-icon,
+.nexus-header-search-content-dekstop {
+  display: none;
+}
+
+.nexus-header-menu-open-button {
+  margin: $rhythm * 3 0 $rhythm * 3 $rhythm * 2;
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  transition: 100ms all var(--ease-in-out-expo);
+
+  svg {
+    color: $white;
+    width: 26px;
+    height: 26px;
+  }
+}

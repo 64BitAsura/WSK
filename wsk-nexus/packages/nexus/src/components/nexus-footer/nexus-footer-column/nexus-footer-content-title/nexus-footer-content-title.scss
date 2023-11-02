@@ -1,0 +1,12 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/typography';
+@import '../../../../styles/theme';
+
+.nexus-footer-content-title {
+  :first-child {
+    @include nexus-overline;
+
+    list-style-type: none;
+    margin-bottom: $rhythm;
+  }
+}

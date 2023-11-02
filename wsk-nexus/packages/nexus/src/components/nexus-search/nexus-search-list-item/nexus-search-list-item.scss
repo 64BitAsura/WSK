@@ -1,0 +1,35 @@
+@import '../../../styles/variables';
+
+.nexus-search-list-li {
+  list-style: none;
+  margin: 0;
+  color: var(--primary-text);
+
+  a,
+  button {
+    z-index: 2;
+    position: relative;
+    padding: $padding * 2 $padding * 5;
+    color: var(--primary-text);
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+
+    .nexus-selected &,
+    &:hover,
+    &:focus {
+      background-color: $blue-100;
+      box-shadow: none;
+    }
+  }
+
+  &.nexus-selected {
+    a,
+    button {
+      background-color: $blue-100;
+      box-shadow: none;
+    }
+  }
+}

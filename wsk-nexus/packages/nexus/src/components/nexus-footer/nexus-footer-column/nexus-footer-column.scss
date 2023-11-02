@@ -1,0 +1,22 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+@import '../../../styles/theme';
+
+.nexus-footer-column {
+  .nexus-footer-column-list {
+    margin-left: 0;
+  }
+
+  @include mq(x-small) {
+    .nexus-footer-column-list {
+      margin-top: $rhythm * 5;
+    }
+  }
+
+  @include mq(small) {
+    .nexus-footer-column-list {
+      margin-top: 0;
+      margin-left: $rhythm * 3;
+    }
+  }
+}

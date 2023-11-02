@@ -1,0 +1,31 @@
+@import '../../../styles/variables';
+@import '../../../styles/theme';
+
+.nexus-tooltip-trigger {
+  position: relative;
+  display: flex;
+
+  .nexus-icon-button {
+    display: inline-block;
+    height: $rhythm * 2.5;
+    width: $rhythm * 2.5;
+    color: var(--tooltip-trigger-color);
+  }
+
+  .nexus-tooltip-trigger-arrow {
+    position: absolute;
+    border: solid transparent;
+    content: '';
+    border-bottom-color: var(--tooltip-trigger-border-color);
+    border-width: $rhythm * 2;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &:hover {
+    .nexus-tooltip-trigger-arrow {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

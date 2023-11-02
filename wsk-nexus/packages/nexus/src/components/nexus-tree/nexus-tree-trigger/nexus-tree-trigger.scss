@@ -1,0 +1,44 @@
+@import '../../../styles/variables';
+
+.nexus-tree-trigger {
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  overflow: visible;
+  transition: color var(--ease-in-out-fast);
+
+  .nexus-btn {
+    font-size: var(--font-size-base);
+  }
+
+  &:focus {
+    box-shadow: none;
+
+    svg {
+      box-shadow: var(--focus-state);
+    }
+  }
+
+  &:disabled {
+    color: var(--disabled);
+    cursor: auto;
+
+    .nexus-tree-trigger-icon {
+      fill: var(--disabled);
+    }
+  }
+}
+
+.nexus-tree-trigger-icon {
+  height: $rhythm * 3;
+  width: $rhythm * 3;
+  margin-right: $rhythm;
+  transform: rotate(0);
+  transition: transform var(--ease-in-out-fast);
+  color: var(--tree-icon-color);
+}

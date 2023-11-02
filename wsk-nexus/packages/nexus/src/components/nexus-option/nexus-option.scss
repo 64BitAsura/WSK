@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.nexus-option {
+  cursor: var(--option-cursor);
+
+  .nexus-checkbox {
+    vertical-align: var(--option-checkbox-vertical-align);
+    padding: var(--option-checkbox-vertical-padding);
+  }
+
+  nexus-radio {
+    .nexus-radio-custom {
+      visibility: var(--option-radio-visibility);
+    }
+  }
+}
+
+.nexus-single-select {
+  padding: var(--option-single-select-padding);
+  background-color: var(--option-single-select-bg);
+}
+
+.nexus-option-selected,
+.nexus-option-selected:hover {
+  background: var(--option-selected-bg);
+  color: var(--option-selected-color);
+}
+
+.nexus-option-disabled,
+.nexus-option-disabled:hover {
+  pointer-events: var(--option-disabled-pointer-events);
+  color: var(--option-disable-color);
+}
+
+.nexus-option-hover,
+.nexus-option:hover {
+  background: var(--option-hover-bg);
+  color: var(--option-hover-color);
+}

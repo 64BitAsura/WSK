@@ -1,0 +1,15 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.nexus-modal-body {
+  padding: $rhythm * 2;
+  display: block;
+  overflow: auto;
+  height: 100%;
+}
+
+@include mq(medium) {
+  .nexus-modal-body {
+    padding: $rhythm * 3;
+  }
+}

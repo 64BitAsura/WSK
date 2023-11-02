@@ -1,0 +1,14 @@
+@import '../../../styles/variables';
+
+.nexus-card-footer {
+  display: flex;
+  margin-top: auto;
+
+  [class^='nexus-btn'] + [class^='nexus-btn'] {
+    margin-left: $rhythm * 2;
+  }
+
+  [class^='nexus-btn'] + [class^='nexus-link'] {
+    margin-left: $rhythm * 2;
+  }
+}

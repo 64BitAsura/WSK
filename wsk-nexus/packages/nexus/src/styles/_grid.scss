@@ -1,0 +1,55 @@
+@import 'variables';
+@import 'grid/_mixins.scss';
+@import 'grid/_classes.scss';
+
+.#{$nexus-prefix}flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.#{$nexus-prefix}flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.#{$nexus-prefix}flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.#{$nexus-prefix}flex-col-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.#{$nexus-prefix}flex-1 {
+  flex: 1 1 0;
+}
+
+.#{$nexus-prefix}flex-auto {
+  flex: 1 1 auto;
+}
+
+.#{$nexus-prefix}flex-initial {
+  flex: 0 1 auto;
+}
+
+.#{$nexus-prefix}flex-none {
+  flex: none;
+}
+
+.#{$nexus-prefix}flex-grow {
+  flex-grow: 1;
+}
+
+.#{$nexus-prefix}flex-grow-0 {
+  flex-grow: 0;
+}
+
+.#{$nexus-prefix}flex-shrink {
+  flex-shrink: 1;
+}
+
+.#{$nexus-prefix}flex-shrink-0 {
+  flex-shrink: 0;
+}

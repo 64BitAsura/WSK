@@ -1,0 +1,25 @@
+@import '../../../styles/variables';
+
+.nexus-breadcrumb-item {
+  li {
+    display: var(--breadcrumb-item-list-display);
+  }
+
+  li > *:not(.nexus-icon):hover {
+    color: var(--breadcrumb-item-list-color);
+  }
+
+  .nexus-breadcrumb-item-disabled > * {
+    cursor: var(--breadcrumb-item-list-disabled);
+  }
+
+  .nexus-breadcrumb-item-separator {
+    margin: 0 $rhythm;
+    font-size: var(--breadcrumb-item-separator-font-size);
+    vertical-align: var(--breadcrumb-item-separator-alignment);
+  }
+
+  .nexus-icon {
+    vertical-align: var(--breadcrumb-item-icon-alignment);
+  }
+}

@@ -1,0 +1,17 @@
+.nexus-tree {
+  display: block;
+}
+
+.nexus-icon.nexus-tree-trigger-icon-hide {
+  display: none;
+}
+
+.nexus-tree-content-visible {
+  .nexus-tree-trigger-icon-hide {
+    display: block;
+  }
+
+  .nexus-tree-trigger-icon-expand {
+    display: none;
+  }
+}

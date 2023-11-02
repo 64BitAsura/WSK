@@ -1,0 +1,109 @@
+/* stylelint-disable rscss/class-format, rscss/no-descendant-combinator  */
+
+@use 'sass:math';
+
+.#{$nexus-prefix}row-span,
+.#{$nexus-prefix}row {
+  @include row();
+
+  &.#{$nexus-prefix}reverse {
+    @include row-reverse();
+  }
+}
+
+.#{$nexus-prefix}col.#{$nexus-prefix}reverse {
+  flex-direction: column-reverse;
+}
+
+.#{$nexus-prefix}hidden {
+  display: none;
+}
+
+@each $label, $map in $nexus-breakpoints {
+  @include mq(map-get($map, min-width)) {
+    .#{$nexus-prefix}row {
+      @include row-gutter(map-get($map, gutter));
+
+      &.#{$nexus-prefix}no-gutter {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+
+    [class^="#{$nexus-prefix}col-"],
+    [class*="#{$nexus-prefix}col-"] {
+      @include col-gutter(map-get($map, gutter));
+
+      .#{$nexus-prefix}no-gutter & {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+
+    .#{$nexus-prefix}col-#{map-get($map, name)} {
+      flex-grow: 1;
+      flex-basis: 0;
+      max-width: 100%;
+      box-sizing: border-box;
+      -moz-box-flex: 0; /* Mozilla */
+      -webkit-box-flex: 0; /* WebKit */
+      position: relative;
+    }
+
+    @include mq-max(map-get($map, max-width)) {
+      .#{$nexus-prefix}hidden-#{map-get($map, name)} {
+        display: none;
+      }
+    }
+
+    @for $i from 1 through map-get($map, columns) {
+      .#{$nexus-prefix}col-#{map-get($map, name)}-#{$i} {
+        @include col(math.div($i, map-get($map, columns)), map-get($map, gutter));
+      }
+
+      .#{$nexus-prefix}col-#{map-get($map, name)}-offset-#{$i} {
+        @include offset(math.div($i, map-get($map, columns)));
+      }
+    }
+
+    .#{$nexus-prefix}start-#{map-get($map, name)} {
+      @include start();
+    }
+
+    .#{$nexus-prefix}center-#{map-get($map, name)} {
+      @include center();
+    }
+
+    .#{$nexus-prefix}end-#{map-get($map, name)} {
+      @include end();
+    }
+
+    .#{$nexus-prefix}top-#{map-get($map, name)} {
+      @include top();
+    }
+
+    .#{$nexus-prefix}middle-#{map-get($map, name)} {
+      @include middle();
+    }
+
+    .#{$nexus-prefix}bottom-#{map-get($map, name)} {
+      @include bottom();
+    }
+
+    .#{$nexus-prefix}around-#{map-get($map, name)} {
+      @include around();
+    }
+
+    .#{$nexus-prefix}between-#{map-get($map, name)} {
+      @include between();
+    }
+
+    .#{$nexus-prefix}first-#{map-get($map, name)} {
+      @include first();
+    }
+
+    .#{$nexus-prefix}last-#{map-get($map, name)} {
+      @include last();
+    }
+  }
+}

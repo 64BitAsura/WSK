@@ -1,0 +1,394 @@
+// ---------------------
+// Default -------------
+// ---------------------
+
+.nexus-btn {
+  align-items: var(--btn-align-item);
+  border-style: var(--btn-border-style);
+  border-width: var(--btn-border-width);
+  border-radius: var(--btn-border-radius);
+  cursor: var(--btn-cursor);
+  display: var(--btn-display);
+  font-family: var(--btn-font-family);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  justify-content: var(--btn-justify-content);
+  line-height: var(--btn-line-height);
+  min-height: var(--btn-min-height);
+  overflow: var(--btn-overflow);
+  padding: var(--btn-padding);
+  position: var(--btn-position);
+  text-align: var(--btn-text-align);
+  text-decoration: var(--btn-text-decoration);
+  transition: var(--btn-transition);
+  width: var(--btn-width);
+  border-color: var(--btn-border-color);
+  background-color: var(--btn-bg-color);
+  color: var(--btn-color);
+
+  svg {
+    display: var(--btn-svg-display);
+    height: var(--btn-svg-height);
+    margin-right: var(--btn-svg-margin-right);
+    width: var(--btn-svg-width);
+  }
+
+  &::-moz-focus-inner {
+    border: var(--btn-moz-border);
+  }
+
+  &:focus,
+  .nexus-btn:focus & {
+    box-shadow: var(--btn-focus-box-shadow);
+    outline: var(--btn-focus-outline);
+  }
+
+  &:before {
+    content: var(--btn-before-content);
+    top: var(--btn-before-top);
+    left: var(--btn-before-left);
+    bottom: var(--btn-before-bottom);
+    width: var(--btn-before-width);
+    position: var(--btn-before-position);
+    pointer-events: var(--btn-before-pointer-events);
+    border-radius: var(--btn-before-border-radius);
+    background-color: var(--btn-before-bg-color);
+    opacity: var(--btn-before-opacity);
+    transition: var(--btn-before-transition);
+  }
+
+  &:hover {
+    background-color: var(--btn-hover-bg-color);
+    border-color: var(--btn-border-color);
+    color: var(--btn-hover-color);
+  }
+
+  &:after {
+    background-color: var(--btn-hover-bg-color);
+    border-color: var(--btn-border-color);
+    color: var(--btn-hover-color);
+  }
+
+  &:active {
+    &:before {
+      width: var(--btn-active-before-width);
+      opacity: var(--btn-active-before-opacity);
+    }
+  }
+
+  &:disabled {
+    background-color: var(--btn-disabled-bg-color);
+    border-color: var(--btn-disabled-border-color);
+    color: var(--btn-disabled-color);
+    cursor: var(--btn-disabled-cursor);
+
+    &:hover {
+      background-color: var(--btn-disabled-hover-bg-color);
+      border-color: var(--btn-disabled-hover-border-color);
+      color: var(--btn-disabled-hover-text);
+      cursor: var(--btn-disabled-hover-cursor);
+    }
+  }
+}
+
+// ---------------------
+// Primary -------------
+// ---------------------
+
+.nexus-btn-primary {
+  @extend .nexus-btn;
+
+  background-color: var(--btn-primary-bg-color);
+  border-color: var(--btn-primary-border-color);
+  color: var(--btn-primary-color);
+
+  &:hover {
+    background-color: var(--btn-primary-hover-bg-color);
+    border-color: var(--btn-primary-hover-border-color);
+    color: var(--btn-primary-hover-color);
+  }
+}
+
+// ---------------------
+// Secondary -----------
+// ---------------------
+
+.nexus-btn-secondary {
+  @extend .nexus-btn;
+
+  background-color: var(--btn-primary-bg-color);
+  border-color: var(--btn-primary-border-color);
+  color: var(--btn-primary-color);
+
+  &:hover {
+    background-color: var(--btn-primary-hover-bg-color);
+    border-color: var(--btn-primary-hover-border-color);
+    color: var(--btn-primary-hover-color);
+  }
+}
+
+// ---------------------
+// Tertiary ------------
+// ---------------------
+
+.nexus-btn-tertiary {
+  @extend .nexus-btn;
+
+  background-color: var(--btn-primary-bg-color);
+  border-color: var(--btn-primary-border-color);
+  color: var(--btn-primary-color);
+
+  &:hover {
+    background-color: var(--btn-primary-hover-bg-color);
+    border-color: var(--btn-primary-hover-border-color);
+    color: var(--btn-primary-hover-color);
+  }
+}
+
+// ---------------------
+// Warning -------------
+// ---------------------
+
+.nexus-btn-warn {
+  @extend .nexus-btn;
+
+  background-color: var(--btn-warn-bg-color);
+  border-color: var(--btn-warn-border-color);
+  color: var(--btn-warn-color);
+
+  &:hover {
+    background-color: var(--btn-warn-hover-bg-color);
+    border-color: var(--btn-warn-hover-border-color);
+    color: var(--btn-warn-hover-color);
+  }
+}
+
+// ---------------------
+// Success -------------
+// ---------------------
+
+.nexus-btn-success {
+  @extend .nexus-btn;
+
+  background-color: var(--btn-success-bg-color);
+  border-color: var(--btn-success-border-color);
+  color: var(--btn-success-color);
+
+  &:hover {
+    background-color: var(--btn-success-hover-bg-color);
+    border-color: var(--btn-success-hover-border-color);
+    color: var(--btn-success-hover-color);
+  }
+}
+
+// ---------------------
+// Call to Action ------
+// ---------------------
+
+.nexus-btn-cta {
+  @extend .nexus-btn;
+
+  background-color: var(--btn-primary-bg-color);
+  border-color: var(--btn-primary-border-color);
+  color: var(--btn-primary-color);
+  height: var(--btn-primary-height);
+  width: var(--btn-primary-width);
+
+  &:hover {
+    background-color: var(--btn-primary-hover-bg-color);
+    border-color: var(--btn-primary-hover-border-color);
+    color: var(--btn-primary-hover-color);
+  }
+}
+
+// ---------------------
+// Icon ----------------
+// ---------------------
+
+.nexus-btn-icon {
+  @extend .nexus-btn;
+
+  background: var(--btn-icon-background);
+  border: var(--btn-icon-border);
+  cursor: var(--btn-icon-cursor);
+  outline: var(--btn-icon-outline);
+  padding: var(--btn-icon-padding);
+  transition: var(--btn-icon-transition-box-shadow);
+  color: var(--btn-icon-color);
+  width: var(--btn-icon-width);
+  min-height: var(--btn-icon-min-height);
+  display: var(--btn-icon-display);
+  justify-content: var(--btn-icon-justify-content);
+  align-items: var(--btn-icon-align-items);
+
+  svg {
+    display: var(--btn-icon-svg-display);
+    margin: var(--btn-icon-svg-margin);
+    width: var(--btn-icon-svg-width);
+    height: var(--btn-icon-svg-height);
+  }
+
+  &:hover {
+    color: var(--btn-icon-hover-color);
+    background: var(--btn-icon-hover-bg);
+  }
+
+  &:focus {
+    box-shadow: var(--btn-icon-focus-box-shadow);
+    color: var(--btn-icon-focus-color);
+    background: var(--btn-icon-bg);
+  }
+
+  &:disabled,
+  &.nexus-disabled-state {
+    cursor: var(--btn-icon-disabled-cursor);
+    pointer-events: var(--btn-icon-disabled-pointer-event);
+    background: var(--btn-icon-disabled-bg);
+
+    svg {
+      color: var(--btn-icon-svg-disabled-color);
+    }
+
+    &:hover {
+      svg {
+        color: var(--btn-icon-svg-disabled-hover-color);
+      }
+    }
+  }
+}
+
+// ---------------------
+// FAB -----------------
+// ---------------------
+
+.nexus-fab {
+  @extend .nexus-btn;
+
+  background-color: var(--btn-fab-bg-color);
+  height: var(--btn-fab-height);
+  width: var(--btn-fab-width);
+  border-radius: var(--btn-fab-border-radius);
+  border: var(--btn-fab-border);
+  color: var(--btn-fab-color);
+  display: var(--btn-fab-display);
+  align-items: var(--btn-fab-align-items);
+  justify-content: var(--btn-fab-justify-content);
+  transition: var(--btn-fab-transition);
+  cursor: var(--btn-fab-cursor);
+
+  svg {
+    width: var(--btn-fab-svg-width);
+    height: var(--btn-fab-svg-height);
+    display: var(--btn-fab-svg-display);
+    margin-right: var(--btn-fab-svg-margin-right);
+  }
+
+  &::-moz-focus-inner {
+    border: var(--btn-fab-moz-border);
+  }
+
+  &:hover {
+    background-color: var(--btn-fab-hover-bg-color);
+    color: var(--btn-fab-hover-color);
+  }
+
+  &:focus {
+    box-shadow: var(--btn-fab-focus-box-shadow);
+    outline: var(--btn-fab-outline);
+  }
+
+  &:disabled {
+    background-color: var(--btn-fab-disabled-bg-color);
+    color: var(--btn-fab-disabled-color);
+    cursor: var(--btn-fab-disabled-cursor);
+  }
+}
+
+.nexus-fab-size-small {
+  height: var(--btn-fab-size-sm-height);
+  width: var(--btn-fab-size-sm-width);
+
+  svg {
+    width: var(--btn-fab-size-sm-svg-width);
+    height: var(--btn-fab-size-sm-svg-height);
+  }
+}
+
+
+// ---------------------
+// Link ----------------
+// ---------------------
+
+.nexus-link {
+  color: var(--btn-link-color);
+  display: var(--btn-link-display);
+  font-family: var(--btn-link-font-family);
+  font-size: var(--btn-link-font-size);
+  line-height: var(--btn-link-line-height);
+  background: var(--btn-link-bg);
+  font-weight: var(--btn-link-font-weight);
+  outline: var(--btn-link-outline);
+  position: var(--btn-link-position);
+  text-decoration: var(--btn-link-text-decoration);
+  align-items: var(--btn-link-align-items);
+  border: var(--btn-link-border);
+  padding: var(--btn-link-padding);
+  transition: var(--btn-link-transition);
+  width: var(--btn-link-width);
+
+  svg {
+    position: var(--btn-link-svg-position);
+    top: var(--btn-link-svg-top);
+    height: var(--btn-link-svg-height);
+    width: var(--btn-link-svg-width);
+    margin-right: var(--btn-link-svg-margin-right);
+  }
+
+  &:hover,
+  .nexus-active & {
+    cursor: var(--btn-link-hover-cursor);
+    text-decoration: var(--btn-link-hover-text-decoration);
+    color: var(--btn-link-hover-color);
+  }
+
+  &:focus {
+    box-shadow: var(--btn-link-focus-box-shadow);
+  }
+
+  &:disabled {
+    cursor: var(--btn-link-disabled-cursor);
+    color: var(--btn-link-disabled-color);
+
+    &:hover {
+      color: var(--btn-link-disabled-hover-color);
+      cursor: var(--btn-link-disabled-hover-cursor);
+      text-decoration: var(--btn-link-disabled-hover-text-decoration);
+    }
+  }
+
+  &.nexus-active {
+    border-bottom: var(--btn-link-active-border-bottom);
+  }
+}
+
+// ---------------------
+// Sizes ---------------
+// ---------------------
+
+.nexus-btn-medium {
+  width: var(--btn-md-width);
+}
+
+.nexus-btn-large {
+  width: var(--btn-lg-width);
+}
+
+.nexus-btn-auto {
+  padding-left: var(--btn-auto-padding-left);
+  padding-right: var(--btn-auto-padding-right);
+  width: var(--btn-auto-width);
+}
+
+.nexus-btn-fluid {
+  width: var(--btn-fluid-width);
+}

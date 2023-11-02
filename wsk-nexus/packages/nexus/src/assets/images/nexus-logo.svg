@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="114px" height="21px" viewBox="0 0 114 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>NEXUS</title>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="130.308007%" gradientTransform="translate(0.500000,0.500000),scale(0.227642,1.000000),rotate(-90.000000),translate(-0.500000,-0.500000)" id="radialGradient-1">
+            <stop stop-color="#FF8E45" offset="0.0519012238%"></stop>
+            <stop stop-color="#F25100" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="Helvetica" font-size="28" font-weight="normal" letter-spacing="4.42105263">
+        <g id="-navigation/navbar/navbar-web" transform="translate(-26.000000, -32.000000)" fill="url(#radialGradient-1)" fill-rule="nonzero">
+            <text id="NEXUS">
+                <tspan x="24" y="54.5">NEXUS</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

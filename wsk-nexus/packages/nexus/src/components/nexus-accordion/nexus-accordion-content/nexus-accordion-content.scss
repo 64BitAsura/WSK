@@ -1,0 +1,44 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+@import '../../../styles/theme';
+
+.nexus-accordion-open .nexus-accordion-content {
+  border-bottom: var(--accordion-border);
+}
+
+.nexus-accordion-content {
+  display: block;
+  height: auto;
+  overflow-y: auto;
+  border: var(--accordion-border);
+  border-top: 0;
+  border-bottom: 0;
+  border-radius: 0 0 2px 2px;
+  font-size: var(--accordion-font-size);
+  font-weight: var(--accordion-font-weight);
+  transition: height var(--ease-in-out);
+}
+
+.nexus-accordion-content-inner {
+  padding: $rhythm * 2 $rhythm * 6;
+
+  &.nexus-accordion-content-inner-xs {
+    padding: $rhythm * 2 $rhythm * 2;
+  }
+
+  &.nexus-accordion-content-inner-sm {
+    padding: $rhythm * 2 $rhythm * 4;
+  }
+
+  &.nexus-accordion-content-inner-md {
+    padding: $rhythm * 2 $rhythm * 6;
+  }
+
+  &.nexus-accordion-content-inner-lg {
+    padding: $rhythm * 2 $rhythm * 8;
+  }
+
+  &.nexus-accordion-content-inner-xl {
+    padding: $rhythm * 2 $rhythm * 10;
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "wsk-angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "config": {
+    "clean": "--glob .*/**/node_modules .*/**/package-lock.json",
+    "package": "@angular/cli",
+    "version": "@latest",
+    "template": "scss",
+    "project": "wsk-app",
+    "prefix": "my",
+    "component": "component"
+  },
+  "scripts": {
+    "preclean": "npx -y rimraf $npm_package_config_project",
+    "clean": "npx -y rimraf $npm_package_config_clean",
+    
+    "pre-init": "npx -y $npm_package_config_package$npm_package_config_version new $npm_package_config_project --style=$npm_package_config_template --routing --interactive=false --defaults --skip-install",
+    "preinit": "npx -y -p $npm_package_config_package$npm_package_config_version ng new $npm_package_config_project --style=$npm_package_config_template --routing",
+    "_init": "cd $npm_package_config_project && npm link angular-workspace && npm link angular-library",
+    "init": "cd $npm_package_config_project && npm link angular-workspace",
+    "postinit": "node .bin/index install && npm run setup",
+    
+    "prestart": "npm run clean",
+    "start": "npm run init",
+    "poststart": "",
+    
+    "presetup": "echo \"Warning: may need to update this script from time to time\"",
+    "setup": "npx -y ncp ./.tmp/src/app ./$npm_package_config_project/src/app",
+    "postsetup": "cd $npm_package_config_project && npm run serve",
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

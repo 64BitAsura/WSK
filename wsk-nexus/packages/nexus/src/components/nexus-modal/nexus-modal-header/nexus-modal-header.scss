@@ -1,0 +1,59 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+@import '../../../styles/typography';
+
+.nexus-modal-header {
+  position: relative;
+  background-color: var(--modal-header-bg-color);
+  border-bottom: 1px solid var(--modal-header-footer-border-color);
+  padding: $rhythm * 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  .nexus-h4 {
+    @include nexus-h4;
+
+    color: var(--modal-header-font-color);
+    margin: 0;
+  }
+
+  .header-text {
+    @include nexus-h5;
+
+    margin: 0 $rhythm * 4 0 0;
+  }
+
+  .header-subtext {
+    min-width: 100%;
+    margin: $rhythm 0 0;
+    color: var(--modal-header-subtext-font-color);
+  }
+}
+
+.nexus-modal-header-close-btn.nexus-btn-icon {
+  position: absolute;
+  right: $rhythm * 3;
+  top: $rhythm * 2;
+  color: var(--modal-header-close-btn-color);
+
+  &:hover,
+  &:focus {
+    color: var(--modal-header-close-btn-hover-color);
+  }
+}
+
+@include mq(medium) {
+  .nexus-modal-header {
+    padding: $rhythm * 1 $rhythm * 3;
+  }
+}
+
+@include mq(large) {
+  .nexus-modal-header {
+    .header-text {
+      @include nexus-h4;
+    }
+  }
+}

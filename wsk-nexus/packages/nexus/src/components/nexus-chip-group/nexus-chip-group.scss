@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.nexus-chip-group {
+  display: flex;
+  flex-wrap: wrap;
+
+  nexus-chip {
+    margin-bottom: $rhythm;
+    margin-right: $rhythm;
+    display: inline-block;
+  }
+}

@@ -1,0 +1,176 @@
+@import 'variables';
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-thin-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-thin-webfont.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-thinitalic-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-thinitalic-webfont.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-thincondensed-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-thincondensed-webfont.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-extralight-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-extralight-webfont.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-extralightitalic-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-extralightitalic-webfont.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-extralightcondensed-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-extralightcondensed-webfont.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-light-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-lightitalic-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-lightitalic-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-lightcondensed-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-lightcondensed-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-regular-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-regularitalic-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-regularitalic-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-regularcondensed-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-regularcondensed-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-bold-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-bolditalic-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-bolditalic-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-boldcondensed-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-boldcondensed-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-black-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-black-webfont.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-blackitalic-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-blackitalic-webfont.woff') format('woff');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-blackcondensed-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-blackcondensed-webfont.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-ultrablack-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-ultrablack-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-ultrablackitalic-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-ultrablackitalic-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: interstate;
+  src: url('#{$font-path}/interstate-ultrablackcondensed-webfont.woff2') format('woff2'),
+    url('#{$font-path}/interstate-ultrablackcondensed-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: condensed;
+}

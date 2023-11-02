@@ -1,0 +1,16 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/typography';
+@import '../../../../styles/theme';
+
+.nexus-footer-content {
+  li {
+    margin-bottom: $rhythm;
+    list-style-type: none;
+
+    a {
+      color: var(--footer-text-color);
+      text-decoration: none;
+      font-weight: var(--weight-normal);
+    }
+  }
+}

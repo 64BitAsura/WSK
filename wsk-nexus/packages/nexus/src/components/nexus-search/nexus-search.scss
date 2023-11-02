@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+
+.nexus-search {
+  .nexus-input {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .nexus-search-list {
+    display: none;
+  }
+
+  &.nexus-open {
+    .nexus-search-list {
+      display: block;
+      position: absolute;
+      width: 100%;
+      background-color: $white;
+    }
+  }
+}

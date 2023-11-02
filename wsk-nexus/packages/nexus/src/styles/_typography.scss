@@ -1,0 +1,176 @@
+@import 'variables';
+@import 'mixins';
+
+@mixin nexus-header {
+  font-family: var(--primary-font);
+}
+
+@mixin nexus-h1 {
+  @include nexus-header;
+
+  font-size: var(--h1-font-size);
+  font-weight: var(--weight-light);
+  letter-spacing: -1.75px;
+  line-height: 1;
+}
+
+.nexus-h1 {
+  @include nexus-h1;
+}
+
+@mixin nexus-h2 {
+  @include nexus-header;
+
+  font-size: var(--h2-font-size);
+  font-weight: var(--weight-light);
+  letter-spacing: -1.5px;
+  line-height: 1;
+}
+
+.nexus-h2 {
+  @include nexus-h2;
+}
+
+@mixin nexus-h3 {
+  @include nexus-header;
+
+  font-size: var(--h3-font-size);
+  font-weight: var(--weight-normal);
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.nexus-h3 {
+  @include nexus-h3;
+}
+
+@mixin nexus-h4 {
+  @include nexus-header;
+
+  font-size: var(--h4-font-size);
+  font-weight: var(--weight-normal);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.nexus-h4 {
+  @include nexus-h4;
+}
+
+@mixin nexus-h5 {
+  @include nexus-header;
+
+  font-size: var(--h5-font-size);
+  font-weight: var(--weight-normal);
+  line-height: 1.2;
+}
+
+.nexus-h5 {
+  @include nexus-h5;
+}
+
+@mixin nexus-h6 {
+  @include nexus-header;
+
+  font-size: var(--h6-font-size);
+  font-weight: var(--weight-normal);
+  line-height: 1.2;
+}
+
+.nexus-h6 {
+  @include nexus-h6;
+}
+
+// --------------------------------------------------
+// Subtitle styles
+// --------------------------------------------------
+
+@mixin nexus-subtitle {
+  font-family: var(--primary-font);
+  font-weight: var(--weight-normal);
+  font-size: var(--subtitle-size);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.nexus-subtitle {
+  @include nexus-subtitle;
+}
+
+@mixin nexus-subtitle-sm {
+  @include nexus-subtitle;
+
+  font-size: var(--subtitle-sm-size);
+  letter-spacing: normal;
+}
+
+.nexus-subtitle-sm {
+  @include nexus-subtitle-sm;
+}
+
+// --------------------------------------------------
+// Copy styles
+// --------------------------------------------------
+
+@mixin nexus-body {
+  font-family: var(--primary-font);
+  font-weight: var(--weight-light);
+  font-size: var(--font-size-base);
+  letter-spacing: -0.2px;
+  line-height: 1.2;
+}
+
+.nexus-body {
+  @include nexus-body;
+}
+
+@mixin nexus-body-sm {
+  @include nexus-body;
+
+  font-size: var(--font-size-sm);
+  letter-spacing: -0.15px;
+}
+
+.nexus-body-sm {
+  @include nexus-body-sm;
+}
+
+@mixin nexus-caption-copy {
+  @include nexus-body;
+
+  font-size: var(--caption-font-size);
+  font-weight: var(--weight-normal);
+  letter-spacing: 0.15px;
+  line-height: 1.1;
+}
+
+.nexus-caption-copy {
+  @include nexus-caption-copy;
+}
+
+@mixin nexus-data {
+  @include nexus-body;
+
+  font-weight: var(--weight-normal);
+  font-size: var(--data-font-size);
+  font-stretch: condensed;
+  letter-spacing: 0.15px;
+  line-height: 1.16;
+}
+
+.nexus-data {
+  @include nexus-data;
+}
+
+@mixin nexus-overline {
+  font-family: var(--primary-font);
+  font-weight: var(--weight-normal);
+  font-size: var(--overline-font-size);
+  line-height: 1.2;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.nexus-overline {
+  @include nexus-overline;
+}

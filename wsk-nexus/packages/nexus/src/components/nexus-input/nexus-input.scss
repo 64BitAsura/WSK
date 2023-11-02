@@ -1,0 +1,68 @@
+@import '../../styles/variables';
+@import '../../styles/typography';
+@import '../../styles/mixins';
+
+.nexus-input,
+.nexus-textarea {
+  @include nexus-subtitle-sm;
+
+  background: var(--form-input-bg);
+  border-top: var(--form-input-border-top);
+  border-right: var(--form-input-border-right);
+  border-bottom: var(--form-input-border-bottom);
+  border-left: var(--form-input-border-left);
+  border-radius: var(--form-input-border-radius);
+  box-sizing: var(--form-input-box-sizing);
+  color: var(--form-input-color);
+  line-height: var(--form-input-line-height);
+  padding: var(--form-input-padding);
+  display: var(--form-input-display);
+  width: var(--form-input-width);
+  resize: var(--form-input-resize);
+  transition: var(--form-input-transition);
+
+  &:focus {
+    outline: var(--form-input-focus-outline);
+    box-shadow: var(--form-input-focus-box-shadow);
+    border-top: var(--form-input-focus-border-top);
+    border-right: var(--form-input-focus-border-right);
+    border-bottom: var(--form-input-focus-border-bottom);
+    border-left: var(--form-input-focus-border-left);
+  }
+
+  &:disabled {
+    color: var(--form-input-disabled-color);
+    border-top: var(--form-input-disabled-border-top);
+    border-right: var(--form-input-disabled-border-right);
+    border-bottom: var(--form-input-disabled-border-bottom);
+    border-left: var(--form-input-disabled-border-left);
+    background-color: var(--form-element-disabled-bg-color);
+
+    &::placeholder {
+      color: var(--form-input-disabled-placeholder-color);
+    }
+  }
+}
+
+.nexus-input-with-icon {
+  position: var(--form-input-with-icon-position);
+  display: var(--form-input-with-icon-display);
+
+  .nexus-input {
+    padding-left: var(--form-input-with-icon-padding-left);
+
+    &:focus {
+      ~ .nexus-icon {
+        color: var(--form-input-with-icon-focus-color);
+      }
+    }
+  }
+
+  .nexus-icon {
+    position: var(--form-input-icon-position);
+    left: var(--form-input-icon-left);
+    top: var(--form-input-icon-top);
+    transform: var(--form-input-icon-transform);
+    color: var(--form-input-icon-color);
+  }
+}

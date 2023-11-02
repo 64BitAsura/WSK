@@ -1,0 +1,829 @@
+:root {
+  // --------------------------------------------------
+  // Typography Variables
+  // --------------------------------------------------
+
+  // --------------------------------------------------
+  // @group States
+  // --------------------------------------------------
+
+  --focus: #174280; // Color for global focus states.
+  --focus-state: 0 0 0 2px var(--focus); // Box shadow for focus states.
+  --disabled: #{$grey-300}; // Color for disabled elements.
+  --disabled-text: #{$grey-400}; // Font Color for disabled elements.
+  --info: #{$grey-800}; // Color for informational items such as notifications.
+  --error: #{$red-500}; // Error Color for items such as notifications and form elements.
+  --warning: #{$yellow-500}; // Warning Color items such as notifications.
+  --success: #{$green-500}; // Success Color items such as notifications and progress bars.
+  --border-color: #767A7D; // Default border Color.
+
+  // @group-end
+
+  // --------------------------------------------------
+  // @group Branding
+  // --------------------------------------------------
+
+  --primary-text: #{$grey-800}; // Primary text color.
+  --primary-text-light: #{$white}; // Primary text color light.
+  --primary-accent: #{$orange-500}; // Primary branding color.
+  --secondary-accent: #{$blue-500}; // Secondary branding color.
+
+  // @group-end
+
+  // --------------------------------------------------
+  // @group Typography
+  // --------------------------------------------------
+
+  --primary-font: 'interstate', 'Helvetica', 'Arial', sans-serif; // Primary font used throughout all components.
+
+  --font-size-base: 1rem; // Base font size.
+  --font-size-sm: 0.875rem; // Small font Size.
+  --font-size-xs: 0.75rem; // Extra small font size.
+  --font-size-xxs: 0.625rem; // Extra extra small font size.
+
+  --weight-thin: 200; // Thin font weight.
+  --weight-extralight: 200; // Extra light font weight.
+  --weight-light: 300; // Light font weight.
+  --weight-normal: 400; // Normal font weight.
+  --weight-bold: 700; // Bold font weight.
+  --weight-black: 800; // Black font weight.
+  --weight-ultra: 900; // Ultra font weight.
+
+  --h1-font-size: 4.5rem; // Heading 1 font size.
+  --h2-font-size: 3rem; // Heading 2 font size.
+  --h3-font-size: 2rem; // Heading 3 font size.
+  --h4-font-size: 1.5rem; // Heading 4 font size.
+  --h5-font-size: 1.25rem; // Heading 5 font size.
+  --h6-font-size: 1.125rem; // Heading 6 font size.
+
+  --subtitle-size: var(--font-size-base); // Subtitle font size.
+  --subtitle-sm-size: var(--font-size-sm); // Subtitle small font size.
+
+  --caption-font-size: var(--font-size-xs); // Caption small font size.
+  --data-font-size: var(--font-size-xs); // Data font size.
+  --overline-font-size: var(--font-size-xxs); // Overline font size.
+
+  // @group-end
+
+  // --------------------------------------------------
+  // @group Layout
+  // --------------------------------------------------
+
+  $rhythm: 8px; // Controls the vertical space under a component.
+  $padding: 8px; // Controls the padding within a component.
+  --content-width: 1312px; // Max width container. Used with `.nexus-container` helper class.
+  --varzero: 0; // Value 0px to be placed where needed.
+
+  // @group-end
+
+  // --------------------------------------------------
+  // @group Animations
+  // --------------------------------------------------
+
+  --ease-in-out: 300ms ease-in-out; // Default transition
+  --ease-in-out-fast: 150ms ease-in-out; // Fast transition
+  --ease-in-out-expo: 300ms cubic-bezier(1, 0, 0, 1); // Exponential transition
+
+  // @group-end
+
+  // --------------------------------------------------
+  // @group Body
+  // --------------------------------------------------
+
+  --body-bg: #{$white}; // Background color for the body tag
+  --body-color: #{$grey-700}; // Font color for the body tag
+
+  // @group-end
+
+  // --------------------------------------------------
+  // @group Lists
+  // --------------------------------------------------
+
+  --list-style: circle; // Unordered list style
+
+  // @group-end
+
+  // --------------------------------------------------
+  // @group Forms
+  // --------------------------------------------------
+
+  --label-font-size: var(--font-size-sm); // Form element label font size.
+  --label-color: #{$grey-700}; // Form element label color.
+
+  --placeholder-color: #{$grey-400}; // Form elements placeholder font color.
+  --placeholder-size: 14px; // Form element placeholder font size.
+
+  --form-filed-position: relative; // Form elements position.
+  --form-field-margin-bottom: 16px; // Form elements margin bottom.
+  --form-field-display: block; // Form elements display.
+  --form-field-error-color: var(--error); // Error form elements color.
+  --form-field-error-bg-color: var(--form-element-bg-color); //
+  --form-field-error-border: var(--form-element-border-size) var(--form-element-border-style) var(--error); // Error form elements border.
+  --form-field-error-border-top: var(--form-field-error-border); // Error form elements border top.
+  --form-field-error-border-right: var(--form-field-error-border); // Error form elements border right.
+  --form-field-error-border-bottom: var(--form-field-error-border); // Error form elements border bottom.
+  --form-field-error-border-left: var(--form-field-error-border); // Error form elements border left.
+  --form-field-icon-error-color: var(--error); // Error form icon color.
+
+  --form-field-success-color: var(--success); // Success form element color.
+  --form-field-success-bg-color: var(--form-element-bg-color); //
+  --form-field-success-border: var(--form-element-border-size) var(--form-element-border-style) var(--success); // Success form element border.
+  --form-field-success-border-top: var(--form-field-success-border); // Success form element border top.
+  --form-field-success-border-right: var(--form-field-success-border); // Success form element border right.
+  --form-field-success-border-bottom: var(--form-field-success-border); // Success form element border bottom.
+  --form-field-success-border-left: var(--form-field-success-border); // Success form element border left.
+  --form-field-icon-success-color: var(--success); // Success form icon color.
+
+  --form-element-font-color: #{$grey-800}; // Form element font color.
+  --form-element-bg-color: #{$white}; // Form element background color.
+  --form-element-border-color: var(--border-color); // Form element border color.
+  --form-element-border-radius: 4px; // Form element border radius.
+  --form-element-border-size: 1px; // Form element border size.
+  --form-element-border-style: solid; // Form element border style.
+  --form-element-focus-border-color: #{$grey-500}; // Form element border color when focused.
+  --form-element-hover-border-color: #{$blue-500}; // Form element border color when hovered.
+  --form-element-disabled-color: var(--disabled-text); // Form element color when disabled.
+  --form-element-disabled-bg-color: #{$grey-200}; // Form element background color when disabled.
+  --form-element-disabled-border-color: #{$grey-400}; // Form element border color when disabled.
+
+  --form-element-checked-bg-color: var(--focus); // Checked background color for radio and checkbox form elements.
+  --form-element-checked-border-color: #{$grey-500}; // Checked border color for radio and checkbox form elements.
+  --form-element-checked-disabled-bg-color: var(--disabled); // Checked background color for radio and checkbox form elements when disabled.
+  --form-element-checked-disabled-border-color: var(--disabled); // Checked background color for radio and checkbox form elements when disabled.
+  --form-element-checked-icon-color: #{$white}; // Checked icon color for checkbox form elements.
+
+  // File Upload
+  --file-upload-font-color: #{$grey-800}; // File upload font color.
+  --file-upload-border-color: #{$black}; // File upload border color.
+
+  // @group-end
+
+  // --------------------------------------------------
+  // @group Components
+  // --------------------------------------------------
+
+  // Accordion
+  --accordion-font-size: var(--font-size-base);
+  --accordion-font-weight: var(--weight-light);
+  --accordion-hover-font-weight: var(--weight-normal);
+  --accordion-border: 1px solid #{$grey-500}; // Accordion border color.
+  --accordion-accent-color: var(--primary-accent); // Accordion accent color for hover and expanded states.
+
+  // Badge
+  --badge-font-size: var(--font-size-xs); // Badge font size.
+  --badge-default-bg-color: #{$grey-800}; // Default badge bg color
+  --badge-default-font-color: #{$white}; // Default badge font color
+  --badge-error-bg-color: var(--error); // Error badge bg color
+  --badge-error-font-color: #{$white}; // Error badge font color
+  --badge-success-bg-color: var(--success); // Success badge bg color
+  --badge-success-font-color: #{$grey-800}; // Success badge font color
+  --badge-warning-bg-color: var(--warning); // Warning badge bg color
+  --badge-warning-font-color: #{$grey-800}; // Warning badge font color
+
+  //Breadcrumb
+  --breadcrumb-list-style: none; // Breadcrumb list style
+  --breadcrumb-list-display: inline-block; // Breadcrumb list display
+  --breadcrumb-item-list-display: inline-block; // BreadcrumbItem list display
+  --breadcrumb-item-list-color: #{$blue-600}; // BreadcrumbItem list color
+  --breadcrumb-item-list-disabled: no-drop; // BreadcrumbItem list mouse cursor
+  --breadcrumb-item-separator-font-size: var(--h4-font-size); // BreadcrumbItem list separator font size
+  --breadcrumb-item-separator-alignment: middle; // BreadcrumbItem list separator alignment
+  --breadcrumb-item-icon-alignment: middle; // BreadcrumbItem list icon alignment
+
+  // Button
+  --btn-align-item: center; // Button items alignment.
+  --btn-border-style: solid; // Button border style.
+  --btn-border-width: 1px; // Button border width.
+  --btn-border-radius: var(--form-element-border-radius); // Button radius for rounded corners.
+  --btn-cursor: pointer; // Button cursor style.
+  --btn-display: inline-flex; // Button display.
+  --btn-font-family: var(--primary-font); // Button font family.
+  --btn-font-size: var(--font-size-sm); // Button font size.
+  --btn-font-weight: var(--weight-bold); // Button font weight.
+  --btn-justify-content: center; // Button content justification.
+  --btn-line-height: 1.143; // Button line height.
+  --btn-min-height: 32px; // Button minimal height.
+  --btn-overflow: visible; // Button overflow.
+  --btn-padding: 11px #{$rhythm}; // Button padding.
+  --btn-position: relative; // Button position.
+  --btn-text-align: center; // Button text alignment.
+  --btn-text-decoration: none; // Button text decoration.
+  --btn-transition: color var(--ease-in-out-fast), background var(--ease-in-out-fast), box-shadow var(--ease-in-out-fast), border-color var(--ease-in-out-fast); // Button transition.
+  --btn-width: 124px; // Button width.
+  --btn-border-color: #{$grey-700}; // Default button border color.
+  --btn-bg-color: transparent; // Default button background color.
+  --btn-color: #{$grey-700}; // Default button font color.
+  --btn-svg-display: block; // Button icon display.
+  --btn-svg-height: 16px; // Button icon height.
+  --btn-svg-margin-right: 4px; // Button icon margin right.
+  --btn-svg-width: 16px; // Button icon width.
+  --btn-moz-border: 0; // Button border.
+  --btn-focus-box-shadow: var(--focus-state); // Button box shadow.
+  --btn-focus-outline: none; // Button focus outline.
+  --btn-before-content: ''; // Button before content.
+  --btn-before-top: 0; // Button before top position.
+  --btn-before-left: 0; // Button before left position.
+  --btn-before-bottom: 0; // Button before bottom position.
+  --btn-before-width: 0%; // Button before width.
+  --btn-before-position: absolute; // Button before position.
+  --btn-before-pointer-events: none; // Button before pointer events.
+  --btn-before-border-radius: inherit; // Button before border radius.
+  --btn-before-bg-color: #{$white}; // Default button background color that slides in when pressed.
+  --btn-before-opacity: 0; // Button before opacity.
+  --btn-before-transition: width var(--ease-in-out-fast), opacity var(--ease-in-out-fast); // Button before transition.
+  --btn-hover-bg-color: #{$black}; // Default button background color when hovered.
+  --btn-hover-border-color: #{$black}; // Default button border color when hovered.
+  --btn-hover-color: #{$white}; // Default button font color when hovered.
+  --btn-active-before-width: 100%; // Active button before width.
+  --btn-active-before-opacity: 0.15; // Active button before opacity.
+
+  --btn-disabled-bg-color: var(--disabled); // Default button background color when disabled.
+  --btn-disabled-border-color: var(--disabled); // Default button border color when disabled.
+  --btn-disabled-color: var(--disabled-text); // Default button font color when disabled.
+  --btn-disabled-cursor: auto; // Default button cursor when disabled.
+  --btn-disabled-hover-bg-color: var(--disabled); // Default button hover background color when disabled.
+  --btn-disabled-hover-border-color: var(--disabled); // Default button hover border color when disabled.
+  --btn-disabled-hover-text: var(--disabled-text); // Default button hover color when disabled.
+  --btn-disabled-hover-cursor: auto; // Default button hover cursor when disabled.
+
+  --secondary-color: rgb(224, 224, 224);
+  --secondary-hover-color: #1B5FBD;
+  --btn-primary-bg-color: var(--focus); // Primary button background color.
+  --btn-primary-border-color: var(--focus); // Primary button border color.
+  --btn-primary-color: #{$white}; // Primary button font color.
+  --btn-primary-hover-bg-color: var(--secondary-hover-color); // Primary button background color when hovered.
+  --btn-primary-hover-border-color: var(--focus); // Primary button border color when hovered.
+  --btn-primary-hover-color: var(--secondary-color); // Primary button font color when hovered.
+  --btn-secondary-bg-color: #{$white}; // Secondary button background color.
+  --btn-secondary-border-color: var(--focus); // Secondary button border color.
+  --btn-secondary-color: var(--focus); // Secondary button font color.
+  --btn-secondary-hover-bg-color: var(--secondary-color); // Secondary button background color when hovered.
+  --btn-secondary-hover-border-color: var(--focus); // Secondary button border color when hovered.
+  --btn-secondary-hover-color: var(--secondary-hover-color); // Secondary button font color when hovered.
+  --btn-tertiary-bg-color: #{$white}; // Tertiary button background color.
+  --btn-tertiary-border-color: #{$grey-400}; // Tertiary button border color.
+  --btn-tertiary-color: #{$black}; // Tertiary button font color.
+  --btn-tertiary-hover-bg-color: var(--secondary-color); // Tertiary button background color when hovered.
+  --btn-tertiary-hover-border-color: #{$grey-700}; // Tertiary button border color when hovered.
+  --btn-tertiary-hover-color: #{$grey-800}; // Tertiary button font color when hovered.
+
+  --btn-warn-bg-color: var(--error); // Warning button background color.
+  --btn-warn-border-color: var(--error); // Warning button border color.
+  --btn-warn-color: #{$white}; // Warning button font color.
+  --btn-warn-hover-bg-color: #{$red-700}; // Warning button background color when hovered.
+  --btn-warn-hover-border-color: #{$red-700}; // Warning button border color when hovered.
+  --btn-warn-hover-color: #{$white}; // Warning button font color when hovered.
+
+  --btn-cta-bg-color: var(--btn-cta-bg-color); // Call to Action button background color.
+  --btn-cta-border-color: var(--btn-cta-border-color); // Call to Action button border color.
+  --btn-cta-color: var(--btn-cta-color); // Call to Action button color.
+  --btn-cta-height: var(--btn-cta-height); // Call to Action button height.
+  --btn-cta-width: var(--btn-cta-width); // Call to Action button width.
+  --btn-cta-hover-bg-color: var(--btn-cta-hover-bg-color); // Call to Action button background color when hovered.
+  --btn-cta-hover-border-color: var(--btn-cta-hover-border-color); // Call to Action button border color when hovered.
+  --btn-cta-hover-color: var(--btn-cta-hover-color); // Call to Action button color when hovered.
+
+  --btn-icon-background: transparent; // Icon button background.
+  --btn-icon-border: none; // Icon button boarded.
+  --btn-icon-cursor: pointer; // Icon button cursor.
+  --btn-icon-outline: none; // Icon button outline.
+  --btn-icon-padding: 4px; // Icon button padding.
+  --btn-icon-transition-box-shadow: box-shadow var(--ease-in-out-fast); // Icon button transition.
+  --btn-icon-color: #{$grey-700}; // Icon button color.
+  --btn-icon-width: auto; // Icon button width.
+  --btn-icon-min-height: auto; // Icon button minimal height.
+  --btn-icon-display: flex; // Icon button display.
+  --btn-icon-justify-content: center; // Icon button color.
+  --btn-icon-align-items: center; // Icon button items alignment.
+  --btn-icon-svg-display: block; // Icon button svg display.
+  --btn-icon-svg-margin: 0 auto; // Icon button svg margin.
+  --btn-icon-svg-width: 24px; // Icon button svg width.
+  --btn-icon-svg-height: 24px; // Icon button svg height.
+  --btn-icon-hover-color: #{$black}; // Icon button color when hovered.
+  --btn-icon-hover-bg: transparent; // Icon button background when hovered.
+  --btn-icon-focus-box-shadow: var(--focus-state); // Icon button box shadow when focused.
+  --btn-icon-focus-color: #{$black}; // Icon button color when hovered.
+  --btn-icon-bg: transparent; // Icon button background color.
+  --btn-icon-disabled-cursor: auto; // Icon button cursor when disabled.
+  --btn-icon-disabled-pointer-event: none; // Icon button pinter event when disabled.
+  --btn-icon-disabled-bg: transparent; // Icon button background color when disabled.
+  --btn-icon-svg-disabled-color: var(--disabled); // Icon button color when disabled.
+  --btn-icon-svg-disabled-hover-color: var(--disabled); // Icon button svg color when hovered and disabled.
+
+  --btn-fab-bg-color: #{$grey-700}; // Floating action button color.
+  --btn-fab-height: 56px; // Floating action button height.
+  --btn-fab-width: 56px; // Floating action button width.
+  --btn-fab-border-radius: 100%; // Floating action button border radius.
+  --btn-fab-border: none; // Floating action button border.
+  --btn-fab-color: #{$white}; // Floating action button color.  --btn-fab-display
+  --btn-fab-display: flex; // Floating action button display.
+  --btn-fab-align-items: center; // Floating action button items alignment.
+  --btn-fab-justify-content: center; // Floating action button content justification.
+  --btn-fab-transition: var(--ease-in-out-fast) var(--ease-in-out-fast); // Floating action button transition.
+  --btn-fab-cursor: pointer; // Floating action button cursor.
+  --btn-fab-svg-width: 30px; // Floating action button icon size.
+  --btn-fab-svg-height: auto; // Floating action button icon size.
+  --btn-fab-svg-display: block; // Floating action button icon display.
+  --btn-fab-svg-margin-right: 0; // Floating action button icon margin right.
+  --btn-fab-moz-border: 0; // Floating action moz button border.
+  --btn-fab-hover-bg-color: #{$black}; // Floating action button background color when hovered.
+  --btn-fab-hover-color: #{$white}; // Floating action button color when hovered.
+  --btn-fab-focus-box-shadow: var(--focus-state); // Floating action button box shadow on focus.
+  --btn-fab-outline: none; // Floating action button outline.
+  --btn-fab-disabled-bg-color: transparent; // Floating action button background color when disabled.
+  --btn-fab-disabled-color: var(--disabled); // Floating action button color when disabled.
+  --btn-fab-disabled-cursor: auto; // Floating action button cursor when disabled.
+  --btn-fab-size-sm-height: 40px; // Small floating action button size.
+  --btn-fab-size-sm-width: 40px; // Small floating action button size.
+  --btn-fab-size-sm-svg-width: 22px; // Small floating action button icon size.
+  --btn-fab-size-sm-svg-height: auto; // Small floating action button icon size.
+
+  --btn-link-color: #{$grey-700}; // Text link font color.
+  --btn-link-display: inline-flex; // Link button display.
+  --btn-link-font-family: var(--primary-font); // Link button font family.
+  --btn-link-font-size: inherit; // Link button font size.
+  --btn-link-line-height: 1.2; // Link button line height.
+  --btn-link-bg: transparent; // Link button background color.
+  --btn-link-font-weight: var(--weight-bold); // Link button font weight.
+  --btn-link-outline: none; // Link button outline.
+  --btn-link-position: relative; // Link button position.
+  --btn-link-text-decoration: none; // Link button text decoration.
+  --btn-link-align-items: center; // Link button items alignment.
+  --btn-link-border: none; // Link button border.
+  --btn-link-padding: 0; // Link button padding.
+  --btn-link-transition: color var(--ease-in-out-fast); // Link button transition.
+  --btn-link-width: auto; // Link button width.
+  --btn-link-svg-position: relative; // Link button icon position.
+  --btn-link-svg-top: 2px; // Link button icon top position.
+  --btn-link-svg-height: 14px; // Link button icon height.
+  --btn-link-svg-width: 14px; // Link button icon width.
+  --btn-link-svg-margin-right: 4px; // Link button icon margin right.
+  --btn-link-hover-cursor: pointer; // Link button cursor on hover.
+  --btn-link-hover-text-decoration: underline; // Link button text decoration when hover.
+  --btn-link-hover-color: #{$grey-700}; // Text link font color when hovered.
+  --btn-link-focus-box-shadow: var(--focus-state); // Link button box shadow when focused.
+  --btn-link-disabled-cursor: auto; // Link button cursor when disabled.
+  --btn-link-disabled-color: var(--disabled); // Link button text color when disabled.
+  --btn-link-disabled-hover-color: var(--disabled); // Link button text color when disabled hovered.
+  --btn-link-disabled-hover-cursor: auto; // Link button cursor when disabled hovered.
+  --btn-link-disabled-hover-text-decoration: none; // Link button text decoration when disabled.
+  --btn-link-active-border-bottom: 2px solid currentColor; // Active link button border.
+  --btn-md-width: 140px; // Medium button width.
+  --btn-lg-width: 180px; // Large button width.
+  --btn-auto-padding-left: #{7 * $rhythm}; // Button auto padding left.
+  --btn-auto-padding-right: #{7 * $rhythm}; // Button auto padding right.
+  --btn-auto-width: auto; // Button auto width.
+  --btn-fluid-width: 100%; // Fluid button width.
+
+  // Card
+  --card-border: 1px solid #{$grey-300}; // Card border.
+  --card-bg-color: #{$white}; // Card background color.
+
+  //Checkbox
+  --checkbox-label-display: flex; // Checkbox label display.
+  --checkbox-label-align-items: center; // Checkbox label display.
+  --checkbox-width: 20px; // Checkbox width size.
+  --checkbox-height: 20px; // Checkbox height size.
+  --checkbox-bg-color: var(--form-element-bg-color); // Checkbox background color.
+  --checkbox-border: var(--form-element-border-size) var(--form-element-border-style) var(--form-element-border-color);
+  --checkbox-border-radius: 4px; // Checkbox border radius.
+  --checkbox-align-item: center; // Checkbox item alignment.
+  --checkbox-display: inline-flex; // Checkbox display.
+  --checkbox-justify-content: center; // Checkbox content justification.
+  --checkbox-flex-shrink: 0; // Checkbox flex shrinking.
+  --checkbox-overflow: hidden; // Checkbox overflow.
+  --checkbox-box-shadow: 0 0 0 1px var(--focus); // Checkbox box shadow.
+  --checkbox-checked-icon-display: block; // Checkbox icon display when checked.
+  --checkbox-indeterminate-icon-height: 18px; // Checkbox indeterminate icon height.
+  --checkbox-indeterminate-icon-width: 18px; //Checkbox indeterminate icon width.
+  --checkbox-checked-indeterminate-icon-color: var(--form-element-checked-icon-color); // Checkbox icon color when indeterminate.
+  --checkbox-input-focus-box-shadow: var(--checkbox-box-shadow); // Checkbox box shadow on focus.
+  --checkbox-input-focus-border: var(--form-element-border-size) var(--form-element-border-style) var(--focus); // Checkbox input border on focus.
+  --checkbox-label-margin-left: #{$rhythm}; // Checkbox label margin left.
+  --checkbox-checked-bg: var(--form-element-checked-bg-color); // Checkbox checked background color.
+  --checkbox-checked-border: var(--form-element-border-size) var(--form-element-border-style) var(--form-element-checked-border-color); // Checkbox checked border.
+  --checkbox-disabled-color: var(--form-element-disabled-color); // Checkbox color when disabled.
+  --checkbox-disabled-bg: var(--form-element-checked-disabled-bg-color); // Checkbox background color when disabled.
+  --checkbox-disabled-border: var(--form-element-border-size) var(--form-element-border-style) var(--form-element-checked-disabled-border-color); // Checkbox border when disabled.
+  --checkbox-disabled-label-color: var(--form-element-disabled-color); // Checkbox label color when disabled.
+  --checkbox-disabled-hover-border: var(--form-element-border-size) var(--form-element-border-style) var(--form-element-checked-disabled-border-color); // Checkbox border on hover when disabled.
+  --checkbox-disabled-checked-bg: var(--checkbox-checked-bg); // Checkbox checked background when disabled.
+  --checkbox-disabled-indeterminate-bg: var(--form-element-checked-disabled-bg-color); // Checkbox disabled background color when indeterminate.
+  --checkbox-disabled-indeterminate-border: var(--form-element-border-size) var(--form-element-border-style) var(--form-element-checked-disabled-border-color); // Checkbox disabled border when indeterminate.
+  --checkbox-checked-indeterminate-icon-display: none; // Checkbox indeterminate icon display when checked.
+  --checkbox-indeterminate-bg: var(--form-element-checked-bg-color); // Checkbox background color when indeterminate.
+  --checkbox-indeterminate-border: var(--form-element-border-size) var(--form-element-border-style) var(--form-element-checked-border-color); // Checkbox border when indeterminate.
+  --checkbox-indeterminate-icon-display: block; // Checkbox icon display when indeterminate.
+
+  // Chip
+  --chip-color: #{$white}; // Chip Color.
+  --chip-bg-color: #{$grey-800}; // Chip background color.
+  --chip-border: 1px solid #{$grey-800}; // Chip border color.
+  --chip-border-radius: 100px; // Chip border radius color.
+  --chip-font-size: var(--font-size-base); // Chip font size.
+  --chip-font-weight: var(--weight-light); // Chip font weight.
+  --chip-hover-color: #{$white}; // Chip color when hovered.
+  --chip-hover-bg-color: #{$black}; // Chip background color when hovered.
+  --chip-hover-border-color: #{$black}; // Chip border color when hovered.
+  --chip-active-color: #{$white}; // Chip color when active.
+  --chip-active-bg-color: #{$black}; // Chip background color when active.
+  --chip-disabled-color: var(--disabled); // Chip color when disabled.
+  --chip-disabled-bg-color: #{$white}; // Chip background color when disabled.
+  --chip-disabled-border-color: var(--disabled); // Chip border color when disabled.
+  --chip-success-color: var(--success); // Chip color when the `success` prop is true.
+  --chip-error-color: var(--error); // Chip color when the `error` prop is true.
+
+  //Dropdown
+  --dropdown-display: flex; // Dropdown display.
+  --dropdown-flex-direction: column; // Dropdown flex direction.
+  --dropdown-z-index: 20; // Dropdown z index.
+  --dropdown-bg-color: #{$white}; // Dropdown background color.
+  --dropdown-position: absolute; // Dropdown position.
+  --dropdown-width: 100%; // Dropdown width.
+  --dropdown-container-max-height: 0; // Dropdown container maximal height.
+  --dropdown-container-width: 100%; // Dropdown container width.
+  --dropdown-container-opacity: 0; // Dropdown container opacity.
+  --dropdown-container-overflow: hidden; // Dropdown container overflow.
+  --dropdown-container-order: 1; // Dropdown container order.
+  --dropdown-container-position: absolute; // Dropdown container position.
+  --dropdown-container-box-shadow: 0 3px 19px -6px rgba(26, 26, 26, 1); // Dropdown container box shadow.
+  --dropdown-container-border-radius: 0 0 5px 5px; // Dropdown container border radius.
+  --dropdown-select-height: #{30 * $rhythm}; // Dropdown select height.
+  --dropdown-select-opacity: 1; // Dropdown select opacity.
+  --dropdown-scroll-bg: #{$grey-300}; // Dropdown scrollbar color.
+  --dropdown-select-overflow: auto; // Dropdown select overflow.
+  --dropdown-border: var(--form-element-border-size) var(--form-element-border-style) var(--border-color); // Dropdown border.
+  --dropdown-container-selected-after-transform: rotateX(180deg); // Dropdown container icon transformation.
+  --dropdown-container-selected-after-top: -6px; // Dropdown container icon top position.
+  --dropdown-container-webkit-scrollbar-width: #{$rhythm}; // Dropdown webkit scrollbar width.
+  --dropdown-container-webkit-scrollbar-thumb-bg: var(--dropdown-scroll-bg); // Dropdown webkit scrollbar background color.
+  --dropdown-label-cursor: pointer; // Dropdown label cursor.
+
+  // Footer
+  --footer-bg-color: #{$grey-900};
+  --footer-text-color: #{$white};
+
+  // Header
+  --header-bg-color: #{$white}; // Header background color.
+  --header-icon-color: #{$grey-500}; // Header icon color.
+  --header-icon-hover-color: #{$grey-700}; // Header icon color when hovered.
+  --header-search-bg-color: #{$grey-600}; // Header search bar background color.
+  --header-search-placeholder-color: #{$grey-400}; // Header search placeholder color.
+  --header-search-item-bg-color: #{$grey-500}; // Header search results list item background color.
+  --header-text-color: #{$black}; // Header text color.
+  --header-divider: #{$grey-400}; // Header divider color for navigation items on small screen devices.
+
+  //Icon
+  --icon-display: inline-block; // Icon display.
+  --icon-fill: currentColor; // Icon color fill.
+  --icon-position: static; // Icon position.
+  --icon-top: auto; // Icon top position.
+  --icon-left: auto; // Icon left position.
+  --icon-img-fill: currentColor; // Icon image color fill.
+  --icon-xs-img-width: #{1.5 * $rhythm}; // Extra small icon image width.
+  --icon-xs-img-height: #{1.5 * $rhythm}; // Extra small icon image height.
+  --icon-sm-img-height: #{2 * $rhythm}; // Small icon image height.
+  --icon-sm-img-width: #{2 * $rhythm}; // Small icon image width.
+  --icon-md-img-height: #{3 * $rhythm}; // Medium icon image height.
+  --icon-md-img-width: #{3 * $rhythm}; // Medium icon image width.
+  --icon-lg-img-height: #{6 * $rhythm}; // Large icon image height.
+  --icon-lg-img-width: #{6 * $rhythm}; // Large icon image width.
+  --icon-lx-img-height: #{8 * $rhythm}; // Extra large icon image height.
+  --icon-lx-img-width: #{8 * $rhythm}; // Extra large icon image width.
+
+  // Input
+  --form-input-bg: var(--form-element-bg-color); // Input background color.
+  --form-input-border: none; // Input border.
+  --form-input-border-top: var(--form-input-border); // Input border top.
+  --form-input-border-right: var(--form-input-border); // Input border right.
+  --form-input-border-bottom: var(--form-element-border-size) var(--form-element-border-style) var(--form-element-border-color); // Input border bottom.
+  --form-input-border-left: var(--form-input-border); // Input border left.
+  --form-input-border-radius: none; // Input border radius.
+  --form-input-box-sizing: border-box; // Input box sizing.
+  --form-input-color: var(--form-element-font-color); // Input color.
+  --form-input-line-height: rem($rhythm * 3); //Input line height.
+  --form-input-padding: #{$padding}; // Input padding.
+  --form-input-display: block; // Input display.
+  --form-input-width: 100%; // Input width.
+  --form-input-resize: vertical; // Input resize.
+  --form-input-transition: padding-left 300ms var(--ease-in-out-expo); // Input transition.
+  --form-input-focus-box-shadow: none; // Input box shadow on focus.
+  --form-input-focus-outline: none; // Input outline on focus.
+  --form-input-focus-border: none; // Input border on focus.
+  --form-input-focus-border-top: var(--form-input-focus-border); // Input border top on focus.
+  --form-input-focus-border-right: var(--form-input-focus-border); // Input on focus border right on focus.
+  --form-input-focus-border-bottom: var(--form-element-border-size) var(--form-element-border-style) var(--focus); // Input border bottom on focus.
+  --form-input-focus-border-left: var(--form-input-focus-border); // Input border left on focus.
+  --form-input-disabled-border: none; // Input border when disabled.
+  --form-input-disabled-border-top: var(--form-input-disabled-border); // Input disabled border top.
+  --form-input-disabled-border-right: var(--input-form--disabled-border); // Input disabled border right.
+  --form-input-disabled-border-bottom: var(--form-element-border-size) var(--form-element-border-style) var(--disabled); // Input border bottom when disabled.
+  --form-input-disabled-border-left: var(--form-input-disabled-border); // Input disabled border left.
+  --form-input-disabled-color: var(--disabled-text); // Input color when disabled.
+  --form-input-disabled-placeholder-color: var(--disabled); // Input placeholder color when disabled.
+  --form-input-with-icon-position: relative; // Input position with icon.
+  --form-input-with-icon-display: block; // Input display with icon.
+  --form-input-with-icon-padding-left: #{$padding * 5}; // Input padding with icon.
+  --form-input-with-icon-focus-color: var(--primary-accent); // Input icon color on focus.
+  --form-input-icon-position: absolute; // Icon position inside input.
+  --form-input-icon-left: #{$padding}; // Icon left position inside input.
+  --form-input-icon-top: 50%; // Icon top position inside input.
+  --form-input-icon-transform: translateY(-50%); // Icon transformation inside input.
+  --form-input-icon-color: $grey-300; // Icon color inside input.
+
+  // Loader
+  --loader-bg-color: rgba(255, 255, 255, 0.75); // Loader background color.
+  --loader-bg-color-start: rgba(255, 255, 255, 0); // Loader background animation start color.
+  --loader-square-bg-color: var(--primary-accent); // Loader animated squares background color.
+
+  // Menu
+  --menu-bg-color: #{$white}; // Menu background color.
+  --menu-font-color: #{$grey-800}; // Menu font color.
+  --menu-button-icon-color: #{$black}; // Menu button icon color.
+
+  // Modal
+  --modal-overlay-bg-color: rgba(0, 0, 0, 0.5); // Modal overlay background color.
+  --modal-border-color: #{$grey-500}; // Modal border color.
+  --modal-bg-color: #{$white}; // Modal background color.
+  --modal-header-bg-color: #{$white}; // Modal header background color.
+  --modal-header-font-color: #{$black}; // Modal header font color.
+  --modal-header-subtext-font-color: #{$grey-600}; // Modal header subtext font color.
+  --modal-header-close-btn-color: #{$grey-700}; // Modal header close button color.
+  --modal-header-close-btn-hover-color: #{$black}; // Modal header close button color when hovered.
+  --modal-header-footer-border-color: #{$grey-200}; // Modal footer border color.
+  --modal-default-max-width: 1024px; // Modal default max width
+
+  //Option
+  --option-bg: #{$grey-500}; // Option selected background color
+  --option-color: #{$white}; // Option selected text color
+  --option-cursor: pointer; // Option cursor.
+  --option-checkbox-vertical-align: middle; // Option checkbox vertical alignment.
+  --option-checkbox-vertical-padding: #{$padding} 0 #{$padding} #{$padding}; // Option checkbox padding.
+  --option-radio-visibility: hidden; // Option radio visibility.
+  --option-single-select-padding: #{$rhythm} 0 #{$rhythm} #{$rhythm}; // Option single select padding.
+  --option-single-select-bg: var(--form-element-bg-color); // Option single select background color.
+  --option-selected-bg: var(--option-bg); // Option select background color.
+  --option-selected-color: var(--option-color); // Option select color.
+  --option-disabled-pointer-events: none; // Option pointer events when disabled.
+  --option-disable-color: #{$grey-400}; // Option color when disabled.
+  --option-hover-color: #{$white}; // Option hover text color.
+  --option-hover-bg: #{$grey-600}; // Option hover background color.
+  --checkbox-disable-border-color: #{$grey-400};
+
+  // Pagination
+  --pagination-icon-color: #{$black}; // Pagination icon color.
+  --pagination-jump-icon-color: #{$grey-600}; // Pagination icon color for jump to first or last page.
+  --pagination-count-border-color: #{$grey-500}; // Pagination count border color.
+  --pagination-count-font-color: #{$grey-800}; // Pagination count font color.
+
+  // Pin entry
+  --pin-entry-focus-color: #{$grey-800}; // Pin entry focus color.
+
+  // Progress bar
+  --progress-bar-bg-color: #{$grey-200}; // Progress bar background color.
+  --progress-bar-circle-border-width: 4px; // Progress bar circle border width.
+  --progress-bar-circle-size: 82px; // Progress bar circle size.
+  --progress-bar-circle-diameter-size: 41px; // Progress bar circle diameter size (should be 50% of `progress-bar-circle-default-size`)
+
+  // Radio Button
+  --radio-button-main-margin-right: #{2 * $rhythm}; // Radio button main class margin right.
+  --radio-button-main-last-of-type-margin-right: var(--varzero); // Radio button main class last of type margin right.
+  --radio-button-display: inline-flex; // Radio button display.
+  --radio-button-align-items: center; // Radio button align items.
+  --radio-button-margin: #{math.div($rhythm, 10)}; // Radio button margin.
+  --radio-button-disabled-color: var(--disabled); // Radio button disabled color.
+  --radio-button-radio-in-group-margin-right: #{2 * $rhythm}; // Radio button radio in group margin right.
+  --radio-button-radio-in-group-margin-bottom: #{$rhythm}; // Radio button radio in group margin bottom.
+  --radio-button-radio-in-group-display: inline-block; // Radio button radio in group display.
+  --radio-button-radio-custom-width: #{2.5 * $rhythm}; // Radio button radio custom width.
+  --radio-button-radio-custom-height: #{2.5 * $rhythm}; // Radio button radio custom height.
+  --radio-button-radio-custom-border: 1px solid var(--form-element-border-color); // Radio button radio custom border.
+  --radio-button-radio-custom-border-radius: 24px; // Radio button radio custom border-radius.
+  --radio-button-radio-custom-align-items: center; // Radio button radio custom align-items.
+  --radio-button-radio-custom-display: inline-flex; // Radio button radio custom display.
+  --radio-button-radio-custom-justify-content: center; // Radio button radio custom justify content.
+  --radio-button-radio-custom-flex-shrink: 0; // Radio button radio custom flex shrink
+  --radio-button-radio-custom-checked-width: #{$rhythm}; // Radio button radio custom checked width.
+  --radio-button-radio-custom-checked-height: #{$rhythm}; // Radio button radio custom checked height.
+  --radio-button-radio-custom-checked-border-radius: 16px; // Radio button radio custom checked border-radius.
+  --radio-button-radio-custom-checked-background: var(--form-element-bg-color); // Radio button radio custom checked background.
+  --radio-button-radio-label-margin-left: #{0.75 * $rhythm}; // Radio button radio label margin left.
+  --radio-button-radio-label-margin-top: #{math.div($rhythm, 2)}; // Radio button radio label margin top.
+  --radio-button-radio-label-font-size: var(--font-size-sm); // Radio button radio label font size.
+  --radio-button-radio-hover: var(--form-element-font-color); // Radio button radio hover.
+  --radio-button-focus-radio-custom-box-shadow: 0 0 0 1px var(--secondary-accent); // Radio button radio custom box shadow.
+  --radio-button-focus-radio-custom-border: 1px solid var(--secondary-accent); // Radio button radio custom border.
+  --radio-button-hover-radio-custom-border: 1px solid var(--form-element-font-color); // Radio button radio custom border.
+  --radio-button-radio-custom-radio-color: var(--form-element-font-color); // Radio buton radio custom radio color.
+  --radio-button-radio-custom-custom-checked-checked-background: var(--primary-accent); // Radio button radio custom checked background.
+  --radio-button-radio-custom-custom-checked-border: 4px solid #{$white}; // class added ror matching Marsh design.
+  --radio-button-radio-custom-hover-border: 1px solid var(--form-element-font-color); // Radio button radio custom hover border.
+  --radio-button-radio-focus-custom-box-shadow: none; // Radio button radio focus custom box shadow.
+  --radio-button-radio-focus-custom-border: 10px solid #174280; // class added ror matching Marsh design.
+  --radio-button-radio-custom-disabled-border: 1px solid var(--form-element-disabled-border-color);
+  --radio-button-radio-custom-checked-border: 1px solid var(--form-element-font-color); // Radio button radio custom checked border.
+  --radio-button-checked-radio-custom-checked-background: var(--form-element-disabled-color); // Radio button checked radio custom checked background.
+
+  //Select
+  --select-after-content: ''; // Select after content.
+  --select-after-pointer-event: none; // Select after pointer event.
+  --select-after-border-style: solid; // Select after border style.
+  --select-after-border-width: 2px 2px 0 0; // Select after border width.
+  --select-after-display: inline-block; // Select after display.
+  --select-after-top: 10px; // Select after top position.
+  --select-after-right: 24px; // Select after right position.
+  --select-after-height: 6px; // Select after height.
+  --select-after-width: 6px; // Select after width.
+  --select-after-position: absolute; // Select after position.
+  --select-after-transform: rotate(135deg); // Select after transformation.
+  --select-wrapper-position: relative; // Select component position.
+  --select-wrapper-display: block; // Select component display.
+  --select-appearance: none; // Select appearance.
+  --select-bg-color: #{$white}; // Select background color.
+  --select-border-color: var(--border-color); // Select border color.
+  --select-border: var(--form-element-border-size) var(--form-element-border-style) var(--select-border-color); // Select border
+  --select-border-top: none; // Select top.
+  --select-border-right: none; // Select right.
+  --select-border-bottom: var(--select-border); // Select bottom.
+  --select-border-left: none; // Select lft.
+  --select-border-radius: none; // Select border radius.
+  --select-padding: #{$rhythm} #{2 * $rhythm} #{$rhythm} #{$rhythm}; // Select padding
+  --select-padding-right: #{7 * $rhythm}; // Select padding right.
+  --select-margin: 0; // Select margin.
+  --select-display: flex; // Select display
+  --select-justify-content: space-between; // Select content justification.
+  --select-align-items: center; // Select items alignment.
+  --select-width: 100%; // Select width.
+  --select-line-height: 24px; // Select line height.
+  --select-font-size: 14px; // Select font size.
+  --select-cursor: pointer; // Select cursor.
+  --select-focus-border-color: #{$grey-500}; // Select border color on focus.
+  --select-focus-border: var(--form-element-border-size) var(--form-element-border-style) var(--select-focus-border-color); // Select border on focus.
+  --select-focus-border-top: none; // Select border top on focus.
+  --select-focus-border-right: none; // Select border right on focus.
+  --select-focus-border-bottom: var(--select-focus-border); // Select border bottom on focus.
+  --select-focus-border-left: none; // Select border left on focus.
+  --select-disabled-border-color: #{$grey-400}; // Select border color when disabled.
+  --select-disabled-border: var(--form-element-border-size) var(--form-element-border-style) var(--select-disabled-border-color); // Select border when disabled.
+  --select-disabled-border-top: var(--select-disabled-border); // Select border top when disabled.
+  --select-disabled-border-right: var(--select-disabled-border); // Select border right when disabled.
+  --select-disabled-border-bottom: var(--select-disabled-border); // Select border bottom when disabled.
+  --select-disabled-border-left: var(--select-disabled-border); // Select border left when disabled.
+  --select-disabled-cursor: default; // Select cursor when disabled.
+  --select-invalid-border-color: var(--error); // Select border color when invalid.
+  --select-invalid-border: var(--form-element-border-size) var(--form-element-border-style) var(--select-invalid-border-color); // Select border when invalid.
+  --select-invalid-border-top: var(--select-invalid-border); // Select border top when invalid.
+  --select-invalid-border-right: var(--select-invalid-border); // Select border right when invalid.
+  --select-invalid-border-bottom: var(--select-invalid-border); // Select border bottom when invalid.
+  --select-invalid-border-left: var(--select-invalid-border); // Select border left when invalid.
+  --select-custom-content-display: flex; // Select custom content display.
+  --select-custom-content-padding: #{$padding} #{2 * $padding}; // Select custom content padding.
+  --select-custom-content-min-height: 40px; // Select custom content minimal height.
+  --select-custom-content-align-items: center; // Select custom content items alignment.
+  --select-custom-selected-content-max-width: 80%; // Select custom element selected maximal width.
+  --select-custom-selected-content-white-space: nowrap; // Select custom element selected white space.
+  --select-custom-selected-content-overflow: hidden; // Select custom element selected overflow.
+  --select-custom-selected-content-text-overflow: ellipsis; // Select custom element selected text overflow.
+  --select-custom-dropdown-active-border: var(--form-element-border-size) var(--form-element-border-style) var(--select-border-color); // Select custom dropdown active border.
+  --select-custom-dropdown-active-border-top: var(--form-element-border-size) var(--form-element-border-style) var(--select-border-color); // Select custom dropdown active border top position.
+  --select-custom-dropdown-active-box-shadow: 0 -1px 1px var(--select-border-color); // Select custom dropdown active box shadow.
+  --select-label-display: flex; // Select label display.
+  --select-label-align: center; // Select label alignment
+  --select-text-selection-color: #{$black}; // Text selection color on tab
+  --select-text-selection-bg: #{$white}; // Text selection background on tab
+
+  // Slider
+  --slider-thumb-color: #{$black}; // Range slider thumb color.
+  --slider-track-color: #{$grey-200}; // Range slider track color.
+  --slider-track-value-markers: #{$black}; // Range slider track value markers.
+
+  // Tab bar
+  --tab-bar-font-color: #{$black}; // Tab bar font color.
+  --tab-bar-hover-font-color: #{$blue-500}; // Tab bar font color when hovered.
+
+  // Table
+
+  --table-border-color: #{$grey-400};
+  --table-cell-border-color: #{$grey-300};
+  --table-stripe-background-color: #{$grey-100};
+
+  // Toast
+  --toast-info-bg-color: #A6E2EF; // Toast info background color.
+  --toast-info-font-color: #314858; // Toast info font color.
+  --toast-success-bg-color: #3AB895; // Toast success background color.
+  --toast-success-font-color: #E9F6F3; // Toast success font color.
+  --toast-error-bg-color: #830208; // Toast error background color.
+  --toast-error-font-color: #E9F6F3; // Toast error font color.
+  --toast-warning-bg-color: var(--warning); // Toast warning background color.
+  --toast-warning-font-color: #{$black}; // Toast warning font color.
+  --toast-custom-bg-color: #E9F6F3; // Toast custom background color.
+  --toast-custom-font-color: #3AB895; // Toast custom font color.
+  --toast-custom-border: #{0.125 * $rhythm} dashed #3AB895; // Toast custom border.
+  --toast-custom-border-radius: #{0.75 * $rhythm}; // Toast custom border radius.
+  --toast-box-shadow: var(--varzero) var(--varzero) #{2 * $rhythm} rgba(0, 0, 0, 0.24); // Toast box shadow.
+
+  // Toggle
+  --toggle-label-position: relative; // Toggle label position.
+  --toggle-label-display: inline-block; // Toggle label display.
+  --toggle-label-width: #{10 * $rhythm}; // Toggle label rhythm.
+  --toggle-label-height: #{5 * $rhythm}; // Toggle label height.
+  --toggle-label-xs-width: #{4 * $rhythm}; // Toggle label xs height.
+  --toggle-label-xs-height: #{2 * $rhythm}; // Toggle label xs width.
+  --toggle-label-sm-width: #{6 * $rhythm}; // Toggle label sm width.
+  --toggle-label-sm-height: #{3 * $rhythm}; // Toggle label sm height.
+  --toggle-label-md-width: #{10 * $rhythm}; // Toggle label md width.
+  --toggle-label-md-height: #{5 * $rhythm}; // Toggle label md height.
+  --toggle-label-lg-width: #{14 * $rhythm}; // Toggle label lg width.
+  --toggle-label-lg-height: #{7 * $rhythm}; // Toggle label lg height.
+  --toggle-label-xl-width: #{16 * $rhythm}; // Toggle label xl width.
+  --toggle-label-xl-height: #{8 * $rhythm}; // Toggle label xl height.
+  --toggle-input-opacity: var(--varzero); // Toggle label input opacity.
+  --toggle-input-width: var(--varzero); // Toggle label input width.
+  --toggle-input-height: var(--varzero); // Toggle label input height.
+  --toggle-slider-position: absolute; // Toggle slider postion.
+  --toggle-slider-cursor: pointer; // Toggle slider cursor pointer.
+  --toggle-slider-border-radius: #{4 * $rhythm}; // Slider border radius.
+  --toggle-slider-background-color: #D8D8D8; // Toggle background color.
+  --toggle-slider-bottom: var(--varzero); // Toggle slider bottom.
+  --toggle-slider-left: var(--varzero); // Toggle slider left.
+  --toggle-slider-right: var(--varzero); // Toggle slider right.
+  --toggle-slider-top: var(--varzero); // Toggle slider top.
+  --toggle-slider-transition: var(--ease-in-out); // Toggle slider transition.
+
+  --toggle-slider-before-position: absolute; // Toggle slieder before position.
+  --toggle-slider-before-border-radius: 50%; // Toggle slider before border-radius.
+  --togle-slider-before-bottom: 2px; // Toggle slider before bottom.
+  --toggle-slider-before-left: 2px; // Toggle slider before left.
+  --toggle-slider-before-content: ''; // Toggle slider before content.
+  --toggle-slider-before-height: #{4.5 * $rhythm}; // Toggle slider before height.
+  --toggle-slider-before-width: #{4.5 * $rhythm}; // Toggle slider before width.
+  --toggle-slider-before-background-color: #{$white}; // Toggle slider before background.
+  --toggle-slider-before-transition: var(--ease-in-out); // Toggle slider before transition.
+
+  --toggle-slider-xs-before-height: #{1.5 * $rhythm}; // Toggle slider xs before height.
+  --toggle-slider-xs-before-width: #{1.5 * $rhythm}; // Toggle slider xs before width.
+
+  --toggle-slider-sm-before-height: #{2.5 * $rhythm}; // Toggle slider sm before height.
+  --toggle-slider-sm-before-width: #{2.5 * $rhythm}; // Toggle slider sm before width.
+
+  --toggle-slider-md-before-height: #{4.5 * $rhythm}; // Toggle slider md before height.
+  --toggle-slider-md-before-width: #{4.5 * $rhythm}; // Toggle slider md before width.
+
+  --toggle-slider-lg-before-height: #{6.5 * $rhythm}; // Toggle slider lg before height.
+  --toggle-slider-lg-before-width: #{6.5 * $rhythm}; // Toggle slider lg before width.
+
+  --toggle-slider-xl-before-height: #{7.5 * $rhythm}; // Toggle slider xl before height.
+  --toggle-slider-xl-before-width: #{7.5 * $rhythm}; // Toggle slider xl before width.
+
+  --toggle-input-checked-slider-background-color: #174280; // Toggle input checked slider background color.
+  --toggle-input-checked-slider-before-transform: translateX(#{5 * $rhythm}); // Toggle input checked slider transform.
+  --toggle-input-xs-checked-slider-before-transform: translateX(#{2 * $rhythm}); // Toggle input checked xs slider before transform.
+  --toggle-input-sm-checked-slider-before-transform: translateX(#{3 * $rhythm}); // Toggle input checked sm slider before transform.
+  --toggle-input-md-checked-slider-before-transform: translateX(#{5 * $rhythm}); // Toggle input checked md slider before transform.
+  --toggle-input-lg-checked-slider-before-transform: translateX(#{7 * $rhythm}); // Toggle input checked lg slider before transform.
+  --toggle-input-xl-checked-slider-before-transform: translateX(#{8 * $rhythm}); // Toggle input checked xl slider before transform.
+  --toggle-input-disabled-slider-background-color: #{$grey-200}; // Toggle disabled background color.
+  --toggle-labels-hover-focus-cursor: pointer; // Toggle lebels hover focus cursor.
+  --toggle-label-left-padding-right: var(--padding); // Toggle label left padding right.
+  --toggle-label-right-padding-left: var(--padding); // Toggle label right padding left.
+  --toggle-align-center-align-items: center; // Toggle align center align items.
+  --toggle-align-center-display: flex; // Toggle align center display.
+  --toggle-align-center-align-content: center; // Toggle align center align content.
+  --toggle-label-selected-font-style: inherit; // Toggle label selected font style.
+  --toggle-button-wraper-position: relative; // Toggle button wrapper position.
+  --toggle-button-wrapper-display: inline-flex; // Toggle button wrapper display.
+  --toggle-button-wrapper-flex-direction: row; // Toggle button wrapper flex direction.
+  --toggle-button-wrapper-padding: 4px; // Toggle button wrapper padding.
+  --toggle-button-wrapper-border-radius: #{3 * $rhythm}; // Toggle button wrapper border radius.
+  --toggle-button-wrapper-border: 1px solid; // Toggle button wrapper border.
+  --toggle-button-wrapper-background-color: #{$black}; // Toggle button wrapper background color.
+  --toggle-button-wrapper-color: #{$white}; // Toggle button wrapper color.
+  --toggle-label-display: none; // Toggle label display.
+  --toggle-labels-padding: 4px 12px 0; // Toggle labels padding.
+  --toggle-labels-border-radius: #{2 * $rhythm}; // Toggle labels border radius.
+  --toggle-labels-cursor: pointer; // Toggle labels cursor.
+  --toggle-labels-text-align: center; // Toggle labels text align.
+  --toggle-labels-vertical-align: middle; // Toggle labels vertical align.
+  --toggle-button-xs-font-size: var(--font-size-xxs); // Toggle button xs font size.
+  --toggle-button-sm-font-size: var(--font-size-sm); // Toggle button sm font size.
+  --toggle-button-md-font-size: var(--font-size-base); // Toggle button md font size.
+  --toggle-button-lg-font-size: var(--h6-font-size); // Toggle button lg font size.
+  --toggle-button-xl-font-size: var(--h4-font-size); // Toggle button xl font size.
+  --toggle-button-xl-border-radius: #{3 * $rhythm}; // Toggle button xl border radius.
+  --toggle-button-focus-border: none; // Toggle button focus border.
+  --toggle-button-focus-box-shadow: none; // Toggle button box shadow.
+  --toggle-label-selected-background-color: #{$orange-500}; // Toggle label selected background color.
+  --toggle-label-selected-color: #{$black}; // Toggle label selected color.
+
+  // Tooltip
+  --tooltip-bg-color: #{$grey-800}; // Tooltip background color.
+  --tooltip-color: #{$white}; // Tooltip font color.
+  --tooltip-trigger-color: #{$grey-800}; // Tooltip trigger icon color.
+  --tooltip-trigger-border-color: #{$grey-800}; // Tooltip trigger border color.
+  --tooltip-close-icon-color: #{$white}; // Tooltip close icon color.
+  --tooltip-close-hover-icon-color: #{$grey-300}; // Tooltip close icon hover color.
+
+  // Tree
+  --tree-icon-color: #{$orange-500}; // Tree icon color.
+  // @group-end
+}

@@ -1,0 +1,125 @@
+@import '../../styles/variables';
+
+.nexus-progress-bar {
+  display: flex;
+  flex-direction: column;
+
+  .nexus-progress-bar-meter-container {
+    display: inline-block;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: $grey-200;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .nexus-progress-bar-meter {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    border-radius: 2px;
+    background-color: var(--primary-accent);
+
+    &.nexus-progress-bar-meter-error {
+      background-color: var(--error);
+    }
+
+    &.nexus-progress-bar-meter-indeterminate {
+      animation: grow 1.5s linear infinite;
+
+      @keyframes grow {
+        0% {
+          width: 0;
+        }
+
+        100% {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @mixin size($width, $height) {
+    height: $height;
+    width: $width;
+  }
+
+  &.nexus-progress-bar-circle {
+    @include size(var(--progress-bar-circle-size), var(--progress-bar-circle-size));
+
+    position: relative;
+  }
+
+  .nexus-progress-bar-pie {
+    @include size(100%, 100%);
+
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    .nexus-progress-bar-left-hidden {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: var(--progress-bar-circle-border-width) solid var(--progress-bar-bg-color);
+      clip: rect(0, 41px, 81px, 0);
+    }
+
+    &.nexus-progress-bar-hide-right {
+      .nexus-progress-bar-right-side {
+        display: none;
+      }
+    }
+
+    &:not(.nexus-progress-bar-hide-right) {
+      clip: rect(auto, auto, auto, auto);
+
+      .nexus-progress-bar-right-side {
+        transform: rotate(180deg);
+      }
+    }
+
+    &.nexus-progress-bar-error {
+      .nexus-progress-bar-half-circle {
+        border-color: var(--error);
+      }
+    }
+
+    .nexus-progress-bar-half-circle {
+      @include size(100%, 100%);
+
+      border: var(--progress-bar-circle-border-width) solid var(--primary-accent);
+      border-radius: 50%;
+      clip: rect(0, var(--progress-bar-circle-diameter-size), var(--progress-bar-circle-size), 0);
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+
+    .nexus-progress-bar-label {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .nexus-progress-bar-shadow {
+    @include size(100%, 100%);
+
+    border: var(--progress-bar-circle-border-width) solid var(--progress-bar-bg-color);
+    border-radius: 50%;
+  }
+}
+
+.nexus-progress-bar-label-span {
+  font-size: var(--progress-bar-label-span-font-size);
+  color: var(--progress-bar-label-span-color);
+}
+
+.nexus-progress-bar-blue-label-span {
+  color: var(--progress-bar-blue-label-span-color);
+  font-size: var(--progress-bar-label-span-font-size);
+}

@@ -1,0 +1,23 @@
+@import '../../styles/variables';
+@import '../../styles/typography';
+
+.nexus-error-message {
+  @include nexus-body-sm;
+
+  display: flex;
+  align-items: center;
+  margin-top: $rhythm;
+  margin-bottom: 0;
+  color: var(--error);
+
+  .nexus-error-icon {
+    svg {
+      position: relative;
+      height: $rhythm * 3;
+      width: $rhythm * 3;
+      margin-right: $rhythm;
+      fill: var(--error);
+      display: block;
+    }
+  }
+}

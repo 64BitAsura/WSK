@@ -1,0 +1,36 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.nexus-modal-footer {
+  display: block;
+  padding: $rhythm * 3 $rhythm * 2;
+  border-top: 1px solid var(--modal-header-footer-border-color);
+  margin-top: auto;
+
+  button {
+    width: 100%;
+    margin-top: 0;
+    justify-content: center;
+    margin-bottom: $rhythm * 2;
+  }
+
+  [class^='nexus-btn'] + [class^='nexus-btn'] {
+    margin-bottom: 0;
+  }
+}
+
+@include mq(medium) {
+  .nexus-modal-footer {
+    display: flex;
+    padding: $rhythm * 1 $rhythm * 3;
+
+    button {
+      width: 140px;
+      margin-bottom: 0;
+    }
+
+    [class^='nexus-btn'] + [class^='nexus-btn'] {
+      margin-left: $rhythm * 4;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+@import '../../../styles/theme';
+
+.nexus-tooltip-content {
+  position: absolute;
+  top: auto;
+  max-width: var(--tooltip-content-max-width);
+  overflow-wrap: break-word;
+  font-size: var(--tooltip-content-font-size);
+  line-height: $rhythm * 3;
+  color: $white;
+  text-align: left;
+  padding: $rhythm * 2 $rhythm * 1.5;
+  padding-right: $rhythm * 3.5;
+  background-color: var(--tooltip-bg-color);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  transition: opacity var(--ease-in-out);
+  height: fit-content;
+
+  .nexus-btn-icon {
+    position: absolute;
+    top: auto;
+    right: 0;
+    color: var(--tooltip-close-icon-color);
+    visibility: hidden;
+    opacity: 0;
+
+    &:hover,
+    &:focus {
+      color: var(--tooltip-close-hover-icon-color);
+    }
+  }
+
+  .nexus-content {
+    overflow: auto;
+  }
+}
+
+@include mq(small) {
+  .nexus-tooltip-content {
+    max-width: var(--tooltip-content-max-width-sm);
+    min-width: var(--tooltip-content-min-width-sm);
+  }
+}
+
+.nexus-tooltip-clicked {
+  .nexus-btn-icon {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.nexus-tooltip-trigger-arrow {
+  position: absolute;
+  border: solid transparent;
+  content: '';
+  border-bottom-color: var(--tooltip-trigger-border-color);
+  border-width: var(--tooltip-arrow-border-width);
+}

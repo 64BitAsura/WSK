@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`check nexus-progress-bar should render indeterminate circle 1`] = `
+<nexus-progress-bar circle="true" class="nexus-progress-bar nexus-progress-bar-circle" indeterminate="true">
+  <!---->
+  <div class="nexus-progress-bar-hide-right nexus-progress-bar-pie">
+    <div class="nexus-progress-bar-half-circle" style="transform: rotate(0deg);"></div>
+    <div class="nexus-progress-bar-left-hidden"></div>
+    <div class="nexus-progress-bar-half-circle nexus-progress-bar-right-side"></div>
+  </div>
+  <div class="nexus-progress-bar-shadow"></div>
+</nexus-progress-bar>
+`;
+
+exports[`check nexus-progress-bar should render with circle 1`] = `
+<nexus-progress-bar class="nexus-progress-bar nexus-progress-bar-circle">
+  <!---->
+  <div class="nexus-progress-bar-hide-right nexus-progress-bar-pie">
+    <div class="nexus-progress-bar-half-circle" style="transform: rotate(0deg);"></div>
+    <div class="nexus-progress-bar-left-hidden"></div>
+    <div class="nexus-progress-bar-half-circle nexus-progress-bar-right-side"></div>
+  </div>
+  <div class="nexus-progress-bar-shadow"></div>
+</nexus-progress-bar>
+`;
+
+exports[`check nexus-progress-bar should render with error 1`] = `
+<nexus-progress-bar class="nexus-progress-bar">
+  <!---->
+  <div class="nexus-progress-bar-meter-container">
+    <div class="nexus-progress-bar-meter nexus-progress-bar-meter-error" style="width: 0%;"></div>
+  </div>
+</nexus-progress-bar>
+`;
+
+exports[`check nexus-progress-bar should render with indeterminate 1`] = `
+<nexus-progress-bar class="nexus-progress-bar">
+  <!---->
+  <div class="nexus-progress-bar-meter-container">
+    <div class="nexus-progress-bar-meter nexus-progress-bar-meter-indeterminate" style="width: 0%;"></div>
+  </div>
+</nexus-progress-bar>
+`;
+
+exports[`check nexus-progress-bar should render with value 1`] = `
+<nexus-progress-bar class="nexus-progress-bar">
+  <!---->
+  <div class="nexus-progress-bar-meter-container">
+    <div class="nexus-progress-bar-meter" style="width: 50%;"></div>
+  </div>
+</nexus-progress-bar>
+`;

@@ -1,0 +1,55 @@
+.nexus-table {
+  border: 1px solid var(--table-border-color);
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+
+  thead {
+    tr {
+      &:nth-child(odd) {
+        background-color: transparent;
+      }
+
+      .nexus-icon {
+        width: 18px;
+        height: 18px;
+        position: relative;
+        top: 4px;
+        margin-top: $rhythm * -1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  td,
+  th {
+    padding: var(--table-td-th-padding);
+    border-bottom: 1px solid var(--table-cell-border-color);
+    vertical-align: middle;
+  }
+
+  th {
+    text-transform: uppercase;
+    font-size: var(--font-size-xs);
+  }
+
+  tr {
+    &:nth-child(odd) {
+      background-color: var(--table-stripe-background-color);
+    }
+
+    &:last-child {
+      td {
+        border-bottom: none;
+      }
+    }
+  }
+
+  tfoot {
+    td {
+      padding: var(--table-td-th-padding);
+      border-top: 1px solid var(--table-cell-border-color);
+      vertical-align: middle;
+    }
+  }
+}

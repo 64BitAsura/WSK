@@ -1,0 +1,50 @@
+:root {
+  --dark-bg-color: #{$black};
+  --dark-bg-text-color: #{$white};
+}
+
+.nexus-theme-dark {
+  // Button
+  --btn-bg-color: transparent;
+  --btn-border-color: #{$white};
+  --btn-color: #{$white};
+  --btn-hover-bg-color: #{$white};
+  --btn-hover-border-color: #{$white};
+  --btn-hover-color: #{$grey-700};
+  --btn-active-bg-color: #{$black};
+
+  --btn-primary-bg-color: #{$white};
+  --btn-primary-border-color: #{$white};
+  --btn-primary-color: #{$black};
+  --btn-primary-hover-bg-color: #{$grey-300};
+  --btn-primary-hover-border-color: #{$grey-300};
+  --btn-primary-hover-color: #{$grey-700};
+
+  --btn-link-color: #{$white};
+  --btn-link-hover-color: #{$white};
+
+  // Header
+  --header-text-color: #{$white};
+
+  // Forms
+  --label-color: #{$white};
+
+  --placeholder-color: #{$grey-300};
+
+  --form-element-font-color: #{$white}; // Form element font color.
+  --form-element-bg-color: #{$black};
+  --form-element-border-color: #{$white};
+
+  // Chip
+  --chip-color: #{$grey-800}; // Chip Color.
+  --chip-bg-color: #{$white}; // Chip background color.
+  --chip-border: 1px solid #{$white}; // Chip border color.
+  --chip-hover-color: #{$grey-800}; // Chip color when hovered.
+  --chip-hover-bg-color: #{$grey-200}; // Chip background color when hovered.
+  --chip-hover-border-color: #{$grey-200}; // Chip border color when hovered.
+  --chip-active-color: #{$grey-800}; // Chip color when active.
+  --chip-active-bg-color: #{$grey-200}; // Chip background color when active.
+
+  background: var(--dark-bg-color);
+  color: var(--dark-bg-text-color);
+}

@@ -1,0 +1,81 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+@import '../../../styles/theme';
+
+.nexus-accordion .nexus-accordion-trigger {
+  border-radius: 2px 2px 0 0;
+
+  .nexus-accordion-collapse-icon {
+    opacity: 0;
+    display: block;
+  }
+}
+
+.nexus-accordion-open .nexus-accordion-trigger {
+  border-radius: 2px 2px 0 0;
+
+  .nexus-accordion-collapse-icon {
+    opacity: 1;
+  }
+
+  .nexus-accordion-expand-icon {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.nexus-accordion-trigger {
+  width: 100%;
+  margin: 0;
+  padding: $rhythm;
+  background: none;
+  border: var(--accordion-border);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: #{$blue-100};
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.nexus-accordion-title-content {
+  padding: 0 $rhythm * 2;
+  display: flex;
+  flex-grow: 1;
+
+  &.show-content-at-start {
+    justify-content: start;
+  }
+
+  &.show-content-at-center {
+    justify-content: center;
+  }
+
+  &.show-content-at-end {
+    justify-content: end;
+  }
+}
+
+.nexus-accordion-collapse-icon {
+  opacity: 0;
+}
+
+.nexus-accordion-icons {
+  flex-shrink: 0;
+  position: relative;
+  height: $rhythm * 3;
+  width: auto;
+  color: var(--primary-accent);
+}
+
+.nexus-accordion-collapse-icon,
+.nexus-accordion-expand-icon {
+  position: relative;
+  left: 0;
+  top: 0;
+}

@@ -1,0 +1,1133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="418" failures="0" errors="0" time="52.253">
+  <testsuite name="Check nexus-carousel" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:38" time="5.471" tests="7">
+    <testcase classname="Check nexus-carousel builds" name="Check nexus-carousel builds" time="0.101">
+    </testcase>
+    <testcase classname="Check nexus-carousel should set the width of each item" name="Check nexus-carousel should set the width of each item" time="0.11">
+    </testcase>
+    <testcase classname="nexus-carousel should set the width of the card container" name="nexus-carousel should set the width of the card container" time="0.135">
+    </testcase>
+    <testcase classname="nexus-carousel should move 1 card on swipe" name="nexus-carousel should move 1 card on swipe" time="0.061">
+    </testcase>
+    <testcase classname="nexus-carousel should set the scroll distance" name="nexus-carousel should set the scroll distance" time="0.094">
+    </testcase>
+    <testcase classname="nexus-carousel should allow an overlap to see other cards" name="nexus-carousel should allow an overlap to see other cards" time="0.068">
+    </testcase>
+    <testcase classname="nexus-carousel should not go past the first or last item" name="nexus-carousel should not go past the first or last item" time="0.098">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-search" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:38" time="5.753" tests="8">
+    <testcase classname="nexus-search builds" name="nexus-search builds" time="0.246">
+    </testcase>
+    <testcase classname="nexus-search should navigate through options via arrow keys" name="nexus-search should navigate through options via arrow keys" time="0.089">
+    </testcase>
+    <testcase classname="nexus-search should set the value of the input on enter" name="nexus-search should set the value of the input on enter" time="0.066">
+    </testcase>
+    <testcase classname="nexus-search should open the menu if in focus" name="nexus-search should open the menu if in focus" time="0.089">
+    </testcase>
+    <testcase classname="nexus-search should close the menu on tab" name="nexus-search should close the menu on tab" time="0.09">
+    </testcase>
+    <testcase classname="nexus-search onclick should set the value of the input " name="nexus-search onclick should set the value of the input " time="0.118">
+    </testcase>
+    <testcase classname="nexus-search onclick should open the menu" name="nexus-search onclick should open the menu" time="0.107">
+    </testcase>
+    <testcase classname="nexus-search onclick outside should close the menu" name="nexus-search onclick outside should close the menu" time="0.074">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-toggle" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:38" time="5.862" tests="13">
+    <testcase classname="nexus-toggle builds" name="nexus-toggle builds" time="0.116">
+    </testcase>
+    <testcase classname="nexus-toggle renders class for button type" name="nexus-toggle renders class for button type" time="0.141">
+    </testcase>
+    <testcase classname="nexus-toggle should have toggled attribute" name="nexus-toggle should have toggled attribute" time="0.062">
+    </testcase>
+    <testcase classname="nexus-toggle should render the disabled toggle" name="nexus-toggle should render the disabled toggle" time="0.074">
+    </testcase>
+    <testcase classname="nexus-toggle should set the disabled attribute" name="nexus-toggle should set the disabled attribute" time="0.032">
+    </testcase>
+    <testcase classname="nexus-toggle should add the required attribute" name="nexus-toggle should add the required attribute" time="0.075">
+    </testcase>
+    <testcase classname="nexus-toggle should set the id" name="nexus-toggle should set the id" time="0.056">
+    </testcase>
+    <testcase classname="nexus-toggle should toggle true on change" name="nexus-toggle should toggle true on change" time="0.091">
+    </testcase>
+    <testcase classname="nexus-toggle should toggle false on change" name="nexus-toggle should toggle false on change" time="0.079">
+    </testcase>
+    <testcase classname="nexus-toggle should not toggle true when disabled on change" name="nexus-toggle should not toggle true when disabled on change" time="0.122">
+    </testcase>
+    <testcase classname="nexus-toggle should set the toggle to true when clicked on label and toggle back" name="nexus-toggle should set the toggle to true when clicked on label and toggle back" time="0.059">
+    </testcase>
+    <testcase classname="nexus-toggle should not show labels when label properties are not passed to the component" name="nexus-toggle should not show labels when label properties are not passed to the component" time="0.064">
+    </testcase>
+    <testcase classname="nexus-toggle keyboard events should call handleClick on space" name="nexus-toggle keyboard events should call handleClick on space" time="0.087">
+    </testcase>
+  </testsuite>
+  <testsuite name="NexusTooltip" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:38" time="6.233" tests="12">
+    <testcase classname="NexusTooltip should initialize with default values" name="NexusTooltip should initialize with default values" time="0.149">
+    </testcase>
+    <testcase classname="NexusTooltip should contain class" name="NexusTooltip should contain class" time="0.096">
+    </testcase>
+    <testcase classname="NexusTooltip should set the attrId when provided" name="NexusTooltip should set the attrId when provided" time="0.159">
+    </testcase>
+    <testcase classname="NexusTooltip should set the position when provided" name="NexusTooltip should set the position when provided" time="0.073">
+    </testcase>
+    <testcase classname="NexusTooltip should set the allowClick property when provided" name="NexusTooltip should set the allowClick property when provided" time="0.074">
+    </testcase>
+    <testcase classname="NexusTooltip attrId when not provided" name="NexusTooltip attrId when not provided" time="0.048">
+    </testcase>
+    <testcase classname="NexusTooltip should persist content on click" name="NexusTooltip should persist content on click" time="0.063">
+    </testcase>
+    <testcase classname="NexusTooltip should close tooltip if content icon is clicked" name="NexusTooltip should close tooltip if content icon is clicked" time="0.253">
+    </testcase>
+    <testcase classname="NexusTooltip should handle mouse events correctly" name="NexusTooltip should handle mouse events correctly" time="0.111">
+    </testcase>
+    <testcase classname="calculates tooltip position based on element and content dimensions should set trigger position correctly" name="calculates tooltip position based on element and content dimensions should set trigger position correctly" time="0.078">
+    </testcase>
+    <testcase classname="calculates tooltip position based on element and content dimensions tooltip position should be on bottom when their is no space on top" name="calculates tooltip position based on element and content dimensions tooltip position should be on bottom when their is no space on top" time="0.103">
+    </testcase>
+    <testcase classname="calculates tooltip position based on element and content dimensions tooltip position based on space around it" name="calculates tooltip position based on element and content dimensions tooltip position based on space around it" time="0.152">
+    </testcase>
+  </testsuite>
+  <testsuite name="to check nexus-pin-entry class" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:38" time="6.399" tests="20">
+    <testcase classname="to check nexus-pin-entry class should have nexus pin entry input class" name="to check nexus-pin-entry class should have nexus pin entry input class" time="0.147">
+    </testcase>
+    <testcase classname="to check nexus-pin-entry class should have nexus pin entry class" name="to check nexus-pin-entry class should have nexus pin entry class" time="0.093">
+    </testcase>
+    <testcase classname="to check nexus-pin-entry class should set first input class to 0 by default" name="to check nexus-pin-entry class should set first input class to 0 by default" time="0.055">
+    </testcase>
+    <testcase classname="to check nexus-pin-entry class should set last class to last index" name="to check nexus-pin-entry class should set last class to last index" time="0.043">
+    </testcase>
+    <testcase classname="to check nexus-pin-entry class length should set number of pin entry inputs" name="to check nexus-pin-entry class length should set number of pin entry inputs" time="0.06">
+    </testcase>
+    <testcase classname="to check nexus-pin-entry class should set disabled attribute" name="to check nexus-pin-entry class should set disabled attribute" time="0.087">
+    </testcase>
+    <testcase classname="to check nexus-pin-entry class should set disabled attribute for all inputs" name="to check nexus-pin-entry class should set disabled attribute for all inputs" time="0.051">
+    </testcase>
+    <testcase classname="to check nexus-pin-entry class should set maxLength for each input to 1" name="to check nexus-pin-entry class should set maxLength for each input to 1" time="0.052">
+    </testcase>
+    <testcase classname="check nexus-pin-entry class default pattern should be null" name="check nexus-pin-entry class default pattern should be null" time="0.064">
+    </testcase>
+    <testcase classname="check nexus-pin-entry class should set pattern for each input to alphanumeric" name="check nexus-pin-entry class should set pattern for each input to alphanumeric" time="0.078">
+    </testcase>
+    <testcase classname="check nexus-pin-entry class default type should be text" name="check nexus-pin-entry class default type should be text" time="0.07">
+    </testcase>
+    <testcase classname="check nexus-pin-entry class should set type for each input to password" name="check nexus-pin-entry class should set type for each input to password" time="0.091">
+    </testcase>
+    <testcase classname="check nexus-pin-entry class should have called handleOnInput" name="check nexus-pin-entry class should have called handleOnInput" time="0.145">
+    </testcase>
+    <testcase classname="check nexus-pin-entry class should have called handleFocus" name="check nexus-pin-entry class should have called handleFocus" time="0.062">
+    </testcase>
+    <testcase classname="check nexus-pin-entry class should have called handleKeydown" name="check nexus-pin-entry class should have called handleKeydown" time="0.124">
+    </testcase>
+    <testcase classname="check nexus-pin-entry class should have ignored handleKeydown, backwards not called" name="check nexus-pin-entry class should have ignored handleKeydown, backwards not called" time="0.172">
+    </testcase>
+    <testcase classname="check nexus-pin-entry class input value should be updated" name="check nexus-pin-entry class input value should be updated" time="0.101">
+    </testcase>
+    <testcase classname="check nexus-pin-entry class should have called keydown multiple times" name="check nexus-pin-entry class should have called keydown multiple times" time="0.078">
+    </testcase>
+    <testcase classname="check nexus-pin-entry class should update pin value when backspace is pressed" name="check nexus-pin-entry class should update pin value when backspace is pressed" time="0.061">
+    </testcase>
+    <testcase classname="check nexus-pin-entry class should have called advance multiple times" name="check nexus-pin-entry class should have called advance multiple times" time="0.112">
+    </testcase>
+  </testsuite>
+  <testsuite name="check nexus-select" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:38" time="7.843" tests="28">
+    <testcase classname="check nexus-select should contain class" name="check nexus-select should contain class" time="0.237">
+    </testcase>
+    <testcase classname="check nexus-select should set a custom id if one is provided" name="check nexus-select should set a custom id if one is provided" time="0.096">
+    </testcase>
+    <testcase classname="check nexus-select should set a default id if none exists" name="check nexus-select should set a default id if none exists" time="0.057">
+    </testcase>
+    <testcase classname="check nexus-select should set a default id on multiple inputs if none exists" name="check nexus-select should set a default id on multiple inputs if none exists" time="0.051">
+    </testcase>
+    <testcase classname="check nexus-select updateValue called when value changes for custom select" name="check nexus-select updateValue called when value changes for custom select" time="0.098">
+    </testcase>
+    <testcase classname="check nexus-select updateValue called when value changes for custom select with delimiter passed" name="check nexus-select updateValue called when value changes for custom select with delimiter passed" time="0.098">
+    </testcase>
+    <testcase classname="check nexus-select updateValue called when value changes for native select" name="check nexus-select updateValue called when value changes for native select" time="0.063">
+    </testcase>
+    <testcase classname="check nexus-select trigger _disabledChange disable events" name="check nexus-select trigger _disabledChange disable events" time="0.097">
+    </testcase>
+    <testcase classname="check nexus-select does not trigger _disabledChange disable events when disabled value is changed to same" name="check nexus-select does not trigger _disabledChange disable events when disabled value is changed to same" time="0.102">
+    </testcase>
+    <testcase classname="check nexus-select should set the placeholder attribute" name="check nexus-select should set the placeholder attribute" time="0.16">
+    </testcase>
+    <testcase classname="nexus-select trigger call toggleDropDown onClick custom select" name="nexus-select trigger call toggleDropDown onClick custom select" time="0.127">
+    </testcase>
+    <testcase classname="nexus-select trigger updateShowDropDown called when dropdown is open for custom select" name="nexus-select trigger updateShowDropDown called when dropdown is open for custom select" time="0.105">
+    </testcase>
+    <testcase classname="nexus-select trigger does not call updateShowDropDown when dropdown is closed for custom select" name="nexus-select trigger does not call updateShowDropDown when dropdown is closed for custom select" time="0.111">
+    </testcase>
+    <testcase classname="nexus-select trigger closed dropdown when click outside the select" name="nexus-select trigger closed dropdown when click outside the select" time="0.111">
+    </testcase>
+    <testcase classname="nexus-select trigger close dropdown when click option for single-select" name="nexus-select trigger close dropdown when click option for single-select" time="0.139">
+    </testcase>
+    <testcase classname="nexus-select trigger does not close dropdown when click option for multi-select" name="nexus-select trigger does not close dropdown when click option for multi-select" time="0.109">
+    </testcase>
+    <testcase classname="nexus-select trigger emits triggerSelection when option is clicked" name="nexus-select trigger emits triggerSelection when option is clicked" time="0.088">
+    </testcase>
+    <testcase classname="nexus-select keyboard events for single select should call toggleDropDown on enter" name="nexus-select keyboard events for single select should call toggleDropDown on enter" time="0.085">
+    </testcase>
+    <testcase classname="nexus-select keyboard events for single select should open dropdown on space" name="nexus-select keyboard events for single select should open dropdown on space" time="0.054">
+    </testcase>
+    <testcase classname="nexus-select keyboard events for single select should close dropdown on escape" name="nexus-select keyboard events for single select should close dropdown on escape" time="0.16">
+    </testcase>
+    <testcase classname="nexus-select keyboard events for single select should close dropdown on tab" name="nexus-select keyboard events for single select should close dropdown on tab" time="0.083">
+    </testcase>
+    <testcase classname="nexus-select keyboard events for single select should do nothing if other buttons are pressed" name="nexus-select keyboard events for single select should do nothing if other buttons are pressed" time="0.175">
+    </testcase>
+    <testcase classname="nexus-select keyboard events for single select should call changeSelectedValue on all Arrow keys" name="nexus-select keyboard events for single select should call changeSelectedValue on all Arrow keys" time="0.049">
+    </testcase>
+    <testcase classname="nexus-select keyboard events for multi select should open dropdown on arrow " name="nexus-select keyboard events for multi select should open dropdown on arrow " time="0.15">
+    </testcase>
+    <testcase classname="nexus-select keyboard events for multi select should open dropdown on space " name="nexus-select keyboard events for multi select should open dropdown on space " time="0.089">
+    </testcase>
+    <testcase classname="nexus-select keyboard events for multi select Skips disabled option on arrow " name="nexus-select keyboard events for multi select Skips disabled option on arrow " time="0.159">
+    </testcase>
+    <testcase classname="nexus-select keyboard events for multi select Does not got up on arrow if first option is disabled" name="nexus-select keyboard events for multi select Does not got up on arrow if first option is disabled" time="0.076">
+    </testcase>
+    <testcase classname="nexus-select keyboard events for multi select restrict arrow movement to first and last option " name="nexus-select keyboard events for multi select restrict arrow movement to first and last option " time="0.051">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-modal" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:44" time="1.984" tests="13">
+    <testcase classname="nexus-modal should contain class" name="nexus-modal should contain class" time="0.142">
+    </testcase>
+    <testcase classname="nexus-modal should disable scrolling" name="nexus-modal should disable scrolling" time="0.071">
+    </testcase>
+    <testcase classname="nexus-modal should enable scrolling when destroyed" name="nexus-modal should enable scrolling when destroyed" time="0.129">
+    </testcase>
+    <testcase classname="nexus-modal should emit closeEvent when modal is closed" name="nexus-modal should emit closeEvent when modal is closed" time="0.028">
+    </testcase>
+    <testcase classname="nexus-modal should contain class nexus-modal-overlay-hidden if fullscreen is true" name="nexus-modal should contain class nexus-modal-overlay-hidden if fullscreen is true" time="0.042">
+    </testcase>
+    <testcase classname="nexus-modal should not contain class nexus-modal-overlay-hidden if fullscreen is false" name="nexus-modal should not contain class nexus-modal-overlay-hidden if fullscreen is false" time="0.04">
+    </testcase>
+    <testcase classname="nexus-modal should contain classes if size is full" name="nexus-modal should contain classes if size is full" time="0.022">
+    </testcase>
+    <testcase classname="nexus-modal should contain class nexus-modal-xs and not nexus-modal-overlay-hidden if size is xs" name="nexus-modal should contain class nexus-modal-xs and not nexus-modal-overlay-hidden if size is xs" time="0.038">
+    </testcase>
+    <testcase classname="nexus-modal should contain class nexus-modal-sm  and not nexus-modal-overlay-hidden if size is sm" name="nexus-modal should contain class nexus-modal-sm  and not nexus-modal-overlay-hidden if size is sm" time="0.038">
+    </testcase>
+    <testcase classname="nexus-modal should contain class nexus-modal-md  and not nexus-modal-overlay-hidden if size is md" name="nexus-modal should contain class nexus-modal-md  and not nexus-modal-overlay-hidden if size is md" time="0.017">
+    </testcase>
+    <testcase classname="nexus-modal should contain class nexus-modal-lg and not nexus-modal-overlay-hidden if size is lg" name="nexus-modal should contain class nexus-modal-lg and not nexus-modal-overlay-hidden if size is lg" time="0.039">
+    </testcase>
+    <testcase classname="nexus-modal should contain class nexus-modal-xl  and not nexus-modal-overlay-hidden if size is xl" name="nexus-modal should contain class nexus-modal-xl  and not nexus-modal-overlay-hidden if size is xl" time="0.042">
+    </testcase>
+    <testcase classname="nexus-modal should not contain any of the size classes if size is undefined" name="nexus-modal should not contain any of the size classes if size is undefined" time="0.056">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:45" time="1.56" tests="3">
+    <testcase classname="nexus-card should contain class" name="nexus-card should contain class" time="0.056">
+    </testcase>
+    <testcase classname="nexus-card should allow the entire card to be clickable" name="nexus-card should allow the entire card to be clickable" time="0.075">
+    </testcase>
+    <testcase classname="nexus-card should set the background image" name="nexus-card should set the background image" time="0.06">
+    </testcase>
+  </testsuite>
+  <testsuite name="check nexus-slider" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:44" time="2.295" tests="14">
+    <testcase classname="check nexus-slider should contain class" name="check nexus-slider should contain class" time="0.212">
+    </testcase>
+    <testcase classname="check nexus-slider should set a custom id if one is provided" name="check nexus-slider should set a custom id if one is provided" time="0.137">
+    </testcase>
+    <testcase classname="check nexus-slider should overwrite default id if one exists" name="check nexus-slider should overwrite default id if one exists" time="0.05">
+    </testcase>
+    <testcase classname="check nexus-slider should set a default id if none exists" name="check nexus-slider should set a default id if none exists" time="0.044">
+    </testcase>
+    <testcase classname="check nexus-slider should set a default id on multiple inputs if none exists" name="check nexus-slider should set a default id on multiple inputs if none exists" time="0.026">
+    </testcase>
+    <testcase classname="check nexus-slider should set the min and max 0 and 100 if not defined" name="check nexus-slider should set the min and max 0 and 100 if not defined" time="0.043">
+    </testcase>
+    <testcase classname="check nexus-slider should set the max value attribute" name="check nexus-slider should set the max value attribute" time="0.037">
+    </testcase>
+    <testcase classname="check nexus-slider should set the min   value attribute" name="check nexus-slider should set the min   value attribute" time="0.02">
+    </testcase>
+    <testcase classname="check nexus-slider should set the value half at start" name="check nexus-slider should set the value half at start" time="0.043">
+    </testcase>
+    <testcase classname="check nexus-slider should set the initial value to 50 if min and max is not defined" name="check nexus-slider should set the initial value to 50 if min and max is not defined" time="0.044">
+    </testcase>
+    <testcase classname="check nexus-slider should set the initial value to half of max if min is not defined" name="check nexus-slider should set the initial value to half of max if min is not defined" time="0.064">
+    </testcase>
+    <testcase classname="check nexus-slider should set the required attribute" name="check nexus-slider should set the required attribute" time="0.073">
+    </testcase>
+    <testcase classname="check nexus-slider should set the disabled attribute" name="check nexus-slider should set the disabled attribute" time="0.06">
+    </testcase>
+    <testcase classname="check nexus-slider should emit the change event on input" name="check nexus-slider should emit the change event on input" time="0.054">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-form-field" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:45" time="2.388" tests="10">
+    <testcase classname="nexus-form-field builds" name="nexus-form-field builds" time="0.084">
+    </testcase>
+    <testcase classname="nexus-form-field with input should set the disabled attribute to form-field" name="nexus-form-field with input should set the disabled attribute to form-field" time="0.084">
+    </testcase>
+    <testcase classname="nexus-form-field with input should set the for attribute" name="nexus-form-field with input should set the for attribute" time="0.068">
+    </testcase>
+    <testcase classname="nexus-form-field with input should have an error class if the child has an error message" name="nexus-form-field with input should have an error class if the child has an error message" time="0.057">
+    </testcase>
+    <testcase classname="nexus-form-field with textarea should set the disabled attribute for nexus-textarea" name="nexus-form-field with textarea should set the disabled attribute for nexus-textarea" time="0.091">
+    </testcase>
+    <testcase classname="nexus-form-field with textarea should set the for attribute" name="nexus-form-field with textarea should set the for attribute" time="0.05">
+    </testcase>
+    <testcase classname="nexus-form-field with textarea should have an error class if the child has an error message" name="nexus-form-field with textarea should have an error class if the child has an error message" time="0.052">
+    </testcase>
+    <testcase classname="nexus-form-field with select should set the disabled attribute for nexus-select" name="nexus-form-field with select should set the disabled attribute for nexus-select" time="0.141">
+    </testcase>
+    <testcase classname="nexus-form-field with select should have select specific class" name="nexus-form-field with select should have select specific class" time="0.065">
+    </testcase>
+    <testcase classname="nexus-form-field with file upload should not set the for attribute" name="nexus-form-field with file upload should not set the for attribute" time="0.142">
+    </testcase>
+  </testsuite>
+  <testsuite name="check nexus-progress-bar" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:44" time="3.053" tests="10">
+    <testcase classname="check nexus-progress-bar builds" name="check nexus-progress-bar builds" time="0.072">
+    </testcase>
+    <testcase classname="check nexus-progress-bar should set the name" name="check nexus-progress-bar should set the name" time="0.147">
+    </testcase>
+    <testcase classname="check nexus-progress-bar should set the error state" name="check nexus-progress-bar should set the error state" time="0.075">
+    </testcase>
+    <testcase classname="check nexus-progress-bar should set the indeterminate state" name="check nexus-progress-bar should set the indeterminate state" time="0.098">
+    </testcase>
+    <testcase classname="check nexus-progress-bar should render with value" name="check nexus-progress-bar should render with value" time="0.085">
+    </testcase>
+    <testcase classname="check nexus-progress-bar should render with error" name="check nexus-progress-bar should render with error" time="0.047">
+    </testcase>
+    <testcase classname="check nexus-progress-bar should render with indeterminate" name="check nexus-progress-bar should render with indeterminate" time="0.041">
+    </testcase>
+    <testcase classname="check nexus-progress-bar should have a label" name="check nexus-progress-bar should have a label" time="0.073">
+    </testcase>
+    <testcase classname="check nexus-progress-bar should render with circle" name="check nexus-progress-bar should render with circle" time="0.047">
+    </testcase>
+    <testcase classname="check nexus-progress-bar should render indeterminate circle" name="check nexus-progress-bar should render indeterminate circle" time="1.043">
+    </testcase>
+  </testsuite>
+  <testsuite name="check nexus-toast" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:38" time="9.212" tests="4">
+    <testcase classname="check nexus-toast should contain class" name="check nexus-toast should contain class" time="0.1">
+    </testcase>
+    <testcase classname="check nexus-toast should remove the tooltip when the x is clicked" name="check nexus-toast should remove the tooltip when the x is clicked" time="0.181">
+    </testcase>
+    <testcase classname="check nexus-toast should have the custom icon class when custom option is selected" name="check nexus-toast should have the custom icon class when custom option is selected" time="0.065">
+    </testcase>
+    <testcase classname="check nexus-toast auto close after 3 milli seconds." name="check nexus-toast auto close after 3 milli seconds." time="4.105">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-stepper" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:46" time="1.98" tests="1">
+    <testcase classname="nexus-stepper renders" name="nexus-stepper renders" time="0.789">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-pagination" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:46" time="2.412" tests="4">
+    <testcase classname="nexus-pagination should have class" name="nexus-pagination should have class" time="0.222">
+    </testcase>
+    <testcase classname="nexus-pagination should emit the correct page number when a button is clicked" name="nexus-pagination should emit the correct page number when a button is clicked" time="0.058">
+    </testcase>
+    <testcase classname="nexus-pagination should emit the correct page number when entered as input" name="nexus-pagination should emit the correct page number when entered as input" time="0.151">
+    </testcase>
+    <testcase classname="nexus-pagination should not emit an event when min or max is passed" name="nexus-pagination should not emit an event when min or max is passed" time="0.203">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-tooltip-content" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:46" time="2.812" tests="1">
+    <testcase classname="nexus-tooltip-content renders" name="nexus-tooltip-content renders" time="1.028">
+    </testcase>
+  </testsuite>
+  <testsuite name="NexusInput" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:46" time="3.493" tests="11">
+    <testcase classname="NexusInput should contain class" name="NexusInput should contain class" time="0.179">
+    </testcase>
+    <testcase classname="NexusInput should emit the change event on input" name="NexusInput should emit the change event on input" time="0.15">
+    </testcase>
+    <testcase classname="NexusInput should set a default id if none exists" name="NexusInput should set a default id if none exists" time="0.124">
+    </testcase>
+    <testcase classname="NexusInput should set a default id on multiple inputs if none exists" name="NexusInput should set a default id on multiple inputs if none exists" time="0.044">
+    </testcase>
+    <testcase classname="NexusInput should overwrite default id if one exists" name="NexusInput should overwrite default id if one exists" time="0.204">
+    </testcase>
+    <testcase classname="NexusInput should set the maxlength attribute" name="NexusInput should set the maxlength attribute" time="0.151">
+    </testcase>
+    <testcase classname="NexusInput should set the minlength " name="NexusInput should set the minlength " time="0.142">
+    </testcase>
+    <testcase classname="NexusInput should set the disabled attribute" name="NexusInput should set the disabled attribute" time="0.167">
+    </testcase>
+    <testcase classname="NexusInput should set the readonly attribute" name="NexusInput should set the readonly attribute" time="0.167">
+    </testcase>
+    <testcase classname="NexusInput should set the placeholder attribute" name="NexusInput should set the placeholder attribute" time="0.13">
+    </testcase>
+    <testcase classname="NexusInput should set the required attribute" name="NexusInput should set the required attribute" time="0.296">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-chip" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:47" time="2.825" tests="1">
+    <testcase classname="nexus-chip renders" name="nexus-chip renders" time="0.931">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-modal-header" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:47" time="2.818" tests="1">
+    <testcase classname="nexus-modal-header renders" name="nexus-modal-header renders" time="1.03">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-label" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:48" time="2.346" tests="1">
+    <testcase classname="nexus-label renders" name="nexus-label renders" time="0.393">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-dropdown" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:47" time="3.417" tests="9">
+    <testcase classname="nexus-dropdown builds" name="nexus-dropdown builds" time="0.214">
+    </testcase>
+    <testcase classname="nexus-dropdown should have the global class nexus-dropdown" name="nexus-dropdown should have the global class nexus-dropdown" time="0.179">
+    </testcase>
+    <testcase classname="nexus-dropdown should have the global class nexus-dropdown-container" name="nexus-dropdown should have the global class nexus-dropdown-container" time="0.188">
+    </testcase>
+    <testcase classname="nexus-dropdown should have the global class nexus-dropdown-active" name="nexus-dropdown should have the global class nexus-dropdown-active" time="0.202">
+    </testcase>
+    <testcase classname="nexus-dropdown does not contain global class when prop is false" name="nexus-dropdown does not contain global class when prop is false" time="0.261">
+    </testcase>
+    <testcase classname="nexus-dropdown setTop is called when setDropdownTop @Method is invoked." name="nexus-dropdown setTop is called when setDropdownTop @Method is invoked." time="0.141">
+    </testcase>
+    <testcase classname="nexus-dropdown closed dropdown when click outside the dropdown" name="nexus-dropdown closed dropdown when click outside the dropdown" time="0.195">
+    </testcase>
+    <testcase classname="nexus-dropdown call toggleDropDown onClick" name="nexus-dropdown call toggleDropDown onClick" time="0.105">
+    </testcase>
+    <testcase classname="nexus-dropdown check if style attribute is added to the component" name="nexus-dropdown check if style attribute is added to the component" time="0.101">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-table" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:38" time="13.11" tests="41">
+    <testcase classname="nexus-table should contain class" name="nexus-table should contain class" time="0.153">
+    </testcase>
+    <testcase classname="nexus-table should contain table headers" name="nexus-table should contain table headers" time="0.113">
+    </testcase>
+    <testcase classname="nexus-table should contain table rows" name="nexus-table should contain table rows" time="0.09">
+    </testcase>
+    <testcase classname="nexus-table should not contain pagination" name="nexus-table should not contain pagination" time="0.056">
+    </testcase>
+    <testcase classname="nexus-table should contain pagination" name="nexus-table should contain pagination" time="0.092">
+    </testcase>
+    <testcase classname="nexus-table should not allow multiple row selection" name="nexus-table should not allow multiple row selection" time="0.099">
+    </testcase>
+    <testcase classname="nexus-table should allow multiple row selection" name="nexus-table should allow multiple row selection" time="0.16">
+    </testcase>
+    <testcase classname="nexus-table should sort column - ascending" name="nexus-table should sort column - ascending" time="0.091">
+    </testcase>
+    <testcase classname="nexus-table should sort column - descending" name="nexus-table should sort column - descending" time="0.063">
+    </testcase>
+    <testcase classname="nexus-table should reset column - neutral" name="nexus-table should reset column - neutral" time="0.109">
+    </testcase>
+    <testcase classname="nexus-table should select all rows when multiple page" name="nexus-table should select all rows when multiple page" time="0.244">
+    </testcase>
+    <testcase classname="nexus-table should select all rows when single page" name="nexus-table should select all rows when single page" time="0.096">
+    </testcase>
+    <testcase classname="nexus-table should select single row" name="nexus-table should select single row" time="0.082">
+    </testcase>
+    <testcase classname="nexus-table should unselect single row" name="nexus-table should unselect single row" time="0.102">
+    </testcase>
+    <testcase classname="nexus-table should not contain element for page size label" name="nexus-table should not contain element for page size label" time="0.107">
+    </testcase>
+    <testcase classname="nexus-table should contain class for page size label" name="nexus-table should contain class for page size label" time="0.098">
+    </testcase>
+    <testcase classname="nexus-table should call rowSelect.emit function" name="nexus-table should call rowSelect.emit function" time="0.064">
+    </testcase>
+    <testcase classname="nexus-table should sort column - ascending using custom sort function" name="nexus-table should sort column - ascending using custom sort function" time="0.083">
+    </testcase>
+    <testcase classname="nexus-table should use custom cell renderer function" name="nexus-table should use custom cell renderer function" time="0.058">
+    </testcase>
+    <testcase classname="nexus-table should contain maxheight for scroll" name="nexus-table should contain maxheight for scroll" time="0.148">
+    </testcase>
+    <testcase classname="nexus-table should call onCurrentPageChangeHandler on pagination" name="nexus-table should call onCurrentPageChangeHandler on pagination" time="0.069">
+    </testcase>
+    <testcase classname="nexus-table should sort column and call defaultSort function" name="nexus-table should sort column and call defaultSort function" time="0.194">
+    </testcase>
+    <testcase classname="nexus-table should emit tableChangeEvent on pagination" name="nexus-table should emit tableChangeEvent on pagination" time="0.056">
+    </testcase>
+    <testcase classname="nexus-table should contain attrid when passed" name="nexus-table should contain attrid when passed" time="0.152">
+    </testcase>
+    <testcase classname="nexus-table should calculate max pagination when totalItems is passed" name="nexus-table should calculate max pagination when totalItems is passed" time="0.08">
+    </testcase>
+    <testcase classname="nexus-table should contain nexus-table-custom class when type is custom" name="nexus-table should contain nexus-table-custom class when type is custom" time="0.097">
+    </testcase>
+    <testcase classname="nexus-table should navigate to first page when negative value will be passed" name="nexus-table should navigate to first page when negative value will be passed" time="0.097">
+    </testcase>
+    <testcase classname="nexus-table should navigate to the page you pass to currentPage" name="nexus-table should navigate to the page you pass to currentPage" time="0.056">
+    </testcase>
+    <testcase classname="nexus-table should select last page when current page exceeded the max value" name="nexus-table should select last page when current page exceeded the max value" time="0.045">
+    </testcase>
+    <testcase classname="nexus-table should select last page when current page is set to exceeded the max value" name="nexus-table should select last page when current page is set to exceeded the max value" time="0.063">
+    </testcase>
+    <testcase classname="nexus-table should change number of elements on page" name="nexus-table should change number of elements on page" time="1.279">
+    </testcase>
+    <testcase classname="nexus-table should change number of elements on page to not listed one" name="nexus-table should change number of elements on page to not listed one" time="0.851">
+    </testcase>
+    <testcase classname="nexus-table should check all items on page" name="nexus-table should check all items on page" time="1.014">
+    </testcase>
+    <testcase classname="nexus-table should not render PageSize Select" name="nexus-table should not render PageSize Select" time="0.658">
+    </testcase>
+    <testcase classname="nexus-table should render PageSize Select" name="nexus-table should render PageSize Select" time="0.878">
+    </testcase>
+    <testcase classname="nexus-table should emit emitPageChangeEvent on pagination" name="nexus-table should emit emitPageChangeEvent on pagination" time="0.112">
+    </testcase>
+    <testcase classname="nexus-table should select fist page size if wrong PageSize is selected" name="nexus-table should select fist page size if wrong PageSize is selected" time="0.097">
+    </testcase>
+    <testcase classname="nexus-table should not be selected when sort was changed" name="nexus-table should not be selected when sort was changed" time="0.068">
+    </testcase>
+    <testcase classname="nexus-table when rows is null" name="nexus-table when rows is null" time="0.08">
+    </testcase>
+    <testcase classname="nexus-table select all row when there is pagination of more than one page" name="nexus-table select all row when there is pagination of more than one page" time="0.061">
+    </testcase>
+    <testcase classname="nexus-table pagination without page size select" name="nexus-table pagination without page size select" time="0.05">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-tree" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:49" time="2.996" tests="1">
+    <testcase classname="nexus-tree renders" name="nexus-tree renders" time="0.534">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-header" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:49" time="3.275" tests="1">
+    <testcase classname="nexus-header renders" name="nexus-header renders" time="1.287">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-chip" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:50" time="2.655" tests="5">
+    <testcase classname="nexus-chip builds" name="nexus-chip builds" time="0.225">
+    </testcase>
+    <testcase classname="nexus-chip should have the global class" name="nexus-chip should have the global class" time="0.059">
+    </testcase>
+    <testcase classname="nexus-chip should add the success attribute" name="nexus-chip should add the success attribute" time="0.048">
+    </testcase>
+    <testcase classname="nexus-chip should add the removable attribute" name="nexus-chip should add the removable attribute" time="0.047">
+    </testcase>
+    <testcase classname="nexus-chip emits triggerRemovableClick onclick of removable icon" name="nexus-chip emits triggerRemovableClick onclick of removable icon" time="0.164">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-search-list" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:50" time="2.347" tests="1">
+    <testcase classname="nexus-search-list builds" name="nexus-search-list builds" time="0.15">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-badge" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:50" time="2.896" tests="1">
+    <testcase classname="nexus-badge renders" name="nexus-badge renders" time="0.816">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-file-upload" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:50" time="2.939" tests="8">
+    <testcase classname="nexus-file-upload should have class" name="nexus-file-upload should have class" time="0.07">
+    </testcase>
+    <testcase classname="nexus-file-upload should set the multiple attribute" name="nexus-file-upload should set the multiple attribute" time="0.196">
+    </testcase>
+    <testcase classname="nexus-file-upload should set the disabled attribute" name="nexus-file-upload should set the disabled attribute" time="0.16">
+    </testcase>
+    <testcase classname="nexus-file-upload should set the required attribute" name="nexus-file-upload should set the required attribute" time="0.051">
+    </testcase>
+    <testcase classname="nexus-file-upload should set a default id if none exists" name="nexus-file-upload should set a default id if none exists" time="0.039">
+    </testcase>
+    <testcase classname="nexus-file-upload should overwrite default id if one exists" name="nexus-file-upload should overwrite default id if one exists" time="0.023">
+    </testcase>
+    <testcase classname="nexus-file-upload should add and remove classes on drag events" name="nexus-file-upload should add and remove classes on drag events" time="0.054">
+    </testcase>
+    <testcase classname="nexus-file-upload should dispatch the change event" name="nexus-file-upload should dispatch the change event" time="0.073">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-stepper-item" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:50" time="3.019" tests="1">
+    <testcase classname="nexus-stepper-item renders" name="nexus-stepper-item renders" time="0.944">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-tree-content" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:51" time="3.103" tests="1">
+    <testcase classname="nexus-tree-content renders" name="nexus-tree-content renders" time="0.496">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-header-logo" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:52" time="2.473" tests="1">
+    <testcase classname="nexus-header-logo renders" name="nexus-header-logo renders" time="0.365">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-notification" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:52" time="2.442" tests="1">
+    <testcase classname="nexus-notification renders" name="nexus-notification renders" time="0.387">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card-header-details" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:53" time="2.505" tests="1">
+    <testcase classname="nexus-card-header-details renders" name="nexus-card-header-details renders" time="0.409">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card-body" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:52" time="2.673" tests="1">
+    <testcase classname="nexus-card-body renders" name="nexus-card-body renders" time="0.442">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-loader class" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:53" time="2.462" tests="3">
+    <testcase classname="nexus-loader class should contain class" name="nexus-loader class should contain class" time="0.108">
+    </testcase>
+    <testcase classname="nexus-loader class should show/hide based on show property" name="nexus-loader class should show/hide based on show property" time="0.059">
+    </testcase>
+    <testcase classname="nexus-loader class should render correctly with fullscreen prop" name="nexus-loader class should render correctly with fullscreen prop" time="0.051">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-radio" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:53" time="2.749" tests="7">
+    <testcase classname="nexus-radio should have the global class" name="nexus-radio should have the global class" time="0.147">
+    </testcase>
+    <testcase classname="nexus-radio should set the name" name="nexus-radio should set the name" time="0.244">
+    </testcase>
+    <testcase classname="nexus-radio should set the id" name="nexus-radio should set the id" time="0.084">
+    </testcase>
+    <testcase classname="nexus-radio should set the value" name="nexus-radio should set the value" time="0.048">
+    </testcase>
+    <testcase classname="nexus-radio should set the checked state" name="nexus-radio should set the checked state" time="0.061">
+    </testcase>
+    <testcase classname="nexus-radio should set the required state" name="nexus-radio should set the required state" time="0.048">
+    </testcase>
+    <testcase classname="nexus-radio should set the disabled state" name="nexus-radio should set the disabled state" time="0.04">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-header" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:53" time="2.308" tests="2">
+    <testcase classname="nexus-header builds" name="nexus-header builds" time="0.012">
+    </testcase>
+    <testcase classname="nexus-header should have class" name="nexus-header should have class" time="0.099">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-breadcrumb" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:54" time="2.194" tests="1">
+    <testcase classname="nexus-breadcrumb renders" name="nexus-breadcrumb renders" time="0.355">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-tab-bar" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:54" time="2.257" tests="1">
+    <testcase classname="nexus-tab-bar renders" name="nexus-tab-bar renders" time="0.384">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card-header" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:55" time="2.346" tests="1">
+    <testcase classname="nexus-card-header renders" name="nexus-card-header renders" time="0.519">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-modal-header" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:55" time="2.21" tests="2">
+    <testcase classname="nexus-modal-header should contain class" name="nexus-modal-header should contain class" time="0.147">
+    </testcase>
+    <testcase classname="nexus-modal-header should emit a close event" name="nexus-modal-header should emit a close event" time="0.044">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card-avatar" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:55" time="2.455" tests="1">
+    <testcase classname="nexus-card-avatar renders" name="nexus-card-avatar renders" time="0.444">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-footer-column" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:55" time="2.642" tests="1">
+    <testcase classname="nexus-footer-column renders" name="nexus-footer-column renders" time="0.367">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-carousel-item" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:55" time="2.608" tests="1">
+    <testcase classname="nexus-carousel-item builds" name="nexus-carousel-item builds" time="0.075">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-modal-body" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:56" time="2.622" tests="1">
+    <testcase classname="nexus-modal-body renders" name="nexus-modal-body renders" time="0.369">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-tree" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:56" time="2.285" tests="3">
+    <testcase classname="nexus-tree should have class" name="nexus-tree should have class" time="0.162">
+    </testcase>
+    <testcase classname="nexus-tree should expand the tree content" name="nexus-tree should expand the tree content" time="0.11">
+    </testcase>
+    <testcase classname="nexus-tree should collapse the tree content" name="nexus-tree should collapse the tree content" time="0.077">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card-header-title" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:57" time="2.188" tests="1">
+    <testcase classname="nexus-card-header-title renders" name="nexus-card-header-title renders" time="0.359">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-error-message" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:57" time="2.33" tests="1">
+    <testcase classname="nexus-error-message renders" name="nexus-error-message renders" time="0.46">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-carousel-item" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:57" time="2.601" tests="1">
+    <testcase classname="nexus-carousel-item renders" name="nexus-carousel-item renders" time="0.43">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-tooltip-trigger" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:58" time="2.542" tests="1">
+    <testcase classname="nexus-tooltip-trigger renders" name="nexus-tooltip-trigger renders" time="0.579">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-chip-group" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:58" time="2.093" tests="1">
+    <testcase classname="nexus-chip-group renders" name="nexus-chip-group renders" time="0.45">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-footer-bottom" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:58" time="2.409" tests="1">
+    <testcase classname="nexus-footer-bottom renders" name="nexus-footer-bottom renders" time="0.581">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-breadcrumb-item" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:58" time="2.362" tests="1">
+    <testcase classname="nexus-breadcrumb-item renders" name="nexus-breadcrumb-item renders" time="0.592">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card-body" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:59" time="1.883" tests="1">
+    <testcase classname="nexus-card-body should contain class" name="nexus-card-body should contain class" time="0.085">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-accordion" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:59" time="2.397" tests="4">
+    <testcase classname="nexus-accordion should contain class" name="nexus-accordion should contain class" time="0.107">
+    </testcase>
+    <testcase classname="nexus-accordion should handle the toggle event" name="nexus-accordion should handle the toggle event" time="0.078">
+    </testcase>
+    <testcase classname="nexus-accordion should call collapse() on click if open is false" name="nexus-accordion should call collapse() on click if open is false" time="0.054">
+    </testcase>
+    <testcase classname="nexus-accordion should call expand() on click if open is false" name="nexus-accordion should call expand() on click if open is false" time="0.045">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-footer-content" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:29:59" time="1.99" tests="1">
+    <testcase classname="nexus-footer-content builds" name="nexus-footer-content builds" time="0.051">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-option" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:00" time="1.987" tests="1">
+    <testcase classname="nexus-option renders" name="nexus-option renders" time="0.303">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-progress-bar-label" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:00" time="2.23" tests="1">
+    <testcase classname="nexus-progress-bar-label renders" name="nexus-progress-bar-label renders" time="0.38">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-search" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:00" time="1.98" tests="1">
+    <testcase classname="nexus-search renders" name="nexus-search renders" time="0.333">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card-header-subtitle" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:00" time="2.154" tests="1">
+    <testcase classname="nexus-card-header-subtitle renders" name="nexus-card-header-subtitle renders" time="0.419">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-accordion" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:00" time="2.362" tests="1">
+    <testcase classname="nexus-accordion renders" name="nexus-accordion renders" time="0.475">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-icon" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:01" time="2.439" tests="5">
+    <testcase classname="nexus-icon should contain class" name="nexus-icon should contain class" time="0.087">
+    </testcase>
+    <testcase classname="nexus-icon should return file contents" name="nexus-icon should return file contents" time="0.06">
+    </testcase>
+    <testcase classname="nexus-icon should render direct svg contents" name="nexus-icon should render direct svg contents" time="0.075">
+    </testcase>
+    <testcase classname="nexus-icon should catch errors for incorrect path" name="nexus-icon should catch errors for incorrect path" time="0.026">
+    </testcase>
+    <testcase classname="nexus-icon should render img upon setting the type as &quot;img&quot;" name="nexus-icon should render img upon setting the type as &quot;img&quot;" time="0.088">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-loader" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:01" time="2.303" tests="1">
+    <testcase classname="nexus-loader renders" name="nexus-loader renders" time="0.304">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-tree-trigger" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:01" time="2.27" tests="1">
+    <testcase classname="nexus-tree-trigger should have class" name="nexus-tree-trigger should have class" time="0.087">
+    </testcase>
+  </testsuite>
+  <testsuite name="NexusTextarea" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:02" time="2.259" tests="11">
+    <testcase classname="NexusTextarea should contain class" name="NexusTextarea should contain class" time="0.121">
+    </testcase>
+    <testcase classname="NexusTextarea should set a default id if none exists" name="NexusTextarea should set a default id if none exists" time="0.056">
+    </testcase>
+    <testcase classname="NexusTextarea should set a default id on multiple textareas if none exists" name="NexusTextarea should set a default id on multiple textareas if none exists" time="0.19">
+    </testcase>
+    <testcase classname="NexusTextarea should overwrite default id if one exists" name="NexusTextarea should overwrite default id if one exists" time="0.048">
+    </testcase>
+    <testcase classname="NexusTextarea should set the maxlength attribute" name="NexusTextarea should set the maxlength attribute" time="0.021">
+    </testcase>
+    <testcase classname="NexusTextarea should set the minlength " name="NexusTextarea should set the minlength " time="0.036">
+    </testcase>
+    <testcase classname="NexusTextarea should set the disabled attribute" name="NexusTextarea should set the disabled attribute" time="0.018">
+    </testcase>
+    <testcase classname="NexusTextarea should emit the change event on input" name="NexusTextarea should emit the change event on input" time="0.036">
+    </testcase>
+    <testcase classname="NexusTextarea should set the placeholder attribute" name="NexusTextarea should set the placeholder attribute" time="0.038">
+    </testcase>
+    <testcase classname="NexusTextarea should set the required attribute" name="NexusTextarea should set the required attribute" time="0.053">
+    </testcase>
+    <testcase classname="NexusTextarea should set the disabled attribute" name="NexusTextarea should set the disabled attribute" time="0.023">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-checkbox" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:02" time="2.165" tests="1">
+    <testcase classname="nexus-checkbox renders" name="nexus-checkbox renders" time="0.41">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-option" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:02" time="2.318" tests="9">
+    <testcase classname="nexus-option builds" name="nexus-option builds" time="0.079">
+    </testcase>
+    <testcase classname="nexus-option should contain class" name="nexus-option should contain class" time="0.054">
+    </testcase>
+    <testcase classname="nexus-option should contain class for disabled" name="nexus-option should contain class for disabled" time="0.042">
+    </testcase>
+    <testcase classname="nexus-option should contain class for selected" name="nexus-option should contain class for selected" time="0.054">
+    </testcase>
+    <testcase classname="nexus-option should contain class for keyhover" name="nexus-option should contain class for keyhover" time="0.05">
+    </testcase>
+    <testcase classname="nexus-option triggers handleSelectedOption onclick" name="nexus-option triggers handleSelectedOption onclick" time="0.043">
+    </testcase>
+    <testcase classname="nexus-option triggers handleSelectedOption onclick for option with checkbox" name="nexus-option triggers handleSelectedOption onclick for option with checkbox" time="0.054">
+    </testcase>
+    <testcase classname="nexus-option emit event onclick" name="nexus-option emit event onclick" time="0.054">
+    </testcase>
+    <testcase classname="nexus-option emit event onclick when multiple is true" name="nexus-option emit event onclick when multiple is true" time="0.064">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-menu-item" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:03" time="2.222" tests="1">
+    <testcase classname="nexus-menu-item renders" name="nexus-menu-item renders" time="0.398">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-footer-content-title" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:03" time="2.547" tests="1">
+    <testcase classname="nexus-footer-content-title renders" name="nexus-footer-content-title renders" time="0.434">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-footer-logo" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:03" time="2.322" tests="1">
+    <testcase classname="nexus-footer-logo renders" name="nexus-footer-logo renders" time="0.385">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-message" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:03" time="2.323" tests="1">
+    <testcase classname="nexus-message renders" name="nexus-message renders" time="0.398">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-avatar" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:04" time="2.547" tests="7">
+    <testcase classname="nexus-avatar should have the global class nexus-avatar" name="nexus-avatar should have the global class nexus-avatar" time="0.16">
+    </testcase>
+    <testcase classname="nexus-avatar should set a default avatar size if not added" name="nexus-avatar should set a default avatar size if not added" time="0.116">
+    </testcase>
+    <testcase classname="nexus-avatar should have class nexus-avatar-extended-class if props class-name added" name="nexus-avatar should have class nexus-avatar-extended-class if props class-name added" time="0.056">
+    </testcase>
+    <testcase classname="nexus-avatar should have class avatar-logo if props avatarLogoIcon added" name="nexus-avatar should have class avatar-logo if props avatarLogoIcon added" time="0.061">
+    </testcase>
+    <testcase classname="nexus-avatar should have class avatar-image if props avatarImageSrc added" name="nexus-avatar should have class avatar-image if props avatarImageSrc added" time="0.089">
+    </testcase>
+    <testcase classname="nexus-avatar should have class avatar-status-online if props avatarStatus added" name="nexus-avatar should have class avatar-status-online if props avatarStatus added" time="0.105">
+    </testcase>
+    <testcase classname="nexus-avatar should have class avatar-notification if props avatarStatus added" name="nexus-avatar should have class avatar-notification if props avatarStatus added" time="0.053">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-avatar" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:04" time="2.184" tests="1">
+    <testcase classname="nexus-avatar renders" name="nexus-avatar renders" time="0.353">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-modal" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:05" time="2.292" tests="1">
+    <testcase classname="nexus-modal renders" name="nexus-modal renders" time="0.437">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-icon" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:05" time="2.333" tests="1">
+    <testcase classname="nexus-icon renders" name="nexus-icon renders" time="0.468">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-stepper-item" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:05" time="2.619" tests="5">
+    <testcase classname="nexus-stepper-item builds" name="nexus-stepper-item builds" time="0.141">
+    </testcase>
+    <testcase classname="nexus-stepper-item status active" name="nexus-stepper-item status active" time="0.176">
+    </testcase>
+    <testcase classname="nexus-stepper-item status complete" name="nexus-stepper-item status complete" time="0.221">
+    </testcase>
+    <testcase classname="nexus-stepper-item status error" name="nexus-stepper-item status error" time="0.057">
+    </testcase>
+    <testcase classname="nexus-stepper-item status warning" name="nexus-stepper-item status warning" time="0.044">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-checkbox" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:05" time="2.269" tests="7">
+    <testcase classname="nexus-checkbox should have the global class" name="nexus-checkbox should have the global class" time="0.165">
+    </testcase>
+    <testcase classname="nexus-checkbox should have checked attribute" name="nexus-checkbox should have checked attribute" time="0.068">
+    </testcase>
+    <testcase classname="nexus-checkbox should set the id" name="nexus-checkbox should set the id" time="0.058">
+    </testcase>
+    <testcase classname="nexus-checkbox should have the indeterminate class" name="nexus-checkbox should have the indeterminate class" time="0.078">
+    </testcase>
+    <testcase classname="nexus-checkbox should add the required attribute" name="nexus-checkbox should add the required attribute" time="0.062">
+    </testcase>
+    <testcase classname="nexus-checkbox should add the disabled attribute" name="nexus-checkbox should add the disabled attribute" time="0.043">
+    </testcase>
+    <testcase classname="nexus-checkbox should rerender on change" name="nexus-checkbox should rerender on change" time="0.021">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card-body-image" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:06" time="2.066" tests="1">
+    <testcase classname="nexus-card-body-image renders" name="nexus-card-body-image renders" time="0.36">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card-header-title" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:06" time="2.094" tests="1">
+    <testcase classname="nexus-card-header-title builds" name="nexus-card-header-title builds" time="0.097">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card-footer" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:06" time="1.945" tests="1">
+    <testcase classname="nexus-card-footer should contain class" name="nexus-card-footer should contain class" time="0.125">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-pagination" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:06" time="2.377" tests="1">
+    <testcase classname="nexus-pagination renders" name="nexus-pagination renders" time="0.433">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-toast" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:07" time="2.099" tests="1">
+    <testcase classname="nexus-toast renders" name="nexus-toast renders" time="0.405">
+    </testcase>
+  </testsuite>
+  <testsuite name="check nexus-accordion-group class" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:07" time="2.047" tests="2">
+    <testcase classname="check nexus-accordion-group class builds" name="check nexus-accordion-group class builds" time="0.178">
+    </testcase>
+    <testcase classname="check nexus-accordion-group class Create and accordion group with multiple accordion elements." name="check nexus-accordion-group class Create and accordion group with multiple accordion elements." time="0.155">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card-footer" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:07" time="2.225" tests="1">
+    <testcase classname="nexus-card-footer renders" name="nexus-card-footer renders" time="0.402">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-dropdown" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:08" time="2.278" tests="1">
+    <testcase classname="nexus-dropdown renders" name="nexus-dropdown renders" time="0.411">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-pin-entry" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:08" time="2.316" tests="1">
+    <testcase classname="nexus-pin-entry renders" name="nexus-pin-entry renders" time="0.488">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-footer" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:08" time="2.432" tests="1">
+    <testcase classname="nexus-footer renders" name="nexus-footer renders" time="0.545">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card-body-image" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:09" time="1.997" tests="1">
+    <testcase classname="nexus-card-body-image should contain class" name="nexus-card-body-image should contain class" time="0.123">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-radio" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:08" time="2.323" tests="1">
+    <testcase classname="nexus-radio renders" name="nexus-radio renders" time="0.349">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-modal-header-subtitle" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:09" time="2.181" tests="1">
+    <testcase classname="nexus-modal-header-subtitle renders" name="nexus-modal-header-subtitle renders" time="0.288">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-search-list-item" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:09" time="2.267" tests="1">
+    <testcase classname="nexus-search-list-item renders" name="nexus-search-list-item renders" time="0.333">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-header-menu" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:10" time="2.333" tests="1">
+    <testcase classname="nexus-header-menu renders" name="nexus-header-menu renders" time="0.484">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-toggle" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:10" time="2.323" tests="1">
+    <testcase classname="nexus-toggle renders" name="nexus-toggle renders" time="0.472">
+    </testcase>
+  </testsuite>
+  <testsuite name="check nexus-accordion-trigger" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:10" time="2.36" tests="3">
+    <testcase classname="check nexus-accordion-trigger should contain class" name="check nexus-accordion-trigger should contain class" time="0.195">
+    </testcase>
+    <testcase classname="check nexus-accordion-trigger should contain class show-content-at-center" name="check nexus-accordion-trigger should contain class show-content-at-center" time="0.123">
+    </testcase>
+    <testcase classname="check nexus-accordion-trigger should contain class show-content-at-right" name="check nexus-accordion-trigger should contain class show-content-at-right" time="0.049">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-tooltip-content" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:10" time="2.127" tests="1">
+    <testcase classname="nexus-tooltip-content should contain class" name="nexus-tooltip-content should contain class" time="0.183">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-select" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:11" time="2.083" tests="1">
+    <testcase classname="nexus-select renders" name="nexus-select renders" time="0.346">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card-header-button" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:11" time="2.164" tests="1">
+    <testcase classname="nexus-card-header-button renders" name="nexus-card-header-button renders" time="0.49">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-accordion-content" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:11" time="2.602" tests="1">
+    <testcase classname="nexus-accordion-content renders" name="nexus-accordion-content renders" time="0.453">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-footer-content" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:12" time="2.856" tests="1">
+    <testcase classname="nexus-footer-content renders" name="nexus-footer-content renders" time="0.789">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:12" time="2.848" tests="1">
+    <testcase classname="nexus-card renders" name="nexus-card renders" time="0.904">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-carousel" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:12" time="2.639" tests="1">
+    <testcase classname="nexus-carousel renders" name="nexus-carousel renders" time="0.6">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-progress-bar-label" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:12" time="2.692" tests="1">
+    <testcase classname="nexus-progress-bar-label builds" name="nexus-progress-bar-label builds" time="0.359">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-textarea" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:12" time="2.711" tests="1">
+    <testcase classname="nexus-textarea renders" name="nexus-textarea renders" time="0.686">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-tooltip" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:13" time="2.89" tests="1">
+    <testcase classname="nexus-tooltip renders" name="nexus-tooltip renders" time="0.618">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-notification" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:13" time="2.691" tests="1">
+    <testcase classname="nexus-notification should have class" name="nexus-notification should have class" time="0.092">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-header-menu" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:14" time="2.277" tests="2">
+    <testcase classname="nexus-header-menu builds" name="nexus-header-menu builds" time="0.023">
+    </testcase>
+    <testcase classname="nexus-header-menu should have class" name="nexus-header-menu should have class" time="0.049">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-input" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:14" time="2.775" tests="1">
+    <testcase classname="nexus-input renders" name="nexus-input renders" time="0.427">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-message" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:15" time="2.186" tests="1">
+    <testcase classname="nexus-message should have class" name="nexus-message should have class" time="0.079">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-stepper" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:15" time="1.945" tests="1">
+    <testcase classname="nexus-stepper builds" name="nexus-stepper builds" time="0.092">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-breadcrumb-item" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:15" time="2.279" tests="4">
+    <testcase classname="nexus-breadcrumb-item builds" name="nexus-breadcrumb-item builds" time="0.09">
+    </testcase>
+    <testcase classname="nexus-breadcrumb-item contains class" name="nexus-breadcrumb-item contains class" time="0.069">
+    </testcase>
+    <testcase classname="nexus-breadcrumb-item renders icon " name="nexus-breadcrumb-item renders icon " time="0.081">
+    </testcase>
+    <testcase classname="nexus-breadcrumb-item disable " name="nexus-breadcrumb-item disable " time="0.055">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-breadcrumb" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:15" time="2.444" tests="4">
+    <testcase classname="nexus-breadcrumb builds" name="nexus-breadcrumb builds" time="0.116">
+    </testcase>
+    <testcase classname="nexus-breadcrumb contains class" name="nexus-breadcrumb contains class" time="0.075">
+    </testcase>
+    <testcase classname="nexus-breadcrumb renders NexusBreadcrumbItems" name="nexus-breadcrumb renders NexusBreadcrumbItems" time="0.116">
+    </testcase>
+    <testcase classname="nexus-breadcrumb renders icon inside all the breadcrumb items" name="nexus-breadcrumb renders icon inside all the breadcrumb items" time="0.055">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-tree-trigger" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:16" time="2.09" tests="1">
+    <testcase classname="nexus-tree-trigger renders" name="nexus-tree-trigger renders" time="0.39">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-accordion-group" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:16" time="2.253" tests="1">
+    <testcase classname="nexus-accordion-group renders" name="nexus-accordion-group renders" time="0.383">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-error-message" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:17" time="1.993" tests="1">
+    <testcase classname="nexus-error-message builds" name="nexus-error-message builds" time="0.138">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-progress-bar" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:17" time="2.39" tests="1">
+    <testcase classname="nexus-progress-bar renders" name="nexus-progress-bar renders" time="0.586">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card-header-subtitle" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:17" time="1.993" tests="1">
+    <testcase classname="nexus-card-header-subtitle builds" name="nexus-card-header-subtitle builds" time="0.084">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-slider" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:17" time="2.629" tests="1">
+    <testcase classname="nexus-slider renders" name="nexus-slider renders" time="0.746">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-form-field" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:17" time="2.261" tests="1">
+    <testcase classname="nexus-form-field renders" name="nexus-form-field renders" time="0.412">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-accordion-trigger" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:18" time="2.746" tests="1">
+    <testcase classname="nexus-accordion-trigger renders" name="nexus-accordion-trigger renders" time="0.539">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-table" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:18" time="2.874" tests="1">
+    <testcase classname="nexus-table renders" name="nexus-table renders" time="0.629">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-menu" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:18" time="2.905" tests="1">
+    <testcase classname="nexus-menu renders" name="nexus-menu renders" time="0.762">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-badge" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:19" time="2.448" tests="2">
+    <testcase classname="nexus-badge should contain class" name="nexus-badge should contain class" time="0.07">
+    </testcase>
+    <testcase classname="nexus-badge should contain the overlap class as specified" name="nexus-badge should contain the overlap class as specified" time="0.029">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-label" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:19" time="2.276" tests="1">
+    <testcase classname="nexus-label builds" name="nexus-label builds" time="0.078">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-modal-footer" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:19" time="2.564" tests="1">
+    <testcase classname="nexus-modal-footer renders" name="nexus-modal-footer renders" time="0.366">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card-header-button" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:20" time="2.222" tests="1">
+    <testcase classname="nexus-card-header-button builds" name="nexus-card-header-button builds" time="0.191">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-search-list" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:19" time="2.636" tests="1">
+    <testcase classname="nexus-search-list renders" name="nexus-search-list renders" time="0.447">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-modal-footer" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:21" time="1.861" tests="1">
+    <testcase classname="nexus-modal-footer should contain class" name="nexus-modal-footer should contain class" time="0.1">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-footer-content-title" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:21" time="1.869" tests="1">
+    <testcase classname="nexus-footer-content-title builds" name="nexus-footer-content-title builds" time="0.179">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-file-upload" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:20" time="2.364" tests="1">
+    <testcase classname="nexus-file-upload renders" name="nexus-file-upload renders" time="0.514">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-tooltip-trigger" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:21" time="2.523" tests="1">
+    <testcase classname="nexus-tooltip-trigger should contain class" name="nexus-tooltip-trigger should contain class" time="0.1">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-header" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:21" time="2.519" tests="2">
+    <testcase classname="nexus-header builds" name="nexus-header builds" time="0.024">
+    </testcase>
+    <testcase classname="nexus-header should have class" name="nexus-header should have class" time="0.125">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-tree-content" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:22" time="2.444" tests="1">
+    <testcase classname="nexus-tree-content should have class" name="nexus-tree-content should have class" time="0.054">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card-avatar" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:22" time="2.482" tests="1">
+    <testcase classname="nexus-card-avatar builds" name="nexus-card-avatar builds" time="0.099">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card-header-details" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:22" time="2.552" tests="1">
+    <testcase classname="nexus-card-header-details builds" name="nexus-card-header-details builds" time="0.122">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-card-header" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:22" time="2.269" tests="1">
+    <testcase classname="nexus-card-header should contain class" name="nexus-card-header should contain class" time="0.095">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-menu" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:23" time="2.085" tests="1">
+    <testcase classname="nexus-menu should have class" name="nexus-menu should have class" time="0.136">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-menu" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:23" time="2.102" tests="2">
+    <testcase classname="nexus-menu should have class" name="nexus-menu should have class" time="0.14">
+    </testcase>
+    <testcase classname="nexus-menu should emit a close event" name="nexus-menu should emit a close event" time="0.102">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-footer-logo" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:24" time="1.888" tests="1">
+    <testcase classname="nexus-footer-logo builds" name="nexus-footer-logo builds" time="0.091">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-chip-group" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:24" time="2.114" tests="2">
+    <testcase classname="nexus-chip-group builds" name="nexus-chip-group builds" time="0.061">
+    </testcase>
+    <testcase classname="nexus-chip-group should have the global class" name="nexus-chip-group should have the global class" time="0.155">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-modal-header-subtitle" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:24" time="2.016" tests="1">
+    <testcase classname="nexus-modal-header-subtitle builds" name="nexus-modal-header-subtitle builds" time="0.12">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-accordion-content" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:25" time="1.74" tests="1">
+    <testcase classname="nexus-accordion-content should contain class" name="nexus-accordion-content should contain class" time="0.116">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-search-list-item" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:24" time="1.839" tests="1">
+    <testcase classname="nexus-search-list-item builds" name="nexus-search-list-item builds" time="0.148">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-footer-bottom" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:25" time="1.819" tests="1">
+    <testcase classname="nexus-footer-bottom builds" name="nexus-footer-bottom builds" time="0.077">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-tab-bar" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:25" time="1.644" tests="1">
+    <testcase classname="nexus-tab-bar should have class" name="nexus-tab-bar should have class" time="0.063">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-modal-body" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:25" time="1.78" tests="1">
+    <testcase classname="nexus-modal-body should contain class" name="nexus-modal-body should contain class" time="0.074">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-footer" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:26" time="1.253" tests="1">
+    <testcase classname="nexus-footer builds" name="nexus-footer builds" time="0.046">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-icon-cache-test" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:26" time="1.176" tests="3">
+    <testcase classname="nexus-icon-cache-test test cached icons" name="nexus-icon-cache-test test cached icons" time="0.026">
+    </testcase>
+    <testcase classname="nexus-icon-cache-test test already cached icons" name="nexus-icon-cache-test test already cached icons" time="0.004">
+    </testcase>
+    <testcase classname="nexus-icon-cache-test test cached icons throws exception" name="nexus-icon-cache-test test cached icons throws exception" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="nexus-footer-column" errors="0" failures="0" skipped="0" timestamp="2023-11-01T15:30:26" time="1.134" tests="1">
+    <testcase classname="nexus-footer-column builds" name="nexus-footer-column builds" time="0.039">
+    </testcase>
+  </testsuite>
+</testsuites>

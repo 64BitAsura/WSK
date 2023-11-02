@@ -1,0 +1,94 @@
+@import '../../styles/variables';
+
+.nexus-icon {
+  display: var(--icon-display);
+  fill: var(--icon-fill);
+  position: var(--icon-position);
+  top: var(--icon-top);
+  left: var(--icon-left);
+
+  img,
+  svg {
+    fill: var(--icon-img-fill);
+  }
+
+  &.nexus-icon-xs {
+    img,
+    svg {
+      width: var(--icon-xs-img-width);
+      height: var(--icon-xs-img-height);
+    }
+
+    &.size-locked {
+      img,
+      svg {
+        min-width: var(--icon-xs-img-width);
+        min-height: var(--icon-xs-img-height);
+      }
+    }
+  }
+
+  &.nexus-icon-sm {
+    img,
+    svg {
+      width: var(--icon-sm-img-width);
+      height: var(--icon-sm-img-height);
+    }
+
+    &.size-locked {
+      img,
+      svg {
+        min-width: var(--icon-sm-img-width);
+        min-height: var(--icon-sm-img-height);
+      }
+    }
+  }
+
+  &.nexus-icon-md {
+    img,
+    svg {
+      width: var(--icon-md-img-width);
+      height: var(--icon-md-img-height);
+    }
+
+    &.size-locked {
+      img,
+      svg {
+        min-width: var(--icon-md-img-width);
+        min-height: var(--icon-md-img-height);
+      }
+    }
+  }
+
+  &.nexus-icon-lg {
+    img,
+    svg {
+      width: var(--icon-lg-img-width);
+      height: var(--icon-lg-img-height);
+    }
+
+    &.size-locked {
+      img,
+      svg {
+        min-width: var(--icon-lg-img-width);
+        min-height: var(--icon-lg-img-height);
+      }
+    }
+  }
+
+  &.nexus-icon-xl {
+    img,
+    svg {
+      width: var(--icon-xl-img-width);
+      height: var(--icon-xl-img-height);
+    }
+
+    &.size-locked {
+      img,
+      svg {
+        min-width: var(--icon-xl-img-width);
+        min-height: var(--icon-xl-img-height);
+      }
+    }
+  }
+}

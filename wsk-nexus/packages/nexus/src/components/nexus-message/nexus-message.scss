@@ -1,0 +1,11 @@
+@import '../../styles/variables';
+@import '../../styles/typography';
+
+.nexus-message {
+  @include nexus-body-sm;
+
+  display: flex;
+  align-items: center;
+  margin-top: $rhythm;
+  margin-bottom: 0;
+}

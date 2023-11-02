@@ -1,0 +1,5 @@
+nexus-accordion-group > .nexus-accordion:not(:first-child) {
+  nexus-accordion-trigger > button {
+    border-top: 0;
+  }
+}

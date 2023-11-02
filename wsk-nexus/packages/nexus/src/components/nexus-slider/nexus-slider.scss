@@ -1,0 +1,109 @@
+@import '../../styles/variables';
+@import '../../styles/typography';
+@import '../../styles/mixins';
+
+.nexus-slider {
+  position: relative;
+  display: block;
+  padding-right: 8px;
+}
+
+.nexus-slider-input {
+  appearance: none;
+  width: 100%;
+  padding: $padding * 3 0;
+  background: transparent;
+  --rangeProgressPercent: 0%;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    height: 16px;
+    width: 16px;
+    margin-top: -5px;
+    background: var(--slider-thumb-color);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &::-webkit-range-progress {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+
+  &::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 4px;
+    background-image: linear-gradient(90deg,
+    var(--primary-accent) var(--rangeProgressPercent),
+    var(--slider-track-color) var(--rangeProgressPercent));
+  }
+
+  &:disabled {
+    &::-webkit-slider-thumb {
+      background: var(--disabled);
+      cursor: not-allowed;
+    }
+
+    &::-webkit-range-progress {
+      cursor: not-allowed;
+      border: 0.2px solid #010101;
+    }
+
+    &::-webkit-slider-runnable-track {
+      background-image: linear-gradient(90deg,
+      var(--slider-track-color) var(--rangeProgressPercent),
+      var(--slider-track-color) var(--rangeProgressPercent));
+    }
+  }
+
+  &:disabled + .nexus-slider-wrap {
+    visibility: hidden;
+  }
+}
+
+.nexus-slider-wrap {
+  left: 0;
+  right: 26px;
+  position: absolute;
+  display: block;
+}
+
+.nexus-slider-current-value-top {
+  position: absolute;
+  min-width: 48px;
+  text-align: center;
+  margin-top: -60px;
+  transform: translateX(-30%);
+  left: var(--sliderValueProgressPercent);
+}
+
+.nexus-slider-min-value,
+.nexus-slider-max-value {
+  position: absolute;
+  bottom: 0;
+
+  &:before {
+    border-left: 1px solid var(--slider-track-value-markers);
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: -8px;
+    height: 50%;
+    width: 100%;
+  }
+}
+
+.nexus-slider-min-value {
+  left: 4px;
+}
+
+.nexus-slider-max-value {
+  right: 5px;
+
+  &:before {
+    left: 16px;
+  }
+}

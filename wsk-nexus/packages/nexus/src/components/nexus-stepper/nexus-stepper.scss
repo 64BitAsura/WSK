@@ -1,0 +1,25 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+$border-width: 1.5px;
+$counter-width: $rhythm * 3;
+$line-spacer: calc($counter-width / 2);
+
+.stepper-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stepper-column {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.stepper-row,
+.stepper-column {
+  & ol {
+    display: contents;
+  }
+}

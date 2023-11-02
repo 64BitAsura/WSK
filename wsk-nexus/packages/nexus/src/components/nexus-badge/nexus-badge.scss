@@ -1,0 +1,52 @@
+@import '../../styles/variables';
+
+@mixin badgeColor($background-color, $color) {
+  background-color: $background-color;
+  color: $color;
+}
+
+.nexus-badge {
+  border-radius: 100px;
+  display: inline-block;
+  font-size: var(--badge-font-size);
+  font-weight: var(--weight-bold);
+  line-height: 16px;
+  min-height: 16px;
+  padding: 2px 8px;
+  position: relative;
+  text-align: center;
+
+  &.nexus-badge-overlap {
+    position: absolute;
+    right: var(--nexus-badge-overlap-position-right);
+    top: var(--nexus-badge-overlap-position-top);
+    transform: var(--nexus-badge-overlap-transform);
+  }
+}
+
+.nexus-badge-has-content {
+  padding: 4px 10px;
+}
+
+.nexus-btn-icon {
+  .nexus-badge {
+    margin-top: 10px;
+    margin-right: 4px;
+  }
+}
+
+.nexus-badge-default {
+  @include badgeColor(var(--badge-default-bg-color), var(--badge-default-font-color));
+}
+
+.nexus-badge-error {
+  @include badgeColor(var(--badge-error-bg-color), var(--badge-error-font-color));
+}
+
+.nexus-badge-success {
+  @include badgeColor(var(--badge-success-bg-color), var(--badge-success-font-color));
+}
+
+.nexus-badge-warning {
+  @include badgeColor(var(--badge-warning-bg-color), var(--badge-warning-font-color));
+}

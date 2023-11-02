@@ -1,0 +1,79 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.nexus-header-menu {
+  .nexus-btn-icon {
+    color: var(--header-icon-color);
+
+    &:hover,
+    &:focus {
+      color: var(--header-icon-hover-color);
+    }
+  }
+}
+
+.nexus-hamburger-icon {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+@include mq(large) {
+  .nexus-btn-icon {
+    &.nexus-hamburger-icon {
+      display: none;
+    }
+  }
+
+  .nexus-menu {
+    max-width: 100%;
+    // button {
+    //   display: none;
+    // }
+  }
+
+  .nexus-header-menu {
+    .nexus-menu-nav {
+      max-width: 100%;
+      position: static;
+      height: auto;
+      color: var(--primary-text);
+      transform: translateX(0);
+
+      .nexus-menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+    }
+
+    .nexus-menu-list-item {
+      a,
+      button {
+        padding-bottom: 30px;
+        padding-top: 30px;
+        position: relative;
+        color: var(--menu-font-color);
+        border-bottom: none;
+        font-weight: var(--weight-light);
+
+        &:before {
+          width: 100%;
+          height: 5px;
+          bottom: 0;
+          top: auto;
+        }
+
+        &:hover {
+          color: $black;
+        }
+      }
+
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+}

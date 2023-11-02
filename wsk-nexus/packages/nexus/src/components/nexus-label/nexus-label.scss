@@ -1,0 +1,26 @@
+@import '../../styles/variables';
+@import '../../styles/typography';
+@import '../../styles/mixins';
+
+.nexus-label {
+  @include nexus-subtitle-sm;
+
+  font-size: var(--label-font-size);
+  width: calc(100% - 18px);
+  color: var(--label-color);
+  line-height: 1.43;
+  display: block;
+  z-index: 1;
+  pointer-events: none;
+  transition: 200ms ease all;
+  padding-top: $rhythm;
+  padding-bottom: $rhythm;
+
+  .nexus-input {
+    display: block;
+  }
+
+  &.nexus-label-for-slider {
+    margin-bottom: 20px;
+  }
+}

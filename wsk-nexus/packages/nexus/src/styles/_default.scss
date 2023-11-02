@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+    box-shadow: var(--focus-state);
+  }
+}
+
+.nexus {
+  @include nexus-body();
+
+  background-color: var(--body-bg);
+  overflow-x: hidden;
+  margin: 0;
+}
+
+p {
+  @include nexus-body();
+}
+
+ul {
+  list-style: var(--list-style);
+}
+
+li {
+  margin-bottom: $rhythm * 2;
+}
+
+svg,
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.nexus-visually-hidden {
+  @include nexus-visually-hidden;
+}
+
+.nexus-container {
+  padding: $rhythm * 2 $rhythm * 3;
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+@for $i from 1 through 20 {
+  .nexus-rhythm-#{$i} {
+    display: block;
+    margin-top: $rhythm;
+    margin-bottom: $rhythm * $i;
+  }
+
+  .nexus-rhythm-top-#{$i} {
+    margin-top: $rhythm * $i;
+  }
+
+  .nexus-rhythm-bottom-#{$i} {
+    margin-bottom: $rhythm * $i;
+  }
+
+  .nexus-padding-#{$i} {
+    padding-left: $padding * $i;
+    padding-right: $padding * $i;
+  }
+
+  .nexus-padding-left-#{$i} {
+    padding-left: $padding * $i;
+  }
+
+  .nexus-padding-right-#{$i} {
+    padding-right: $padding * $i;
+  }
+}
+
+@for $i from 1 through 8 {
+  $j: $i;
+
+  @if $i == 5 {
+    $j: 8;
+  }
+
+  @else if $i == 6 {
+    $j: 10;
+  }
+
+  @else if $i == 7 {
+    $j: 13;
+  }
+
+  @else if $i == 8 {
+    $j: 15;
+  }
+
+  .nexus-p-#{$i} {
+    padding: $rhythm * $j;
+  }
+
+  .nexus-px-#{$i} {
+    padding-right: $rhythm * $j;
+    padding-left: $rhythm * $j;
+  }
+
+  .nexus-py-#{$i} {
+    padding-top: $rhythm * $j;
+    padding-bottom: $rhythm * $j;
+  }
+
+  .nexus-pt-#{$i} {
+    padding-top: $rhythm * $j;
+  }
+
+  .nexus-pr-#{$i} {
+    padding-right: $rhythm * $j;
+  }
+
+  .nexus-pb-#{$i} {
+    padding-bottom: $rhythm * $j;
+  }
+
+  .nexus-pl-#{$i} {
+    padding-left: $rhythm * $j;
+  }
+
+  .nexus-m-#{$i} {
+    margin: $rhythm * $j;
+  }
+
+  .nexus-mx-#{$i} {
+    margin-right: $rhythm * $j;
+    margin-left: $rhythm * $j;
+  }
+
+  .nexus-my-#{$i} {
+    margin-top: $rhythm * $j;
+    margin-bottom: $rhythm * $j;
+  }
+
+  .nexus-mt-#{$i} {
+    margin-top: $rhythm * $j;
+  }
+
+  .nexus-mr-#{$i} {
+    margin-right: $rhythm * $j;
+  }
+
+  .nexus-mb-#{$i} {
+    margin-bottom: $rhythm * $j;
+  }
+
+  .nexus-ml-#{$i} {
+    margin-left: $rhythm * $j;
+  }
+}
+
+// Fix IE11 FOUC
+
+nexus-accordion,
+nexus-accordion-content,
+nexus-accordion-trigger,
+nexus-badge,
+nexus-card,
+nexus-card-body,
+nexus-card-body-image,
+nexus-card-footer,
+nexus-card-header,
+nexus-checkbox,
+nexus-chip,
+nexus-chip-group,
+nexus-error-message,
+nexus-file-upload,
+nexus-form-field,
+nexus-header,
+nexus-header-logo,
+nexus-header-menu,
+nexus-header-menu-item,
+nexus-header-utilities,
+nexus-icon,
+nexus-input,
+nexus-label,
+nexus-loader,
+nexus-menu,
+nexus-menu-item,
+nexus-message,
+nexus-modal,
+nexus-modal-body,
+nexus-modal-footer,
+nexus-modal-header,
+nexus-notification,
+nexus-pagination,
+nexus-radio,
+nexus-search,
+nexus-select,
+nexus-tab-bar,
+nexus-table,
+nexus-textarea,
+nexus-toast,
+nexus-tooltip,
+nexus-tooltip-content,
+nexus-tooltip-trigger,
+nexus-tree,
+nexus-tree-content,
+nexus-tree-trigger {
+  visibility: hidden;
+}
+
+@include mq(large) {
+  .nexus-container {
+    padding: $rhythm * 2 $rhythm * 15;
+  }
+}
+
+@include mq(double-extra-large) {
+  .nexus-container {
+    padding: $rhythm * 2 0;
+  }
+}

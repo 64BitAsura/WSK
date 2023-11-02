@@ -1,0 +1,183 @@
+// --------------------------------------------------
+// Color Variables
+// --------------------------------------------------
+
+// Primary Colors
+$white: #FFF;
+$black: #000;
+
+$grey-100: #FAFAFA;
+$grey-200: #EAEBEB;
+$grey-300: #BDBFC1;
+$grey-400: #A3A5A8;
+$grey-500: #7A7F85;
+$grey-600: #636569;
+$grey-700: #484A4C;
+$grey-800: #2D2E2F;
+$grey-900: #19191A;
+
+// Primary Accent
+$orange-100: #FFF0E5;
+$orange-200: #FFD7BA;
+$orange-300: #FFBE8F;
+$orange-400: #FFA464;
+$orange-500: #FF8733;
+$orange-600: #E66D19;
+$orange-700: #B34A00;
+$orange-800: #803500;
+$orange-900: #4D2000;
+
+// Secondary Accent
+$blue-100: #F7F9FC;
+$blue-200: #D4DDF7;
+$blue-300: #BACAF7;
+$blue-400: #809FFF;
+$blue-500: #4D79FF;
+$blue-600: #315BD3;
+$blue-700: #24408F;
+$blue-800: #0F2257;
+$blue-900: #0A1943;
+
+// Secondary Colors - Success
+$green-100: #D1FFCC;
+$green-200: #B3F3AF;
+$green-300: #95E893;
+$green-400: #77DD76;
+$green-500: #59D159;
+$green-600: #44AB46;
+$green-700: #2F8432;
+$green-800: #195E1E;
+$green-900: #04370B;
+
+// Secondary Colors - Warning
+$yellow-100: #FFF6D9;
+$yellow-200: #FFEBB3;
+$yellow-300: #FFDC73;
+$yellow-400: #FFD240;
+$yellow-500: #FFC300;
+$yellow-600: #E6B000;
+$yellow-700: #CC9C00;
+$yellow-800: #B38900;
+$yellow-900: #806200;
+
+// Secondary Colors - Danger
+$red-100: #FFD6CC;
+$red-200: #FFAC99;
+$red-300: #FF7E61;
+$red-400: #FF5833;
+$red-500: #DA3510;
+$red-600: #B62C0D;
+$red-700: #91240B;
+$red-800: #6C1F08;
+$red-900: #4F1200;
+
+// Extended Palette
+$cyan-100: #E5F5FF;
+$cyan-200: #C6E2FD;
+$cyan-300: #A7D8FC;
+$cyan-400: #88CDFA;
+$cyan-500: #69C3F8;
+$cyan-600: #509BC8;
+$cyan-700: #377398;
+$cyan-800: #1D4C67;
+$cyan-900: #042437;
+
+$pink-100: #FFE5FF;
+$pink-200: #FFD3FF;
+$pink-300: #FFC1FF;
+$pink-400: #FFAFFF;
+$pink-500: #FF9DFF;
+$pink-600: #D077D0;
+$pink-700: #A251A2;
+$pink-800: #732B73;
+$pink-900: #440544;
+
+$magenta-100: #F9E5FF;
+$magenta-200: #EFC7FC;
+$magenta-300: #E5AAF8;
+$magenta-400: #DC8CF4;
+$magenta-500: #D26EF1;
+$magenta-600: #A954C3;
+$magenta-700: #803A95;
+$magenta-800: #562067;
+$magenta-900: #2D0639;
+
+
+$rhythm: 8px !default;
+$padding: 8px !default;
+
+$breakpoint-2xs: 0;
+$breakpoint-xs: 320px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1440px;
+$nexus-default-grid-breakpoints: (
+  double-extra-small: (
+    name: '2xs',
+    columns: 4,
+    gutter: 16px,
+    min-width: #{$breakpoint-2xs},
+    max-width: #{$breakpoint-xs - 1px},
+  ),
+  extra-small: (
+    name: 'xs',
+    columns: 4,
+    gutter: 16px,
+    min-width: #{$breakpoint-xs},
+    max-width: #{$breakpoint-sm - 1px},
+  ),
+  small: (
+    name: 'sm',
+    columns: 4,
+    gutter: 16px,
+    min-width: #{$breakpoint-sm},
+    max-width: #{$breakpoint-md - 1px},
+  ),
+  medium: (
+    name: 'md',
+    columns: 8,
+    gutter: 24px,
+    min-width: #{$breakpoint-md},
+    max-width: #{$breakpoint-lg - 1px},
+  ),
+  large: (
+    name: 'lg',
+    columns: 12,
+    gutter: 24px,
+    min-width: #{$breakpoint-lg},
+    max-width: #{$breakpoint-xl - 1px},
+  ),
+  extra-large: (
+    name: 'xl',
+    columns: 12,
+    gutter: 24px,
+    min-width: #{$breakpoint-xl},
+    max-width: #{$breakpoint-2xl - 1px},
+  ),
+  double-extra-large: (
+    name: '2xl',
+    columns: 12,
+    gutter: 24px,
+    min-width: #{$breakpoint-2xl},
+  )
+);
+$nexus-breakpoints: $nexus-default-grid-breakpoints;
+
+@if global-variable-exists(nexus-grid-breakpoints) {
+  $nexus-breakpoints: $nexus-grid-breakpoints;
+}
+
+$nexus-default-prefix: 'nexus-';
+$nexus-prefix: $nexus-default-prefix;
+
+@if global-variable-exists(nexus-grid-prefix) {
+  $nexus-prefix: $nexus-grid-prefix;
+}
+
+$font-path: './assets/fonts';
+
+@if global-variable-exists(nexus-font-path) {
+  $font-path: $nexus-font-path;
+}

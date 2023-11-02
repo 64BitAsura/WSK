@@ -1,0 +1,68 @@
+@import '../../styles/variables';
+
+.nexus-loader-container {
+  align-items: center;
+  background-color: var(--loader-bg-color);
+  display: none;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  &.nexus-loader-show {
+    display: flex;
+  }
+}
+
+.nexus-loader-content {
+  display: flex;
+  height: $rhythm * 2;
+  width: $rhythm * 10;
+}
+
+.nexus-loader-fullscreen {
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+  z-index: 999;
+
+  .nexus-loader-content {
+    top: 50%;
+  }
+}
+
+.nexus-loader-square {
+  background-color: var(--loader-square-bg-color);
+  height: $rhythm * 2;
+  width: $rhythm * 2;
+  opacity: 1;
+  margin-right: 6px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  @for $i from 4 through 1 {
+    &:nth-child(#{$i}) {
+      animation: loaderAnimation 1s;
+      animation-delay: ($i * 0.3s);
+      animation-timing-function: ease-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+  }
+}
+
+@keyframes loaderAnimation {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0.25;
+    transform: scale(0.33);
+  }
+}

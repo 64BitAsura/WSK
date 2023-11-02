@@ -1,0 +1,16 @@
+@import '../../../styles/variables';
+
+.nexus-footer-logo {
+  position: relative;
+  display: block;
+
+  a {
+    display: block;
+    max-height: 72px;
+    max-width: 125px;
+  }
+
+  svg {
+    height: 72px;
+  }
+}

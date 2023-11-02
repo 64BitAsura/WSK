@@ -1,0 +1,77 @@
+@import '../../styles/variables';
+
+.nexus-chip {
+  align-items: center;
+  background-color: var(--chip-bg-color);
+  border-radius: var(--chip-border-radius);
+  border: var(--chip-border);
+  color: var(--chip-color);
+  display: flex;
+  font-family: var(--primary-font);
+  font-size: var(--chip-font-size);
+  font-weight: var(--chip-font-weight);
+  justify-content: space-evenly;
+  line-height: 1;
+  padding: 11px 24px;
+  text-align: center;
+  transition: color var(--ease-in-out-fast), background-color var(--ease-in-out-fast),
+    box-shadow var(--ease-in-out-fast), border-color var(--ease-in-out-fast);
+  cursor: pointer;
+
+  &:focus {
+    box-shadow: var(--focus-state);
+    outline: none;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &:hover {
+    background-color: var(--chip-hover-bg-color);
+    border-color: var(--chip-hover-border-color);
+    color: var(--chip-hover-color);
+  }
+
+  &:active {
+    background-color: var(--chip-active-bg-color);
+    color: var(--chip-active-color);
+  }
+
+  &:disabled {
+    background-color: var(--chip-disabled-bg-color);
+    border-color: var(--chip-disabled-border-color);
+    color: var(--chip-disabled-color);
+
+    &:hover {
+      cursor: auto;
+      background-color: var(--chip-disabled-bg-color);
+    }
+  }
+
+  &.nexus-success {
+    background-color: var(--chip-success-color);
+    border-color: var(--chip-success-color);
+  }
+
+  &.nexus-error {
+    background-color: var(--chip-error-color);
+    border-color: var(--chip-error-color);
+  }
+
+  svg {
+    fill: currentColor;
+  }
+
+  .nexus-close-icon {
+    height: 16px;
+    margin-right: 4px;
+    width: 20px;
+
+    svg {
+      margin-top: -2px;
+      height: 20px;
+      max-height: 20px;
+    }
+  }
+}

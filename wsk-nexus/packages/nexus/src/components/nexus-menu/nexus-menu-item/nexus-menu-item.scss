@@ -1,0 +1,44 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.nexus-menu-list-item {
+  padding-left: $rhythm * 3;
+  padding-right: $rhythm * 3;
+  position: relative;
+  text-align: left;
+
+  a,
+  button {
+    color: var(--menu-font-color);
+    text-decoration: none;
+    display: block;
+    padding-top: $rhythm * 3;
+    padding-bottom: $rhythm * 3;
+    border-bottom: 1px solid $grey-400;
+    font-weight: 500;
+
+    &:before {
+      transition: all var(--ease-in-out-fast);
+      display: block;
+      height: 100%;
+      width: 5px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 100;
+      background: $orange-500;
+    }
+
+    &:hover {
+      &:before {
+        content: '';
+      }
+    }
+  }
+}
+
+@include mq(medium) {
+  .nexus-menu-list-item {
+    font-size: var(--line-height-lg);
+  }
+}

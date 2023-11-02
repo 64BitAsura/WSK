@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+.nexus-table-wrapper {
+  .nexus-table-footer {
+    display: var(--table-footer-display);
+    justify-content: space-between;
+  }
+
+  .nexus-multi-select-col {
+    width: var(--table-multi-select-column-width);
+  }
+
+  .nexus-table tbody {
+    display: var(--table-body-display);
+    overflow: var(--table-body-overflow);
+    height: var(--table-body-height);
+  }
+
+  thead,
+  tbody tr {
+    display: var(--table-head-body-tr-display);
+    overflow-wrap: var(--table-head-body-tr-overflow-wrap);
+    table-layout: var(--table-head-body-tr-table-layout);
+    width: var(--table-head-body-tr-width);
+  }
+
+  .nexus-table-custom {
+    tr {
+      border-bottom: var(--table-tr-border-bottom);
+    }
+  }
+}

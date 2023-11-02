@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="123px" height="63px" viewBox="0 0 123 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 5</title>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="130.308007%" gradientTransform="translate(0.500000,0.500000),scale(0.243902,1.000000),rotate(-90.000000),translate(-0.500000,-0.500000)" id="radialGradient-footer-logo">
+            <stop stop-color="#FFFFFF" offset="0.0519012238%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-28" transform="translate(-119.000000, -65.000000)">
+            <rect id="Rectangle" fill="#19191A" x="0" y="0" width="1439" height="320"></rect>
+            <g id="Group-5" transform="translate(119.000000, 65.000000)">
+                <text id="Powered-by" font-family="Helvetica" font-size="16" font-weight="normal" line-spacing="19.2" letter-spacing="-0.25" fill="#FFFFFF">
+                    <tspan x="2" y="57.8">Powered by </tspan>
+                </text>
+                <path d="M92.5,47.4762708 L92.5,59.00525 L101.922527,59.00525 L101.922527,56.3535316 L96.0321824,56.3535316 L96.0321824,54.450882 L100.290732,54.450882 L100.290732,52.0298798 L96.0321824,52.0298798 L96.0321824,50.1279891 L100.743057,50.1279891 L99.1805505,47.4762708 L92.5,47.4762708 Z M108.266753,47.4762708 L106.254258,51.2383108 L104.246433,47.4762708 L100.318759,47.4762708 L104.458193,54.450882 L104.458193,59.00525 L108.000496,59.00525 L108.000496,54.4516409 L112.145381,47.4762708 L108.266753,47.4762708 Z" id="Shape1" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <polygon id="Shape" fill="#FDD83A" fill-rule="nonzero" points="114.419611 36.4084507 91.5 44.7093157 114.419611 40.691251"></polygon>
+                <text id="Logo" fill="url(#radialGradient-footer-logo)" fill-rule="nonzero" font-family="Helvetica" font-size="28" font-weight="normal" letter-spacing="4.42105263">
+                    <tspan x="0" y="28">NEXUS</tspan>
+                </text>
+            </g>
+            <g id="ey-logo" transform="translate(180.541204, 99.000000)"></g>
+        </g>
+    </g>
+</svg>

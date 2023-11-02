@@ -1,0 +1,46 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "nexus-angular": {
+      "projectType": "library",
+      "root": "projects/nexus-angular",
+      "sourceRoot": "projects/nexus-angular/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/nexus-angular/tsconfig.lib.json",
+            "project": "projects/nexus-angular/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/nexus-angular/src/test.ts",
+            "tsConfig": "projects/nexus-angular/tsconfig.spec.json",
+            "karmaConfig": "projects/nexus-angular/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/nexus-angular/tsconfig.lib.json",
+              "projects/nexus-angular/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "nexus-angular",
+  "cli": {
+    "analytics": false
+  }
+}

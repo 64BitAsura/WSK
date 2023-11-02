@@ -1,0 +1,65 @@
+@import '../../styles/variables';
+
+.nexus-pagination {
+  display: flex;
+  align-items: center;
+
+  [class^='nexus-btn'] {
+    color: var(--pagination-icon-color);
+  }
+
+  .nexus-btn-icon {
+    padding: 0;
+  }
+
+  .nexus-btn:first-child,
+  .nexus-btn:last-child {
+    color: var(--pagination-jump-icon-color);
+  }
+}
+
+.nexus-pagination-count {
+  margin: 4px $rhythm * 2 0 $rhythm * 2;
+  color: var(--pagination-count-font-color);
+  font-family: var(--primary-font);
+  font-weight: var(--weight-normal);
+  font-size: var(--subtitle-size);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+
+  .nexus-pagination-count-input {
+    color: var(--pagination-count-font-color);
+    margin: 0;
+    height: $rhythm * 2;
+    width: $rhythm * 2;
+    font-family: var(--primary-font);
+    font-weight: var(--weight-normal);
+    font-size: var(--subtitle-size);
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    padding: 0;
+    text-align: center;
+    border: none;
+    appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      appearance: none;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      border-bottom: 1px solid var(--pagination-count-border-color);
+    }
+  }
+
+  .nexus-number-of-pages {
+    color: var(--pagination-count-font-color);
+    font-family: var(--primary-font);
+    font-weight: var(--weight-normal);
+    font-size: var(--subtitle-size);
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+  }
+}

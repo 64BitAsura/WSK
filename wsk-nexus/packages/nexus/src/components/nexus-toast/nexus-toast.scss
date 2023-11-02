@@ -1,0 +1,92 @@
+@import '../../styles/variables';
+
+@mixin toastColor($background-color, $color) {
+  background-color: $background-color;
+  color: $color;
+
+  .nexus-icon {
+    position: relative;
+    top: -1px;
+    min-width: 24px;
+    color: $color;
+  }
+
+  .nexus-toast-close-button {
+    color: $color;
+  }
+}
+
+.nexus-toast {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 9px $rhythm * 2;
+  box-shadow: var(--toast-box-shadow);
+}
+
+.nexus-toast-close-btn {
+  height: 24px;
+
+  button {
+    padding: 0;
+    margin-left: $rhythm * 2;
+  }
+}
+
+.nexus-toast-content {
+  display: flex;
+  align-items: flex-start;
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-medium);
+  line-height: 1.375rem;
+
+  .nexus-icon {
+    height: 24px;
+    width: 24px;
+    margin-right: $rhythm;
+  }
+}
+
+.nexus-toast-top,
+.nexus-toast-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.nexus-toast-top {
+  top: 0;
+}
+
+.nexus-toast-bottom {
+  bottom: 0;
+}
+
+.nexus-toast-success {
+  @include toastColor(var(--toast-success-bg-color), var(--toast-success-font-color));
+}
+
+.nexus-toast-error {
+  @include toastColor(var(--toast-error-bg-color), var(--toast-error-font-color));
+}
+
+.nexus-toast-warning {
+  @include toastColor(var(--toast-warning-bg-color), var(--toast-warning-font-color));
+}
+
+.nexus-toast-info {
+  @include toastColor(var(--toast-info-bg-color), var(--toast-info-font-color));
+}
+
+.nexus-toast-custom {
+  @include toastColor(var(--toast-custom-bg-color), var(--toast-custom-font-color));
+
+  border: var(--toast-custom-border);
+  border-radius: var(--toast-custom-border-radius);
+}
+
+.nexus-toast-hidden {
+  display: none;
+}

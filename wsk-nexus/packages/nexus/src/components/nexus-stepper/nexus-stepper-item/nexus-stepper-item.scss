@@ -1,0 +1,142 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+$border-width-line: 3px;
+$border-width-circle: 1px;
+$counter-width: $rhythm * 3;
+
+.check {
+  color: $black;
+  height: $rhythm * 2;
+  margin-bottom: 4px;
+}
+
+.step-counter {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $counter-width;
+  height: $counter-width;
+  border-radius: 50%;
+  padding-top: 3px;
+  border: $border-width-circle solid $grey-300;
+  color: $grey-300;
+  font-size: small;
+  font-weight: var(--weight-normal);
+
+  &.warning {
+    border: $border-width-circle solid $orange-500;
+  }
+
+  &.error {
+    border: $border-width-circle solid $red-500;
+  }
+
+  &.complete {
+    border: $border-width-circle solid $green-600;
+  }
+
+  &.active {
+    border: $border-width-circle solid $black;
+    background-color: $black;
+    color: $white;
+  }
+}
+
+.nexus-stepper-item {
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.step-counter-column {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-items: center;
+}
+
+.stepper-item {
+  flex-grow: 1;
+  position: relative;
+  border: none;
+  font-family: var(--primary-font);
+  text-align: left;
+  margin-right: 0.357rem;
+  padding: 0.857rem 0 0.429rem;
+  min-width: 10rem;
+
+  &:not(:last-child) {
+    .nexus-stepper-item {
+      &:after {
+        content: '';
+        flex: 1;
+        height: 2px;
+        margin-left: 10px;
+        background-color: $grey-400;
+      }
+    }
+
+    .step-counter-column {
+      &:after {
+        position: absolute;
+        left: 0.11rem;
+        height: calc(100% + 3.5rem);
+        top: 1.25rem;
+        width: 2px;
+        margin-top: 0.5rem;
+        content: '';
+        background-color: $grey-400;
+      }
+    }
+  }
+
+  button,
+  a,
+  .step-item-target {
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    vertical-align: super;
+    cursor: pointer;
+    color: $grey-800;
+    font-size: 0.88rem;
+    font-weight: var(--weight-light);
+    line-height: 1;
+    margin: 0;
+    padding: 1px 6px;
+  }
+}
+
+.step-column {
+  background-color: transparent;
+  min-height: 8rem;
+}
+
+.step-row {
+  background-color: transparent;
+}
+
+.icon-complete {
+  color: $green-600;
+  width: $rhythm * 3;
+}
+
+.icon-warning {
+  color: var(--warning);
+  width: $rhythm * 3;
+}
+
+.icon-error {
+  color: $red-500;
+  width: $rhythm * 3;
+}
+
+.icon-default {
+  color: $white;
+  width: $rhythm * 2.5;
+}

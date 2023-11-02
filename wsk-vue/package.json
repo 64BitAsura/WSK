@@ -1,0 +1,42 @@
+{
+  "name": "wsk-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "config": {
+    "clean": "--glob .*/**/node_modules .*/**/package-lock.json",
+    "package": "vue",
+    "version": "@latest",
+    "template": "typescript",
+    "template_typescript": "typescript",
+    "project": "wsk-app",
+    "prefix": "my",
+    "component": "component"
+  },
+  "scripts": {
+    "preclean": "npx -y rimraf $npm_package_config_project",
+    "clean": "npx -y rimraf $npm_package_config_clean",
+
+    "pre-init": "npx -y @vue/cli@3 $npm_package_config_project",
+    "preinit": "npm init vue@3 $npm_package_config_project",
+    "init": "cd $npm_package_config_project && npm i sass --save-dev && npm link vue-library",
+    "postinit": "node .bin/index css2scss && node .bin/index install && npm run setup",
+
+    "prestart": "npm run clean",
+    "start": "npm run init",
+    "poststart": "",
+    
+    "previte": "",
+    "vite": "npm create vite@latest $npm_package_config_project -- --template vue-ts",
+    "postvite": "cd $npm_package_config_project && npm i && npm i sass --save-dev",
+
+    "presetup": "echo \"Warning: may need to update this script from time to time\"",
+    "setup": "cd $npm_package_config_project && npm i && npm run format",
+    "postsetup": "cd $npm_package_config_project && npm run dev",
+    
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

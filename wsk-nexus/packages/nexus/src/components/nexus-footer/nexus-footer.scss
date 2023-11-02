@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+@import '../../styles/typography';
+@import '../../styles/theme';
+
+.nexus-footer {
+  background-color: var(--footer-bg-color);
+  padding-top: $rhythm * 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .nexus-footer-row-content {
+    color: var(--footer-text-color);
+    display: flex;
+    flex-direction: row;
+  }
+
+  &.nexus-footer-fixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &.nexus-footer-sticky {
+    position: sticky;
+    bottom: 0;
+  }
+
+  @include mq(x-small) {
+    .nexus-footer-row-content {
+      justify-content: flex-end;
+    }
+  }
+
+  @include mq(medium) {
+    .nexus-footer-row-content {
+      justify-content: flex-end;
+    }
+  }
+}

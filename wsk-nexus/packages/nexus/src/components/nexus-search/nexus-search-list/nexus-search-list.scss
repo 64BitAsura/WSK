@@ -1,0 +1,17 @@
+.nexus-search-list {
+  border-left: 1px solid var(--form-element-border-color);
+  border-right: 1px solid var(--form-element-border-color);
+  border-bottom: 1px solid var(--form-element-border-color);
+  border-bottom-left-radius: var(--form-element-border-radius);
+  border-bottom-right-radius: var(--form-element-border-radius);
+  max-height: 280px;
+  overflow-y: scroll;
+  position: flex;
+  z-index: 2;
+  display: relative;
+}
+
+.nexus-search-ul {
+  margin: 0;
+  padding: 0;
+}

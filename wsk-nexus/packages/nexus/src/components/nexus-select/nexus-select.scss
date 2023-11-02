@@ -1,0 +1,108 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+nexus-select {
+  position: var(--select-wrapper-position);
+  display: var(--select-wrapper-display);
+
+  &:after {
+    content: var(--select-after-content);
+    pointer-events: var(--select-after-pointer-event);
+    border-style: var(--select-after-border-style);
+    border-width: var(--select-after-border-width);
+    display: var(--select-after-display);
+    top: var(--select-after-top);
+    right: var(--select-after-right);
+    height: var(--select-after-height);
+    width: var(--select-after-width);
+    position: var(--select-after-position);
+    transform: var(--select-after-transform);
+  }
+}
+
+.nexus-select {
+  appearance: var(--select-appearance);
+  background-color: var(--select-bg-color);
+  border-top: var(--select-border-top);
+  border-right: var(--select-border-right);
+  border-bottom: var(--select-border-bottom);
+  border-left: var(--select-border-left);
+  border-radius: var(--select-border-radius);
+  padding: var(--select-padding);
+  padding-right: var(--select-padding-right);
+  margin: var(--select-margin);
+  display: var(--select-display);
+  justify-content: var(--select-justify-content);
+  align-items: var(--select-align-items);
+  width: var(--select-width);
+  line-height: var(--select-line-height);
+  font-size: var(--select-font-size);
+  cursor: var(--select-cursor);
+
+  &:focus {
+    border: var(--select-focus-border);
+    border-top: var(--select-focus-border-top);
+    border-right: var(--select-focus-border-right);
+    border-bottom: var(--select-focus-border-bottom);
+    border-left: var(--select-focus-border-left);
+  }
+
+  &:disabled {
+    border: var(--select-disabled-border);
+    border-top: var(--select-disabled-border-top);
+    border-right: var(--select-disabled-border-right);
+    border-bottom: var(--select-disabled-border-bottom);
+    border-left: var(--select-disabled-border-left);
+    cursor: var(--select-disabled-cursor);
+  }
+}
+
+.nexus-invalid {
+  .nexus-select {
+    border: var(--select-invalid-border);
+    border-top: var(--select-invalid-border-top);
+    border-right: var(--select-invalid-border-right);
+    border-bottom: var(--select-invalid-border-bottom);
+    border-left: var(--select-invalid-border-left);
+  }
+}
+
+.nexus-select-custom {
+  border-radius: var(--select-border-radius);
+  cursor: var(--select-cursor);
+
+  .content {
+    display: var(--select-label-display);
+    padding: var(--select-custom-content-padding);
+    min-height: var(--select-custom-content-min-height);
+    align-items: var(--select-custom-content-align-items);
+
+    .selected-content {
+      max-width: var(--select-custom-selected-content-max-width);
+      white-space: var(--select-custom-selected-content-white-space);
+      overflow: var(--select-custom-selected-content-overflow);
+      text-overflow: var(--select-custom-selected-content-text-overflow);
+    }
+  }
+
+  &.nexus-select-dropdown-active {
+    border: var(--select-custom-dropdown-active-border);
+
+    .nexus-dropdown {
+      border-top: var(--select-custom-dropdown-active-border-top);
+      box-shadow: var(--select-custom-dropdown-active-box-shadow);
+    }
+  }
+
+  .select-input {
+    ::selection {
+      color: var(--select-text-selection-color);
+      background: var(--select-text-selection-bg);
+    }
+  }
+
+  .nexus-input {
+    text-overflow: var(--select-custom-input-text-overflow);
+    padding-right: var(--select-custom-input-padding-right);
+  }
+}

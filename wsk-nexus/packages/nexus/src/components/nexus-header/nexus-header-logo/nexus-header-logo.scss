@@ -1,0 +1,19 @@
+@import '../../../styles/variables';
+
+.nexus-header-logo {
+  position: relative;
+  display: block;
+  padding-top: $rhythm * 3;
+  padding-bottom: $rhythm * 3;
+  z-index: 1;
+
+  a {
+    display: block;
+    height: 32px;
+    max-width: 80px;
+  }
+
+  svg {
+    height: 32px;
+  }
+}

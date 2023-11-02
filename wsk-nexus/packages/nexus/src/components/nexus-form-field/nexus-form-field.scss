@@ -1,0 +1,52 @@
+@import '../../styles/variables';
+
+.nexus-form-field {
+  position: var(--form-filed-position);
+  margin-bottom: var(--form-field-margin-bottom);
+  display: var(--form-field-display);
+
+  &.nexus-disabled {
+    .nexus-input,
+    .nexus-select {
+      background-color: var(--form-element-disabled-bg-color);
+    }
+  }
+
+  &.nexus-invalid {
+    .nexus-input-with-icon {
+      .nexus-icon {
+        color: var(--form-field-icon-error-color);
+      }
+    }
+
+    .nexus-input,
+    .nexus-textarea,
+    .nexus-select {
+      color: var(--form-field-error-color);
+      border-top: var(--form-field-error-border-top);
+      border-right: var(--form-field-error-border-right);
+      border-bottom: var(--form-field-error-border-bottom);
+      border-left: var(--form-field-error-border-left);
+      background-color: var(--form-field-error-bg-color);
+    }
+  }
+
+  &.nexus-success {
+    .nexus-input-with-icon {
+      .nexus-icon {
+        color: var(--form-field-icon-success-color);
+      }
+    }
+
+    .nexus-input,
+    .nexus-textarea,
+    .nexus-select {
+      color: var(--form-field-success-color);
+      border-top: var(--form-field-success-border-top);
+      border-right: var(--form-field-success-border-right);
+      border-bottom: var(--form-field-success-border-bottom);
+      border-left: var(--form-field-success-border-left);
+      background-color: var(--form-field-success-bg-color);
+    }
+  }
+}

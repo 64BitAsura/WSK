@@ -1,0 +1,9 @@
+@import '../../styles/variables';
+
+.nexus-breadcrumb {
+  list-style: var(--breadcrumb-list-style);
+
+  .nexus-breadcrumb-item {
+    display: var(--breadcrumb-list-display);
+  }
+}

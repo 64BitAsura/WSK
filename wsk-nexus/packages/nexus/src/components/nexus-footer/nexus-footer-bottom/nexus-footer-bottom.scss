@@ -1,0 +1,17 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+@import '../../../styles/theme';
+
+.nexus-footer-bottom {
+  border-top: 1px solid $grey-300;
+  color: $white;
+  min-height: 45px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-normal);
+
+  .nexus-footer-bottom-content {
+    :first-child {
+      margin: 0;
+    }
+  }
+}

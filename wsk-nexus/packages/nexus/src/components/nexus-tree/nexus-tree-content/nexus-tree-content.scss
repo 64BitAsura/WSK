@@ -1,0 +1,14 @@
+@import '../../../styles/variables';
+
+.nexus-tree-content {
+  display: block;
+  overflow: hidden;
+  transition: height var(--ease-in-out-fast);
+}
+
+.nexus-tree-content-inner {
+  margin: $rhythm $rhythm * 4;
+  padding-left: $rhythm;
+  padding-right: $rhythm;
+  border-left: 1px solid var(--border-color);
+}
