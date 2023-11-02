@@ -5,7 +5,7 @@
   "main": "index.js",
   "config": {
     "clean": "--glob .*/**/node_modules .*/**/package-lock.json",
-    "package": "vue",
+    "package": "@vue/cli",
     "version": "@latest",
     "template": "typescript",
     "template_typescript": "typescript",
@@ -34,6 +34,9 @@
     "setup": "cd $npm_package_config_project && npm i && npm run format",
     "postsetup": "cd $npm_package_config_project && npm run dev",
     
+    "links": "npm ls -g --depth=0 --link=true",
+    "view": "npm view $npm_package_config_package versions --json",
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

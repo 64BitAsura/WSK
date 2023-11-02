@@ -31,8 +31,27 @@ const updater = (folder, ref, name) => {
 };
 
 event.on('css2scss', () => {
-    const folder = path.join(process.cwd(), "wsk-app/packages/stencil-library/src");
-    renamer(folder);
+    const folders = [
+        path.join(process.cwd(), "wsk-app/packages/stencil-library/src"),
+        path.join(process.cwd(), "wsk-app/packages/stencil-library/src/components"),
+        path.join(process.cwd(), "wsk-app/packages/stencil-library/src/components/my-component"),
+    ];
+    for (const folder of folders) {
+        renamer(folder);
+    }
+});
+event.on('stencil', () => {
+    const project = args[1] || 'stencil-library';
+    const file = path.join(process.cwd(), `wsk-app/packages/${project}/package.json`);
+    if (fs.statSync(file).isFile()) {
+        const content = fs.readFileSync(file, 'utf8');
+        const pkg = JSON.parse(content);
+        pkg["version"] = "1.0.0";
+        fs.writeFileSync(file, JSON.stringify(pkg, null, 2));
+        console.log(`${args[0]} package.json updated`);
+    } else {
+        console.log("File not found");
+    }
 });
 event.on('angular', () => {
     const project = args[1] || 'angular-workspace';
@@ -41,22 +60,25 @@ event.on('angular', () => {
     if (fs.statSync(file).isFile()) {
         const content = fs.readFileSync(file, 'utf8');
         const pkg = JSON.parse(content);
+        pkg["version"] = "1.0.0";
         pkg.peerDependencies["stencil-library"] = "*";
         fs.writeFileSync(file, JSON.stringify(pkg, null, 2));
         console.log(`${args[0]} peerDependencies updated`);
     } else {
         console.log("File not found");
     }
-    // const rootPkg = path.join(process.cwd(), `wsk-app/packages/${project}/package.json`);
-    // if (fs.statSync(rootPkg).isFile()) {
-    //     const content = fs.readFileSync(rootPkg, 'utf8');
-    //     const pkg = JSON.parse(content);
-    //     pkg.dependencies["stencil-library"] = "*";
-    //     fs.writeFileSync(rootPkg, JSON.stringify(pkg, null, 2));
-    //     console.log(`${args[0]} dependencies updated`);
-    // } else {
-    //     console.log("File not found");
-    // }
+    const rootPkg = path.join(process.cwd(), `wsk-app/packages/${project}/package.json`);
+    if (fs.statSync(rootPkg).isFile()) {
+        const content = fs.readFileSync(rootPkg, 'utf8');
+        const pkg = JSON.parse(content);
+        pkg["version"] = "1.0.0";
+        pkg.scripts["build:lib"] = "ng build angular-library";
+        // pkg.dependencies["stencil-library"] = "*";
+        fs.writeFileSync(rootPkg, JSON.stringify(pkg, null, 2));
+        console.log(`${args[0]} dependencies updated`);
+    } else {
+        console.log("File not found");
+    }
 });
 event.on('react', () => {
     const project = args[1] || 'react-library';

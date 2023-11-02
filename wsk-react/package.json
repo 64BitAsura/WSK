@@ -32,6 +32,13 @@
     "presetup": "echo \"Warning: may need to update this script from time to time\"",
     "setup": "npx -y ncp ./.tmp/App.tsx ./$npm_package_config_project/src/App.tsx",
     "postsetup": "cd $npm_package_config_project && npm start",
+
+    "pregenerate": "echo \"Component name: prompt goes here\"",
+    "generate": "cd $npm_package_config_project && npx -y generate-react-cli component $npm_package_config_prefix-$npm_package_config_component --path src/components --withLazy --withStyle --withTest --withStory",
+    "postgenerate": "node .bin/index css2scss $npm_package_config_project/src/components/$npm_package_config_prefix-$npm_package_config_component",
+    
+    "links": "npm ls -g --depth=0 --link=true",
+    "view": "npm view $npm_package_config_package versions --json",
     
     "test": "echo \"Error: no test specified\" && exit 1"
   },

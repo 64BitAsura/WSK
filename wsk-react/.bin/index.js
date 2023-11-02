@@ -31,7 +31,8 @@ const updater = (folder, ref, name) => {
 };
 
 event.on('css2scss', () => {
-    const folder = path.join(process.cwd(), "wsk-app/src");
+    const project = args[1] || 'wsk-app/src';
+    const folder = path.join(process.cwd(), project);
     renamer(folder);
 });
 event.on('install', () => {

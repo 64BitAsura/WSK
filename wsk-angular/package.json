@@ -7,6 +7,9 @@
     "clean": "--glob .*/**/node_modules .*/**/package-lock.json",
     "package": "@angular/cli",
     "version": "@latest",
+    "version_current": "@latest",
+    "version_legacy": "@12.0.0",
+    "version_future": "@next",
     "template": "scss",
     "project": "wsk-app",
     "prefix": "my",
@@ -19,7 +22,7 @@
     "pre-init": "npx -y $npm_package_config_package$npm_package_config_version new $npm_package_config_project --style=$npm_package_config_template --routing --interactive=false --defaults --skip-install",
     "preinit": "npx -y -p $npm_package_config_package$npm_package_config_version ng new $npm_package_config_project --style=$npm_package_config_template --routing",
     "_init": "cd $npm_package_config_project && npm link angular-workspace && npm link angular-library",
-    "init": "cd $npm_package_config_project && npm link angular-workspace",
+    "init": "cd $npm_package_config_project && npm link angular-library",
     "postinit": "node .bin/index install && npm run setup",
     
     "prestart": "npm run clean",
@@ -29,6 +32,9 @@
     "presetup": "echo \"Warning: may need to update this script from time to time\"",
     "setup": "npx -y ncp ./.tmp/src/app ./$npm_package_config_project/src/app",
     "postsetup": "cd $npm_package_config_project && npm run serve",
+
+    "links": "npm ls -g --depth=0 --link=true",
+    "view": "npm view $npm_package_config_package versions --json",
 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
