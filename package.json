@@ -7,14 +7,16 @@
     "clean": "--glob .*/**/node_modules .*/**/package-lock.json"
   },
   "scripts": {
-    "prestart": "npm run clean",
+    "pre-start": "npm run clean",
     "start": "npx -y npm-run-all stencil:start angular:start",
     "post-start": "npx -y npm-run-all --parallel angular:start react:start",
     "preclean": "npx -y npm-run-all --parallel angular:clean react:clean stencil:clean",
     "clean": "npx -y rimraf $npm_package_config_clean",
     "postclean": "",
     "angular:setup": "cd wsk-angular && npm run setup",
+    "angular:postsetup": "cd wsk-angular && npm run postsetup",
     "angular:start": "cd wsk-angular && npm run start",
+    "angular:wsk:start": "cd wsk-angular/wsk-app && npm run start",
     "angular:clean": "cd wsk-angular && npm run clean",
     "javascript:setup": "cd wsk-javascript && npm run setup",
     "javascript:start": "cd wsk-javascript && npm run start",

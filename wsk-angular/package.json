@@ -6,8 +6,10 @@
   "config": {
     "clean": "--glob .*/**/node_modules .*/**/package-lock.json",
     "package": "@angular/cli",
-    "version": "@latest",
-    "version_current": "@latest",
+    "version": "",
+    "version_current": "",
+    "version_current_v16": "@16.2.10",
+    "version_latest": "@latest",
     "version_legacy": "@12.0.0",
     "version_future": "@next",
     "template": "scss",
@@ -18,16 +20,21 @@
   "scripts": {
     "preclean": "npx -y rimraf $npm_package_config_project",
     "clean": "npx -y rimraf $npm_package_config_clean",
+
+    "current": "npx -y -p $npm_package_config_package$npm_package_config_version_current ng version",
+    "latest": "npx -y -p $npm_package_config_package$npm_package_config_version_latest ng version",
+    "legacy": "npx -y -p $npm_package_config_package$npm_package_config_version_legacy ng version",
+    "future": "npx -y -p $npm_package_config_package$npm_package_config_version_future ng version",
     
     "pre-init": "npx -y $npm_package_config_package$npm_package_config_version new $npm_package_config_project --style=$npm_package_config_template --routing --interactive=false --defaults --skip-install",
-    "preinit": "npx -y -p $npm_package_config_package$npm_package_config_version ng new $npm_package_config_project --style=$npm_package_config_template --routing --skip-install",
+    "preinit": "npx -y -p $npm_package_config_package$npm_package_config_version_current ng new $npm_package_config_project --style=$npm_package_config_template --routing --ssr=false --skip-install",
     "_init": "cd $npm_package_config_project && npm link stencil-library && npm link angular-workspace && npm link angular-library",
     "init": "cd $npm_package_config_project && npm link stencil-library angular-library",
-    "postinit": "node .bin/index install && npm run setup",
+    "postinit": "node .bin/index install",
     
     "prestart": "npm run clean",
     "start": "npm run init",
-    "poststart": "",
+    "post-start": "npm run setup",
 
     "prestart:legacy": "npx -y rimraf $npm_package_config_project-legacy",
     "start:legacy": "npx -y -p $npm_package_config_package$npm_package_config_version_legacy ng new $npm_package_config_project-legacy --style=$npm_package_config_template --routing --skip-install",

@@ -73,7 +73,7 @@ event.on('angular', () => {
         const pkg = JSON.parse(content);
         pkg["version"] = "1.0.0";
         pkg.scripts["build:lib"] = "ng build angular-library";
-        // pkg.dependencies["stencil-library"] = "*";
+        pkg.dependencies["stencil-library"] = "*";
         fs.writeFileSync(rootPkg, JSON.stringify(pkg, null, 2));
         console.log(`${args[0]} dependencies updated`);
     } else {
