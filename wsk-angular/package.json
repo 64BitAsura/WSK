@@ -7,7 +7,7 @@
     "clean": "--glob .*/**/node_modules .*/**/package-lock.json",
     "package": "@angular/cli",
     "version": "",
-    "version_current": "",
+    "version_current": "@16.2.10",
     "version_current_v16": "@16.2.10",
     "version_latest": "@latest",
     "version_legacy": "@12.0.0",
@@ -21,21 +21,26 @@
     "preclean": "npx -y rimraf $npm_package_config_project",
     "clean": "npx -y rimraf $npm_package_config_clean",
 
+    "prestart": "npm run clean",
+    "start": "npm run init",
+    "poststart": "npm run setup",
+
+    "preinit": "npx -y -p $npm_package_config_package$npm_package_config_version_current ng new $npm_package_config_project --style=$npm_package_config_template --routing --skip-install",
+    "init": "cd $npm_package_config_project && npm i",
+    "postinit": "node .bin/index install && npm run init:extras",
+
+    "init:extras": "cd $npm_package_config_project && npm link angular-library stencil-library",
+
+    "presetup": "echo \"Warning: may need to update this script from time to time\"",
+    "setup": "npx -y ncp ./.tmp/src/app ./$npm_package_config_project/src/app",
+    "postsetup": "cd $npm_package_config_project && npm run build && npm run serve",
+
+
     "current": "npx -y -p $npm_package_config_package$npm_package_config_version_current ng version",
     "latest": "npx -y -p $npm_package_config_package$npm_package_config_version_latest ng version",
     "legacy": "npx -y -p $npm_package_config_package$npm_package_config_version_legacy ng version",
     "future": "npx -y -p $npm_package_config_package$npm_package_config_version_future ng version",
     
-    "pre-init": "npx -y $npm_package_config_package$npm_package_config_version new $npm_package_config_project --style=$npm_package_config_template --routing --interactive=false --defaults --skip-install",
-    "preinit": "npx -y -p $npm_package_config_package$npm_package_config_version_current ng new $npm_package_config_project --style=$npm_package_config_template --routing --ssr=false --skip-install",
-    "_init": "cd $npm_package_config_project && npm link stencil-library && npm link angular-workspace && npm link angular-library",
-    "init": "cd $npm_package_config_project && npm link stencil-library angular-library",
-    "postinit": "node .bin/index install",
-    
-    "prestart": "npm run clean",
-    "start": "npm run init",
-    "post-start": "npm run setup",
-
     "prestart:legacy": "npx -y rimraf $npm_package_config_project-legacy",
     "start:legacy": "npx -y -p $npm_package_config_package$npm_package_config_version_legacy ng new $npm_package_config_project-legacy --style=$npm_package_config_template --routing --skip-install",
     "poststart:legacy": "npm run setup:legacy",
@@ -51,14 +56,18 @@
     "setup:future": "node .bin/index install future",
     "post-setup:future": "npx -y ncp ./.tmp/src/app ./$npm_package_config_project-future/src/app && cd $npm_package_config_project-legacy && npm i --force or --legacy-peer-deps",
     
-    "presetup": "echo \"Warning: may need to update this script from time to time\"",
-    "setup": "npx -y ncp ./.tmp/src/app ./$npm_package_config_project/src/app",
-    "postsetup": "cd $npm_package_config_project && npm run build && npm run start",
 
     "links": "npm ls -g --depth=0 --link=true",
     "view": "npm view $npm_package_config_package versions --json",
 
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "commands": {
+    "pre-init": "npx -y $npm_package_config_package$npm_package_config_version new $npm_package_config_project --style=$npm_package_config_template --routing --interactive=false --defaults --skip-install",
+    "_preinit": "npx -y -p $npm_package_config_package$npm_package_config_version_current ng new $npm_package_config_project --style=$npm_package_config_template --routing --ssr=false --skip-install",
+    "_init": "cd $npm_package_config_project && npm link stencil-library && npm link angular-workspace && npm link angular-library",
+    
+    "post-setup": "cd $npm_package_config_project && npm run build && npm run start"
   },
   "keywords": [],
   "author": "",

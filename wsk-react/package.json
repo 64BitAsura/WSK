@@ -17,21 +17,24 @@
     "preclean": "npx -y rimraf $npm_package_config_project",
     "clean": "npx -y rimraf $npm_package_config_clean",
 
-    "preinit": "npx -y $npm_package_config_package$npm_package_config_version $npm_package_config_project --template=$npm_package_config_template",
-    "init": "cd $npm_package_config_project && npm i sass --save-dev && npm link react-library",
-    "postinit": "node .bin/index css2scss && node .bin/index install && npm run setup",
-
     "prestart": "npm run clean",
     "start": "npm run init",
-    "poststart": "",
-    
-    "previte": "",
-    "vite": "npm create vite@latest $npm_package_config_project -- --template react-ts",
-    "postvite": "cd $npm_package_config_project && npm i && npm i sass --save-dev",
+    "poststart": "npm run setup",
+
+    "preinit": "npx -y $npm_package_config_package$npm_package_config_version $npm_package_config_project --template=$npm_package_config_template",
+    "init": "cd $npm_package_config_project && npm i sass --save-dev",
+    "postinit": "node .bin/index css2scss && node .bin/index install && npm run init:extras",
+
+    "init:extras": "cd $npm_package_config_project && pwd && npm link react-library stencil-library",
 
     "presetup": "echo \"Warning: may need to update this script from time to time\"",
     "setup": "npx -y ncp ./.tmp/App.tsx ./$npm_package_config_project/src/App.tsx",
     "postsetup": "cd $npm_package_config_project && npm start",
+
+    
+    "previte": "",
+    "vite": "npm create vite@latest $npm_package_config_project -- --template react-ts",
+    "postvite": "cd $npm_package_config_project && npm i && npm i sass --save-dev",
 
     "pregenerate": "echo \"Component name: prompt goes here\"",
     "generate": "cd $npm_package_config_project && npx -y generate-react-cli component $npm_package_config_prefix-$npm_package_config_component --path src/components --withLazy --withStyle --withTest --withStory",

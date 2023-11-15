@@ -17,23 +17,26 @@
     "preclean": "npx -y rimraf $npm_package_config_project",
     "clean": "npx -y rimraf $npm_package_config_clean",
 
-    "pre-init": "npx -y @vue/cli@3 $npm_package_config_project",
-    "preinit": "npm init vue@3 $npm_package_config_project",
-    "init": "cd $npm_package_config_project && npm i sass --save-dev && npm link vue-library",
-    "postinit": "node .bin/index css2scss && node .bin/index install && npm run setup",
-
     "prestart": "npm run clean",
     "start": "npm run init",
-    "poststart": "",
-    
+    "poststart": "npm run setup",
+
+    "pre-init": "npx -y @vue/cli@3 $npm_package_config_project",
+    "preinit": "npm init vue@3 $npm_package_config_project",
+    "init": "cd $npm_package_config_project && npm i sass --save-dev",
+    "postinit": "node .bin/index css2scss && node .bin/index install && npm run init:extras",
+
+    "init:extras": "cd $npm_package_config_project && pwd && npm link vue-library stencil-library",
+
+    "presetup": "echo \"Warning: may need to update this script from time to time\"",
+    "setup": "npx -y ncp ./.tmp ./$npm_package_config_project",
+    "postsetup": "cd $npm_package_config_project && npm run format && npm run serve",
+
+
     "previte": "",
     "vite": "npm create vite@latest $npm_package_config_project -- --template vue-ts",
     "postvite": "cd $npm_package_config_project && npm i && npm i sass --save-dev",
 
-    "presetup": "echo \"Warning: may need to update this script from time to time\"",
-    "setup": "cd $npm_package_config_project && npm i && npm run format",
-    "postsetup": "cd $npm_package_config_project && npm run dev",
-    
     "links": "npm ls -g --depth=0 --link=true",
     "view": "npm view $npm_package_config_package versions --json",
 
