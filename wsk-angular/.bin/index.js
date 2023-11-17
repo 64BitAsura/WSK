@@ -52,6 +52,22 @@ event.on("install", () => {
   } else {
     console.log("File not found");
   }
+
+  const angularFile = path.join(
+    process.cwd(),
+    `wsk-app${project ? "-" + project : ""}/angular.json`
+  );
+
+  if (fs.statSync(angularFile).isFile()) {
+    const content = fs.readFileSync(angularFile, "utf8");
+    const pkg = JSON.parse(content);
+    pkg.projects["wsk-app"].architect.build.options.preserveSymlinks=true;
+    fs.writeFileSync(angularFile, JSON.stringify(pkg, null, 2));
+    console.log(`Updated angular.json`);
+  }else{
+    console.log("File not found")
+  }
+  
 });
 
 const args = process.argv.slice(2);
