@@ -35,11 +35,8 @@ event.on("css2scss", () => {
   renamer(folder);
 });
 event.on("install", () => {
-  const project = args[1] || "";
-  const file = path.join(
-    process.cwd(),
-    `wsk-app${project ? "-" + project : ""}/package.json`
-  );
+  const project = args[1] ? `wsk-app-${args[1]}` : "wsk-app";
+  const file = path.join(process.cwd(), `${project}/package.json`);
   if (fs.statSync(file).isFile()) {
     const content = fs.readFileSync(file, "utf8");
     const pkg = JSON.parse(content);
@@ -48,26 +45,22 @@ event.on("install", () => {
     pkg.dependencies["stencil-library"] = "*";
     pkg.scripts["serve"] = "ng serve --open";
     fs.writeFileSync(file, JSON.stringify(pkg, null, 2));
-    console.log(`Updated package.json`);
+    console.log("Updated package.json");
   } else {
     console.log("File not found");
   }
 
-  const angularFile = path.join(
-    process.cwd(),
-    `wsk-app${project ? "-" + project : ""}/angular.json`
-  );
+  const angularFile = path.join(process.cwd(), `${project}/angular.json`);
 
   if (fs.statSync(angularFile).isFile()) {
     const content = fs.readFileSync(angularFile, "utf8");
     const pkg = JSON.parse(content);
-    pkg.projects["wsk-app"].architect.build.options.preserveSymlinks=true;
+    pkg.projects[`${project}`].architect.build.options.preserveSymlinks = true;
     fs.writeFileSync(angularFile, JSON.stringify(pkg, null, 2));
-    console.log(`Updated angular.json`);
-  }else{
-    console.log("File not found")
+    console.log("Updated angular.json");
+  } else {
+    console.log("File not found");
   }
-  
 });
 
 const args = process.argv.slice(2);
