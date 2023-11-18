@@ -18,15 +18,16 @@
     "component": "component"
   },
   "scripts": {
-    "preclean": "npx -y rimraf $npm_package_config_project",
-    "clean": "npx -y rimraf $npm_package_config_clean",
+    "pre-clean": "",
+    "clean": "npx -y rimraf $npm_package_config_project",
+    "post-clean": "npx -y rimraf $npm_package_config_clean",
 
-    "prestart": "npm run clean",
+    "prestart": "npm run clean && npm i",
     "start": "npm run init",
     "poststart": "npm run setup",
 
     "preinit": "npx -y -p $npm_package_config_package$npm_package_config_version_current ng new $npm_package_config_project --style=$npm_package_config_template --routing --skip-install",
-    "init": "cd $npm_package_config_project && npm i",
+    "init": "cd $npm_package_config_project && npm i && cross-env CI=true npx -y storybook@latest init --disable-telemetry",
     "postinit": "node .bin/index install && npm run init:extras",
 
     "init:extras": "cd $npm_package_config_project && npm link angular-library stencil-library",
@@ -71,5 +72,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "ncp": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.5"
+  }
 }

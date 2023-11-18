@@ -24,85 +24,75 @@
     "ng_lib": "angular-library",
     "react_lib": "react-library",
     "vue_lib": "vue-library",
+    "sb_builder": "webpack5",
+    "sb_builder_vite": "vite",
+    "sb_builder_webpack": "webpack5",
     "release": "1.0.0",
     "framework-angular": "Angular 12+ • TypeScript 4.0+ • Stencil v2.9.0+",
     "framework-react": "React v16.7+ • TypeScript 3.7+ • Stencil v2.9.0+",
     "framework-vue": "Vue 3 • TypeScript 4.0+ • Stencil v2.9.0+"
   },
   "scripts": {
-    "prestart": "npm run clean && npm run setup:monorepo",
-    "start": "npx -y npm-run-all setup:stencil setup:angular setup:react setup:vue",
-    "poststart": "npx -y npm-run-all build:stencil build:angular build:react build:vue && npm run links",
-    
     "preclean": "npx -y rimraf $npm_package_config_project",
     "clean": "npx -y rimraf $npm_package_config_clean",
     "postclean": "npm run uninstall:all && npm run env",
-    
+
+    "prestart": "npm run clean && npm i && npm run setup:monorepo",
+    "start": "npx -y npm-run-all setup:stencil setup:angular setup:react setup:vue",
+    "poststart": "npx -y npm-run-all build:stencil build:angular build:react build:vue && npm run links",
+
     "preuninstall:all": "npm run links",
     "uninstall:all": "npx -y npm-run-all unlink:stencil unlink:angular unlink:react unlink:vue",
     "postuninstall:all": "npm run links",
-
     "prelink:all": "npm run links",
     "link:all": "npx -y npm-run-all link:stencil link:angular link:react link:vue",
     "postlink:all": "npm run links",
-
     "unlink:stencil": "npm uninstall --global $npm_package_config_stencil_lib",
     "prelink:stencil": "npm run unlink:stencil",
     "_link:stencil": "cd $npm_package_config_project/packages/$npm_package_config_stencil_lib/dist && npm link",
     "link:stencil": "cd $npm_package_config_project/packages/$npm_package_config_stencil_lib && npm link",
     "postlink:stencil": "",
-
     "unlink:angular": "npm uninstall --global angular-workspace && npm uninstall --global angular-library",
     "prelink:angular": "npm run unlink:angular",
     "link:angular": "cd $npm_package_config_project/packages/$npm_package_config_ng_proj/dist/$npm_package_config_ng_lib && npm link",
     "_link:angular": "cd $npm_package_config_project/packages/$npm_package_config_ng_proj && npm link",
     "_postlink:angular": "cd $npm_package_config_project/packages/$npm_package_config_ng_proj/projects/$npm_package_config_ng_lib && npm link",
-
     "unlink:react": "npm uninstall --global $npm_package_config_react_lib",
     "prelink:react": "npm run unlink:react",
     "link:react": "cd $npm_package_config_project/packages/$npm_package_config_react_lib/dist && npm link",
     "_link:react": "cd $npm_package_config_project/packages/$npm_package_config_react_lib && npm link",
     "postlink:react": "",
-    
     "unlink:vue": "npm uninstall --global $npm_package_config_vue_lib",
     "prelink:vue": "npm run unlink:vue",
     "link:vue": "cd $npm_package_config_project/packages/$npm_package_config_vue_lib/dist && npm link",
     "_link:vue": "cd $npm_package_config_project/packages/$npm_package_config_vue_lib && npm link",
     "postlink:vue": "",
-
     "presetup:monorepo": "npx -y rimraf $npm_package_config_project",
     "setup:monorepo": "npx -y ncp ./.tmp/project ./$npm_package_config_project",
     "_postsetup:monorepo": "cd $npm_package_config_project && npm install typescript @types/node --save-dev",
-    
     "presetup:stencil": "cd $npm_package_config_project/packages && npx -y create-stencil components $npm_package_config_stencil_lib && cd $npm_package_config_stencil_lib && npm i",
     "setup:stencil": "cd $npm_package_config_project/packages/$npm_package_config_stencil_lib && npm i @stencil/sass @stencil/angular-output-target @stencil/react-output-target @stencil/vue-output-target @stencil-community/eslint-plugin --save-dev",
-    "postsetup:stencil": "npm run setup:stencil:extras",
+    "postsetup:stencil": "npm run setup:stencil:storybook && npm run setup:stencil:extras",
     "presetup:stencil:extras": "echo \"Warning: may need to update this script from time to time\"",
     "setup:stencil:extras": "node .bin/index css2scss && node .bin/index stencil",
     "postsetup:stencil:extras": "npx -y ncp ./.tmp/files/stencil ./$npm_package_config_project/packages/$npm_package_config_stencil_lib",
-
     "prebuild:stencil": "npx -y rimraf $npm_package_config_project/packages/$npm_package_config_stencil_lib/dist",
     "build:stencil": "cd $npm_package_config_project/packages/$npm_package_config_stencil_lib && npm run build",
     "postbuild:stencil": "npm run link:stencil",
-
     "presetup:angular:project": "npx -y rimraf $npm_package_config_project/packages/$npm_package_config_ng_proj",
     "setup:angular:project": "cd $npm_package_config_project/packages && npx -y -p $npm_package_config_framework_angular ng new $npm_package_config_ng_proj --no-create-application",
     "postsetup:angular:project": "cd $npm_package_config_project/packages/$npm_package_config_ng_proj && npm uninstall jasmine-core @types/jasmine",
-
     "presetup:angular:library": "",
     "setup:angular:library": "cd $npm_package_config_project/packages/$npm_package_config_ng_proj && npx -y -p $npm_package_config_framework_angular ng generate library $npm_package_config_ng_lib",
     "postsetup:angular:library": "cd $npm_package_config_project/packages/$npm_package_config_ng_proj/projects/$npm_package_config_ng_lib/src/lib && npx -y rimraf --glob $npm_package_config_ng_lib.component.ts $npm_package_config_ng_lib.service.ts *.spec.ts",
-
     "presetup:angular": "npm run setup:angular:project",
     "setup:angular": "npm run setup:angular:library",
-    "postsetup:angular": "npm run setup:angular:extras",
+    "postsetup:angular": "npm run setup:angular:storybook && npm run setup:angular:extras",
     "presetup:angular:extras": "echo \"Warning: may need to update this script from time to time\"",
     "setup:angular:extras": "node .bin/index angular $npm_package_config_ng_proj $npm_package_config_ng_lib",
     "postsetup:angular:extras": "npx -y ncp ./.tmp/files/angular/src ./$npm_package_config_project/packages/$npm_package_config_ng_proj/projects/$npm_package_config_ng_lib/src",
-
     "build:angular:project": "cd $npm_package_config_project/packages/$npm_package_config_ng_proj && npm link $npm_package_config_stencil_lib",
     "build:angular:library": "cd $npm_package_config_project/packages/$npm_package_config_ng_proj/projects/$npm_package_config_ng_lib && npm link $npm_package_config_stencil_lib",
-
     "prebuild:angular": "npm run build:angular:project && npm run build:angular:library",
     "_build:angular": "cd $npm_package_config_project/packages/$npm_package_config_ng_proj && npx -y -p $npm_package_config_framework_angular ng build $npm_package_config_ng_lib --output-hashing=all --source-map --stats-json --verbose",
     "build:angular": "cd $npm_package_config_project/packages/$npm_package_config_ng_proj && npx -y -p $npm_package_config_framework_angular ng build $npm_package_config_ng_lib",
@@ -110,52 +100,56 @@
     "pre-build:angular:extras": "cd $npm_package_config_project/packages/$npm_package_config_ng_proj && npm run build",
     "build:angular:extras": "",
     "post-build:angular:extras": "npm run link:angular",
-    
     "_presetup:react": "npm install typescript @types/node --save-dev",
     "_setup:react": "cd $npm_package_config_project/packages/$npm_package_config_react_lib && npm i react react-dom @types/react --save-dev",
     "setup:react": "cd $npm_package_config_project/packages/$npm_package_config_react_lib && npm i react react-dom typescript @types/node @types/react --save-dev",
-    "postsetup:react": "npm run setup:react:extras",
+    "postsetup:react": "npm run setup:react:storybook && npm run setup:react:extras",
     "presetup:react:extras": "echo \"Warning: may need to update this script from time to time\"",
     "setup:react:extras": "node .bin/index react",
     "postsetup:react:extras": "",
-
     "prebuild:react": "cd $npm_package_config_project/packages/$npm_package_config_react_lib && npm link $npm_package_config_stencil_lib",
     "build:react": "cd $npm_package_config_project/packages/$npm_package_config_react_lib && npm run build",
     "postbuild:react": "npm run build:react:extras && npm run link:react",
     "prebuild:react:extras": "cd $npm_package_config_project/packages/$npm_package_config_react_lib && npx -y ncp package.json dist/package.json",
     "build:react:extras": "node .bin/index react-dist",
     "postbuild:react:extras": "",
-
     "_presetup:vue": "npm install typescript @types/node --save-dev",
     "_setup:vue": "cd $npm_package_config_project/packages/$npm_package_config_vue_lib && npm i vue@3 --save-dev",
     "setup:vue": "cd $npm_package_config_project/packages/$npm_package_config_vue_lib && npm i vue@3 typescript @types/node --save-dev",
-    "postsetup:vue": "npm run setup:vue:extras",
+    "postsetup:vue": "npm run setup:vue:storybook && npm run setup:vue:extras",
     "presetup:vue:extras": "echo \"Warning: may need to update this script from time to time\"",
     "setup:vue:extras": "node .bin/index vue",
     "postsetup:vue:extras": "",
-
     "prebuild:vue": "cd $npm_package_config_project/packages/$npm_package_config_vue_lib && npm link $npm_package_config_stencil_lib",
     "build:vue": "cd $npm_package_config_project/packages/$npm_package_config_vue_lib && npm run build",
     "postbuild:vue": "npm run build:vue:extras && npm run link:vue",
     "prebuild:vue:extras": "cd $npm_package_config_project/packages/$npm_package_config_vue_lib && npx -y ncp package.json dist/package.json",
     "build:vue:extras": "node .bin/index vue-dist",
     "postbuild:vue:extras": "",
-
     
+    
+    "setup:stencil:storybook": "cd $npm_package_config_project/packages/$npm_package_config_stencil_lib && cross-env CI=true npx -y storybook@latest init --type=html --builder=$npm_package_config_sb_builder --disable-telemetry",
+    "setup:angular:storybook": "cd $npm_package_config_project/packages/$npm_package_config_ng_proj && cross-env CI=true npx -y storybook@latest init --yes --disable-telemetry",
+    "setup:react:storybook": "cd $npm_package_config_project/packages/$npm_package_config_react_lib && cross-env CI=true npx -y storybook@latest init --builder=$npm_package_config_sb_builder --disable-telemetry",
+    "setup:vue:storybook": "cd $npm_package_config_project/packages/$npm_package_config_vue_lib && cross-env CI=true npx -y storybook@latest init --builder=$npm_package_config_sb_builder --disable-telemetry",
+    
+    
+    "setup:storybook:stencil": "cd $npm_package_config_project/packages/$npm_package_config_stencil_lib && npx -y storybook@latest init --type=html --disable-telemetry",
+    "setup:storybook:angular": "npx -y npm-run-all setup:storybook:angular:project setup:storybook:angular:library",
+    "setup:storybook:angular:project": "cd $npm_package_config_project/packages/$npm_package_config_ng_proj && npx -y storybook@latest init",
+    "setup:storybook:angular:library": "cd $npm_package_config_project/packages/$npm_package_config_ng_proj/projects/$npm_package_config_ng_lib && npx -y storybook@latest init",
+    "setup:storybook:react": "cd $npm_package_config_project/packages/$npm_package_config_react_lib && npx -y storybook@latest init",
+    "setup:storybook:vue": "cd $npm_package_config_project/packages/$npm_package_config_vue_lib && npx -y storybook@latest init",
     "pre-setup:storybook": "cd $npm_package_config_project/packages/*-library && npx -y storybook@latest init",
-    "setup:storybook": "cd $npm_package_config_project && npx -y sb init",
-    "postsetup:storybook": "",
+    "setup:storybook": "npx -y npm-run-all setup:storybook:stencil setup:storybook:angular setup:storybook:react setup:storybook:vue",
+    "post-setup:storybook": "cd $npm_package_config_project && npx -y sb init",
     "prepa11y": "pa11y --reporter html https://example.com > .reports/pa11y.html",
     "pa11y": "pa11y --runner axe --runner htmlcs https://example.com",
     "postpa11y": "pa11y --runner axe --runner htmlcs https://example.com",
-    
-
     "stencil:build": "cd $npm_package_config_project/packages/$npm_package_config_stencil_lib && npm run build",
     "stencil:lint": "cd $npm_package_config_project/packages/$npm_package_config_stencil_lib && npm run lint",
     "stencil:coverage": "cd $npm_package_config_project/packages/$npm_package_config_stencil_lib && npm run coverage",
     "stencil:serve:coverage": "cd $npm_package_config_project/packages/$npm_package_config_stencil_lib && npm run serve:coverage",
-
-
     "links": "npm ls -g --depth=0 --link=true",
     "generate": "npx -y @stencil/core generate $npm_package_config_prefix-$npm_package_config_component",
     "view": "npm view @stencil/core versions --json",
@@ -172,7 +166,6 @@
     "setup:tsdx": "npm config ls && cd $npm_package_config_project/packages && npx -y tsdx create tsdx-library --template=react-with-storybook",
     "postsetup:tsdx": "npm config delete init-author-email && npm config ls",
     "pre-uninstall:all": "npx -y npm-run-all --parallel uninstall:stencil uninstall:angular uninstall:react uninstall:vue",
-
     "_start": "npx -y npm-run-all setup:stencil setup:angular setup:angular:extras setup:react setup:react:extras setup:vue setup:vue:extras setup:stencil:extras",
     "post-start": "npx -y npm-run-all --parallel build:angular build:react build:vue && npm run setup:storybook && npm run links",
     "post-setup:monorepo": "cd $npm_package_config_project && git init && git add -A && git commit -m 'Initial commit' && npm install typescript @types/node --save-dev",
@@ -190,11 +183,9 @@
     "pre-setup:vue": "cd $npm_package_config_project/packages && npx -y lerna create $npm_package_config_vue_lib",
     "post-setup:vue": "node .bin/index vue && cd $npm_package_config_project && git add -A && git commit -m 'Vue commit'",
     "post-setup:vue:extras": "npx -y ncp ./.tmp/files/vue/lib ./$npm_package_config_project/packages/$npm_package_config_vue_lib/lib",
-    
     "_init": "npm init stencil",
     "init_": "npx -y create-stencil",
     "init": "npx -y $npm_package_config_package$npm_package_config_version $npm_package_config_template $npm_package_config_project",
-    
     "setup:git": "npx -y npm-run-all git:init git:add git:commit",
     "git:init": "git init",
     "git:status": "git status",
@@ -208,5 +199,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "ncp": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.5"
+  }
 }
