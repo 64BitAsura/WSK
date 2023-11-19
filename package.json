@@ -2,11 +2,14 @@
   "name": "wsk",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": ".bin/index.js",
   "config": {
     "clean": "--glob .*/**/node_modules .*/**/package-lock.json"
   },
   "scripts": {
+    "precli": "npx -y rimraf web-component-lib && node . stencil-create",
+    "cli": "cd web-component-lib && node ../.bin/index stencil-generate",
+    "post-cli": "cd web-component-lib && node ../.bin/index storybook-init",
     "clean": "npx -y rimraf $npm_package_config_clean",
     "start": "npm run stencil:setup",
     "stencil:setup": "cd wsk-stencil && npm run start",

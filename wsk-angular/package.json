@@ -27,7 +27,7 @@
     "poststart": "npm run setup",
 
     "preinit": "npx -y -p $npm_package_config_package$npm_package_config_version_current ng new $npm_package_config_project --style=$npm_package_config_template --routing --skip-install",
-    "init": "cd $npm_package_config_project && npm i && cross-env CI=true npx -y storybook@latest init --disable-telemetry",
+    "init": "cd $npm_package_config_project && npm i && cross-env CI=true npx -y storybook init  --yes --disable-telemetry",
     "postinit": "node .bin/index install && npm run init:extras",
 
     "init:extras": "cd $npm_package_config_project && npm link angular-library stencil-library",
@@ -60,6 +60,7 @@
 
     "links": "npm ls -g --depth=0 --link=true",
     "view": "npm view $npm_package_config_package versions --json",
+    "serve:ssb": "npx -y http-server wsk-app/storybook-static -o",
 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
