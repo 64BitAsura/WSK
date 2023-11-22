@@ -21,7 +21,7 @@
     "react:start": "cd wsk-react && npm run start",
     "react:wsk:start": "cd wsk-react/wsk-app && npm run start",
     "vue:start": "cd wsk-vue && npm run start",
-    "vue:wsk:start": "cd wsk-vue/wsk-app && npm run start",
+    "vue:wsk:start": "cd wsk-vue/wsk-app && npm run dev",
     "links": "npm ls -g --depth=0 --link=true",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
