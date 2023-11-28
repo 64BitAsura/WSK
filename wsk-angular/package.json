@@ -11,7 +11,7 @@
     "version_current_v16": "@16.2.10",
     "version_latest": "@latest",
     "version_legacy": "@12.2.18",
-    "version_future": "@next",
+    "version_future": "@17.0.3",
     "template": "scss",
     "project": "wsk-app",
     "prefix": "my",
@@ -51,11 +51,11 @@
     "postsetup:legacy": "npx -y ncp ./.tmp/src/app ./$npm_package_config_project-legacy/src/app && cd $npm_package_config_project-legacy && NODE_OPTIONS=\"--openssl-legacy-provider\" npm run build && NODE_OPTIONS=\"--openssl-legacy-provider\" npm run serve",
 
     "prestart:future": "npx -y rimraf $npm_package_config_project-future",
-    "start:future": "npx -y -p $npm_package_config_package$npm_package_config_version_future ng new $npm_package_config_project-future --style=$npm_package_config_template --routing --skip-install",
+    "start:future": "npx -y -p $npm_package_config_package$npm_package_config_version_future ng new $npm_package_config_project-future --style=$npm_package_config_template --no-standalone --routing --ssr=false --skip-install",
     "poststart:future": "npm run setup:future",
-    "presetup:future": "cd $npm_package_config_project-future && npm link stencil-library angular-library",
+    "presetup:future": "cd $npm_package_config_project-future && npm i --force or --legacy-peer-deps && npm link stencil-library angular-library",
     "setup:future": "node .bin/index install future",
-    "post-setup:future": "npx -y ncp ./.tmp/src/app ./$npm_package_config_project-future/src/app && cd $npm_package_config_project-legacy && npm i --force or --legacy-peer-deps",
+    "postsetup:future": "npx -y ncp ./.tmp/src/app ./$npm_package_config_project-future/src/app && cd $npm_package_config_project-future npm run build  && npx -y -p $npm_package_config_package$npm_package_config_version_future ng cache disable && npm run serve",
     
 
     "links": "npm ls -g --depth=0 --link=true",
