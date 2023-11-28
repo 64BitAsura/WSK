@@ -11,6 +11,7 @@
     "cli": "cd web-component-lib && node ../.bin/index stencil-generate",
     "post-cli": "cd web-component-lib && node ../.bin/index storybook-init",
     "clean": "npx -y rimraf $npm_package_config_clean",
+    "pre-start": "nvm install",
     "start": "npm run stencil:setup",
     "stencil:setup": "cd wsk-stencil && npm run start",
     "stencil:setup:angular": "cd wsk-stencil && npm run unlink:angular && npm run setup:angular && npm run build:stencil && npm run build:angular",

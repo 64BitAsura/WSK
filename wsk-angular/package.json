@@ -35,6 +35,13 @@
     "setup": "npx -y ncp ./.tmp/src/app ./$npm_package_config_project/src/app",
     "postsetup": "cd $npm_package_config_project && npm run build && npm run serve",
 
+    "init:ng": "npx -y npm-run-all init:ng:prj init:ng:lib",
+    "preinit:ng:prj": "npx -y rimraf angular-workspace",
+    "init:ng:prj": "npx -y -p @angular/cli@12.0.0 ng new angular-workspace --no-create-application --skip-install",
+    "postinit:ng:prj": "cd angular-workspace && npm i --legacy-peer-deps",
+    "preinit:ng:lib": "cd angular-workspace && npm uninstall jasmine-core @types/jasmine",
+    "init:ng:lib": "cd angular-workspace && npx -y -p @angular/cli@12.0.0 ng generate library angular-library",
+    "postinit:ng:lib": "cd angular-workspace && npx -y -p @angular/cli@12.0.0 ng build angular-library",
 
     "init:standard": "npx -y -p $npm_package_config_package$npm_package_config_version ng new $npm_package_config_project-standard --style=$npm_package_config_template --routing --skip-install --ssr=false",
     "init:current": "npx -y -p $npm_package_config_package$npm_package_config_version_current ng new $npm_package_config_project-current --style=$npm_package_config_template --routing --skip-install",
