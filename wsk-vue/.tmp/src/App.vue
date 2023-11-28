@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-// import { MyComponent } from 'vue-library';
-// import { MyComponent, defineCustomElements } from 'vue-library';
-// defineCustomElements();
 </script>
 
 <template>
