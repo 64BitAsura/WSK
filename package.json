@@ -7,6 +7,9 @@
     "clean": "--glob .*/**/node_modules .*/**/package-lock.json"
   },
   "scripts": {
+    "npm:script": "npm pkg set scripts.prepare='husky install'",
+    "npm:deps": "npm pkg set dependencies['stencil-library']='*'",
+    "npm:devDeps": "npm pkg set devDependencies['stencil-library']='*'",
     "precli": "npx -y rimraf web-component-lib && node . stencil-create",
     "cli": "cd web-component-lib && node ../.bin/index stencil-generate",
     "post-cli": "cd web-component-lib && node ../.bin/index storybook-init",

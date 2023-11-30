@@ -35,7 +35,8 @@ event.on("css2scss", () => {
   renamer(folder);
 });
 event.on("install", () => {
-  const project = args[1] ? `wsk-app-${args[1]}` : "wsk-app";
+  // const project = args[1] ? `wsk-app-${args[1]}` : "wsk-app";
+  const project = args[1] ? `${args[1]}` : "wsk-app";
   const file = path.join(process.cwd(), `${project}/package.json`);
   if (fs.statSync(file).isFile()) {
     const content = fs.readFileSync(file, "utf8");
