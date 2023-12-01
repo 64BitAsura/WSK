@@ -48,6 +48,42 @@ event.on("install", () => {
     console.log("File not found");
   }
 });
+event.on("cra", () => {
+  console.log("******************************************************************************************************");
+  console.log(`CRA: ${args[1]} | ${args[2]}`);
+  const version = args[1] || console.error("Missing Version");
+  const project = args[2] || console.error("Missing Project");
+  const package = path.join(process.cwd(), `.tmp/cra/${version}/cra-template-typescript/template.json`);
+  // const template = path.join(process.cwd(), `.tmp/cra/${version}/cra-template-typescript/template`);
+  // const folder = path.join(process.cwd(), project);
+  const file = path.join(process.cwd(), `${project}/package.json`);
+  console.log(file);
+  if (fs.statSync(file).isFile() && fs.statSync(package).isFile()) {
+    const file1 = fs.readFileSync(file, "utf8");
+    const pkg1 = JSON.parse(file1);
+    console.log(pkg1);
+    const file2 = fs.readFileSync(package, "utf8");
+    const pkg2 = JSON.parse(file2);
+    console.log(pkg2);
+    const deps1 = pkg1.dependencies;
+    const deps2 = pkg2.dependencies;
+    const deps = {};
+    const pkg = {...pkg1};
+    pkg.dependencies = {...deps, ...deps1, ...deps2};
+    pkg.scripts = {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    };
+    console.log(pkg);
+    fs.writeFileSync(file, JSON.stringify(pkg, null, 2));
+    console.log("Updated package.json");
+  } else {
+    console.log("File not found");
+  }
+  console.log("******************************************************************************************************");
+});
 
 const args = process.argv.slice(2);
 event.emit(args[0].toLowerCase());
