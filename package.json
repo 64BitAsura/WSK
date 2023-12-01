@@ -4,19 +4,27 @@
   "description": "",
   "main": ".bin/index.js",
   "config": {
-    "clean": "--glob .*/**/node_modules .*/**/package-lock.json"
+    "clean": "--glob .*/**/node_modules .*/**/package-lock.json",
+    "project": "wsk-app"
   },
   "scripts": {
-    "npm:script": "npm pkg set scripts.prepare='husky install'",
-    "npm:deps": "npm pkg set dependencies['stencil-library']='*'",
-    "npm:devDeps": "npm pkg set devDependencies['stencil-library']='*'",
+    "presetup": "npx -y rimraf $npm_package_config_project",
+    "setup": "mkdir $npm_package_config_project && cd $npm_package_config_project && npm init -y",
+    "postsetup": "npx -y npm-run-all npm:scripts npm:deps npm:devDeps",
+    "npm:scripts": "cd $npm_package_config_project && npm pkg set scripts.serve='npx -y http-server ./ -o'",
+    "post-npm:scripts": "cd $npm_package_config_project && npm pkg set scripts.test='npm run env'",
+    "npm:deps": "cd $npm_package_config_project && npm pkg set dependencies['stencil-library']='*'",
+    "npm:devDeps": "cd $npm_package_config_project && npm pkg set devDependencies['stencil-library']='*'",
+
     "precli": "npx -y rimraf web-component-lib && node . stencil-create",
     "cli": "cd web-component-lib && node ../.bin/index stencil-generate",
     "post-cli": "cd web-component-lib && node ../.bin/index storybook-init",
     "clean": "npx -y rimraf $npm_package_config_clean",
     "pre-start": "nvm install",
-    "start": "npm run stencil:setup",
-    "stencil:setup": "cd wsk-stencil && npm run start",
+    "start": "npm run stencil:start",
+    "start:all": "npx -y npm-run-all --parallel stencil:start angular:start react:start vue:start",
+    "stencil:start": "cd wsk-stencil && npm run start",
+    "stencil:setup": "cd wsk-stencil && && npm run unlink:stencil && npm run setup:stencil && npm run build:stencil",
     "stencil:setup:angular": "cd wsk-stencil && npm run unlink:angular && npm run setup:angular && npm run build:stencil && npm run build:angular",
     "stencil:setup:react": "cd wsk-stencil && npm run unlink:react && npm run setup:react && npm run build:stencil && npm run build:react",
     "stencil:setup:vue": "cd wsk-stencil && npm run unlink:vue && npm run setup:vue && npm run build:stencil && npm run build:vue",
