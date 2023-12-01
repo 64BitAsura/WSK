@@ -26,7 +26,7 @@
     "poststart": "npm run setup",
 
     "preinit": "npx -y -p $npm_package_config_package$npm_package_config_version_current ng new $npm_package_config_project --style=$npm_package_config_template --routing --skip-install",
-    "init": "cd $npm_package_config_project && npm i && cross-env CI=true npx -y storybook init  --yes --disable-telemetry",
+    "init": "cd $npm_package_config_project && npm i && cross-env CI=true npx -y storybook init --yes --disable-telemetry",
     "postinit": "node .bin/index install && npm run init:extras",
 
     "init:extras": "cd $npm_package_config_project && npm link angular-library stencil-library",
@@ -53,7 +53,7 @@
     "_init:legacy": "cd wsk-ng-v12-app && npm i && echo \"--force or --legacy-peer-deps\"",
     "_update:legacy": "node .bin/index install wsk-ng-v12-app",
     "_link:legacy": "cd wsk-ng-v12-app && npm link angular-library stencil-library",
-    "_startup:legacy": "cd wsk-ng-v12-app && NODE_OPTIONS=--openssl-legacy-provider npm start",
+    "_startup:legacy": "cd wsk-ng-v12-app && cross-env NODE_OPTIONS=--openssl-legacy-provider npm start",
     
     "preinit:all": "npx -y rimraf wsk-app-legacy wsk-app-v12 wsk-app-v13 wsk-app-v14 wsk-app-v15 wsk-app-v16 wsk-app-v17 wsk-app-v17-standalone",
     "init:all": "npx -y npm-run-all init:legacy init:v12 init:v13 init:v14 init:v15 init:v16 init:v17 init:v17:standalone",
@@ -64,16 +64,16 @@
     "init:legacy": "cd $npm_package_config_project-legacy && npm i --legacy-peer-deps",
     "postinit:legacy": "npm run init:legacy:extras && npx -y ncp ./.tmp/v12/src/app ./$npm_package_config_project-legacy/src/app",
     "init:legacy:extras": "node .bin/index install $npm_package_config_project-legacy && cd $npm_package_config_project-legacy && pwd && npm link angular-library stencil-library --legacy-peer-deps",
-    "prerun:legacy": "cd $npm_package_config_project-legacy && NODE_OPTIONS=--openssl-legacy-provider npm run build",
-    "run:legacy": "cd $npm_package_config_project-legacy && NODE_OPTIONS=--openssl-legacy-provider npm start",
-    "post-run:legacy": "cd $npm_package_config_project-legacy && NODE_OPTIONS=--openssl-legacy-provider npm test",
+    "prerun:legacy": "cd $npm_package_config_project-legacy && cross-env NODE_OPTIONS=--openssl-legacy-provider npm run build",
+    "run:legacy": "cd $npm_package_config_project-legacy && cross-env NODE_OPTIONS=--openssl-legacy-provider npm start",
+    "post-run:legacy": "cd $npm_package_config_project-legacy && cross-env NODE_OPTIONS=--openssl-legacy-provider npm test",
 
     "preinit:v12": "npx -y -p $npm_package_config_package@12 ng new $npm_package_config_project-v12 --style=$npm_package_config_template --routing",
     "init:v12": "node .bin/index install $npm_package_config_project-v12 && cd $npm_package_config_project-v12 && npm link angular-library stencil-library",
     "postinit:v12": "npx -y ncp ./.tmp/v12/src/app ./$npm_package_config_project-v12/src/app",
-    "prerun:v12": "cd $npm_package_config_project-v12 && NODE_OPTIONS=--openssl-legacy-provider npm run build",
-    "run:v12": "cd $npm_package_config_project-v12 && NODE_OPTIONS=--openssl-legacy-provider npm start",
-    "post-run:v12": "cd $npm_package_config_project-v12 && NODE_OPTIONS=--openssl-legacy-provider npm test",
+    "prerun:v12": "cd $npm_package_config_project-v12 && cross-env NODE_OPTIONS=--openssl-legacy-provider npm run build",
+    "run:v12": "cd $npm_package_config_project-v12 && cross-env NODE_OPTIONS=--openssl-legacy-provider npm start",
+    "post-run:v12": "cd $npm_package_config_project-v12 && cross-env NODE_OPTIONS=--openssl-legacy-provider npm test",
 
     "preinit:v13": "npx -y -p $npm_package_config_package@13 ng new $npm_package_config_project-v13 --style=$npm_package_config_template --routing",
     "init:v13": "node .bin/index install $npm_package_config_project-v13 && cd $npm_package_config_project-v13 && npm link angular-library stencil-library",
