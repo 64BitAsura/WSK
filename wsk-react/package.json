@@ -71,27 +71,50 @@
     "postvite:install": "cd $npm_package_config_project && npm link react-library stencil-library",
     "vite:start": "cd $npm_package_config_project && npm run dev",
 
+
+    "previte:all": "npx -y rimraf wsk-vite-v5-app wsk-vite-v4-app wsk-vite-v3-app wsk-vite-v2-app wsk-vite-legacy-app",
     "vite:all": "npx -y npm-run-all vite:v5 vite:v4 vite:v3 vite:v2 vite:legacy",
+    "postvite:all": "npx -y npm-run-all vite:v5:setup vite:v4:setup vite:v3:setup vite:v2:setup vite:legacy:setup",
 
     "previte:v5": "npx -y rimraf wsk-vite-v5-app",
     "vite:v5": "npx -y create-vite@5 wsk-vite-v5-app --template=react-ts",
     "postvite:v5": "cd wsk-vite-v5-app && npm i sass --save-dev",
+    "previte:v5:setup": "npx -y ncp ./.tmp/vite/v4-5 ./wsk-vite-v5-app && node .bin/index css2scss wsk-vite-v5-app/src",
+    "vite:v5:setup": "cd wsk-vite-v5-app && npm pkg set dependencies['stencil-library']='*' && npm pkg set dependencies['react-library']='*'",
+    "postvite:v5:setup": "cd wsk-vite-v5-app && npm link react-library stencil-library",
+    "vite:v5:start": "cd wsk-vite-v5-app && npm run dev",
 
     "previte:v4": "npx -y rimraf wsk-vite-v4-app",
     "vite:v4": "npx -y create-vite@4 wsk-vite-v4-app --template=react-ts",
     "postvite:v4": "cd wsk-vite-v4-app && npm i sass --save-dev",
+    "previte:v4:setup": "npx -y ncp ./.tmp/vite/v4-5 ./wsk-vite-v4-app && node .bin/index css2scss wsk-vite-v4-app/src",
+    "vite:v4:setup": "cd wsk-vite-v4-app && npm pkg set dependencies['stencil-library']='*' && npm pkg set dependencies['react-library']='*'",
+    "postvite:v4:setup": "cd wsk-vite-v4-app && npm link react-library stencil-library",
+    "vite:v4:start": "cd wsk-vite-v4-app && npm run dev",
 
     "previte:v3": "npx -y rimraf wsk-vite-v3-app",
     "vite:v3": "npx -y create-vite@3 wsk-vite-v3-app --template=react-ts",
     "postvite:v3": "cd wsk-vite-v3-app && npm i sass --save-dev",
+    "previte:v3:setup": "npx -y ncp ./.tmp/vite/v3 ./wsk-vite-v3-app && node .bin/index css2scss wsk-vite-v3-app/src",
+    "vite:v3:setup": "cd wsk-vite-v3-app && npm pkg set dependencies['stencil-library']='*' && npm pkg set dependencies['react-library']='*'",
+    "postvite:v3:setup": "cd wsk-vite-v3-app && npm link react-library stencil-library",
+    "vite:v3:start": "cd wsk-vite-v3-app && npm run dev",
 
     "previte:v2": "npx -y rimraf wsk-vite-v2-app",
     "vite:v2": "npx -y create-vite@2 wsk-vite-v2-app --template=react-ts",
     "postvite:v2": "cd wsk-vite-v2-app && npm i sass --save-dev",
+    "previte:v2:setup": "npx -y ncp ./.tmp/vite/v2 ./wsk-vite-v2-app && node .bin/index css2scss wsk-vite-v2-app/src",
+    "vite:v2:setup": "cd wsk-vite-v2-app && npm pkg set dependencies['stencil-library']='*' && npm pkg set dependencies['react-library']='*'",
+    "postvite:v2:setup": "cd wsk-vite-v2-app && npm link react-library stencil-library",
+    "vite:v2:start": "cd wsk-vite-v2-app && npm run dev",
 
     "previte:legacy": "npx -y rimraf wsk-vite-legacy-app",
     "vite:legacy": "npx -y create-vite@2.5.0 wsk-vite-legacy-app --template=react-ts",
     "postvite:legacy": "cd wsk-vite-legacy-app && npm i sass --save-dev",
+    "previte:legacy:setup": "npx -y ncp ./.tmp/vite/legacy ./wsk-vite-legacy-app && node .bin/index css2scss wsk-vite-legacy-app/src",
+    "vite:legacy:setup": "cd wsk-vite-legacy-app && npm pkg set dependencies['stencil-library']='*' && npm pkg set dependencies['react-library']='*'",
+    "postvite:legacy:setup": "cd wsk-vite-legacy-app && npm link react-library stencil-library",
+    "vite:legacy:start": "cd wsk-vite-legacy-app && npm run dev",
 
 
     "pregenerate": "echo \"Component name: prompt goes here\"",
