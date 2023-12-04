@@ -30,39 +30,39 @@ const cli = {
   },
   interactive: (req, res, next) => {},
 };
-const convert = {
-  update: function (dir, reg, name) {
-    // TODO: should search recursively for all references to the css files
-    if (fs.existsSync(dir)) {
-      const files = fs.readdirSync(dir);
-      for (const file of files) {
-        const f = path.join(dir, file);
-        if (fs.statSync(f).isFile()) {
-          const content = fs.readFileSync(f, "utf8");
-          const edited = content.replace(new RegExp(reg, "g"), name);
-          if (content !== edited) {
-            fs.writeFileSync(f, edited);
-            console.log(`Updated references in ${file}`);
+const converter = {
+    update: function (dir, reg, name) {
+        // TODO: should search recursively for all references to the css files
+        if (fs.existsSync(dir)) {
+          const files = fs.readdirSync(dir);
+          for (const file of files) {
+            const f = path.join(dir, file);
+            if (fs.statSync(f).isFile()) {
+              const content = fs.readFileSync(f, "utf8");
+              const edited = content.replace(new RegExp(reg, "g"), name);
+              if (content !== edited) {
+                fs.writeFileSync(f, edited);
+                console.log(`Updated references in ${file}`);
+              }
+            }
+          }
+        }
+      },
+      css: function (dir) {
+        // TODO: should search recursively for all css files
+        if (fs.existsSync(dir)) {
+          const files = fs.readdirSync(dir);
+          for (const file of files) {
+            const f = path.join(dir, file);
+            if (fs.statSync(f).isFile() && path.extname(file) === ".css") {
+              const name = `${path.basename(file, ".css")}.scss`;
+              fs.renameSync(f, path.join(dir, name));
+              console.log(`Renamed ${file} to ${name}`);
+              this.update(dir, file, name);
+            }
           }
         }
       }
-    }
-  },
-  css: function (dir) {
-    // TODO: should search recursively for all css files
-    if (fs.existsSync(dir)) {
-      const files = fs.readdirSync(dir);
-      for (const file of files) {
-        const f = path.join(dir, file);
-        if (fs.statSync(f).isFile() && path.extname(file) === ".css") {
-          const name = `${path.basename(file, ".css")}.scss`;
-          fs.renameSync(f, path.join(dir, name));
-          console.log(`Renamed ${file} to ${name}`);
-          this.update(dir, file, name);
-        }
-      }
-    }
-  },
 };
 const renamer = (folder) => {
   const files = fs.readdirSync(folder);
@@ -190,7 +190,7 @@ event.on("create-stencil-component", () => {
     );
     */
     // Convert CSS > SCSS
-    // convert.css(path.join(workspace, `src/components`));
+    // converter.css(path.join(workspace, `src/components`));
     // /*
     const folders = [
       path.join(workspace, "src/components/my-component"),
@@ -200,7 +200,7 @@ event.on("create-stencil-component", () => {
       ),
     ];
     for (folder in folders) {
-      convert.css(folder);
+        converter.css(folders[folder]);
     }
     // */
     // Update Stencil Config use SCSS
@@ -223,6 +223,7 @@ export const config: Config = {
       cwd: workspace,
       stdio: ["ignore", process.stdout, process.stderr],
     });
+    // /*
     const build = spawnSync("npm", ["run", "build"], {
       cwd: workspace,
       stdio: ["ignore", process.stdout, process.stderr],
@@ -235,6 +236,7 @@ export const config: Config = {
       cwd: workspace,
       stdio: [process.stdin, process.stdout, process.stderr],
     });
+    // */
   };
 
   //   console.log(argv);
