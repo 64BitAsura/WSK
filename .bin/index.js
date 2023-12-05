@@ -62,6 +62,15 @@ const command = (cnf) => {
   });
 };
 
+// Add TypeScript?
+// Add JSX Support?
+// Add Vue Router for Single Page Application development?
+// Add Pinia for state management?
+// Add Vitest for Unit Testing?
+// Add an End-to-End Testing Solution? - down arrow
+// Add ESLint for code quality?
+// Add Prettier for code formatting?
+
 event.on("stencil-create", () => {
   command({
     cmd: "npx",
@@ -98,11 +107,11 @@ event.on("stencil-generate", () => {
 event.on("storybook-init", () => {
     command({
       cmd: "npx",
-      args: ["-y", "@angular/cli", "", ""],
+      args: ["-y", "", "", ""],
       prompts: {
         component: {
-          includes: "Would you like to share pseudonymous usage data about this project",
-          input: "N",
+          includes: "",
+          input: "",
         },
       },
     });

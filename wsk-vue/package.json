@@ -21,8 +21,9 @@
     "start": "npm run init",
     "poststart": "npm run setup",
 
-    "pre-init": "npx -y @vue/cli@3 $npm_package_config_project",
-    "preinit": "npm init vue@3 $npm_package_config_project",
+    "pre-init": "npx -y @vue/cli@3 create $npm_package_config_project",
+    "_preinit": "npm init vue@3 $npm_package_config_project",
+    "preinit": "npx -y create-vue@3 $npm_package_config_project",
     "init": "cd $npm_package_config_project && npm i sass --save-dev",
     "postinit": "node .bin/index css2scss && node .bin/index install && npm run init:extras",
 
